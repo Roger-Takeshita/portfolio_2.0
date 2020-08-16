@@ -1,0 +1,95 @@
+.journal-box {
+    color: $color-black;
+    background-color: $color-grey-1;
+    border-radius: 0.5rem;
+    box-shadow: 1rem 1rem 2rem rgba($color-black, 0.5);
+    width: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.5rem;
+    padding: 1.5rem;
+    margin: 5rem;
+
+    &__heading-primary {
+        font-family: WSJ-Bold, sans-serif;
+        text-transform: uppercase;
+        font-size: 2.9rem;
+        filter: blur(0.08rem);
+    }
+    &__heading-secondary {
+        font-family: WSJ-Bold, sans-serif;
+        text-transform: uppercase;
+        font-size: 1rem;
+        text-align: center;
+        letter-spacing: 0.5rem;
+        filter: blur(0.08rem);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        filter: blur(0.125rem);
+
+        &__content {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+
+            &:last-child {
+                border-top: 0.1rem solid $color-black;
+                border-bottom: 0.1rem solid $color-black;
+                font-size: 4.5px;
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        width: 100%;
+        margin-top: 1rem;
+
+        &__heading {
+            text-transform: uppercase;
+            text-align: center;
+        }
+        &__photo {
+            width: 25rem;
+            height: 25rem;
+            float: left;
+            margin: 0 1rem 0 0;
+            filter: grayscale(35%);
+        }
+        &__paragraph {
+            font-size: 0.8rem;
+            &--blur {
+                filter: blur(0.125rem);
+            }
+        }
+    }
+}
+
+.info-box {
+    white-space: nowrap;
+
+    &:not(:first-child) {
+        margin-left: 0.2rem;
+    }
+    &__text {
+        font-weight: bold;
+        margin-right: 0.2rem;
+    }
+    &__symbol {
+        margin-right: 0.2rem;
+        margin-left: 0.2rem;
+
+        &--up {
+            color: green;
+        }
+        &--down {
+            color: red;
+        }
+    }
+}

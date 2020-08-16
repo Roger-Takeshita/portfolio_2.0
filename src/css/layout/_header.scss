@@ -1,0 +1,26 @@
+.header {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+    &__bg {
+        height: 100%;
+        width: 100%;
+        background-image: url('../assets/images/bg_header.jpg');
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.1);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__text-box {
+        position: absolute;
+        @include abs-center;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+    }
+}

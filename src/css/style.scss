@@ -1,15 +1,15 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
+@import './abstracts/variables';
+@import './abstracts/mixin';
+@import './abstracts/utilities';
 
-html {
-    font-size: 62.5%;
-}
+@import './components/journal';
 
-body {
-    box-sizing: border-box;
-}
+@import './base/animations';
+@import './base/base';
+@import './base/typography';
+
+@import './layout/grid';
+@import './layout/header';
+@import './layout/navigation';
+
+@import './sections/sections';

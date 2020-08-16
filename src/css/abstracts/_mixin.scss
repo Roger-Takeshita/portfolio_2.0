@@ -1,0 +1,14 @@
+@mixin abs-center($x: -50%, $y: -50%) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate($x, $y);
+}
+
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

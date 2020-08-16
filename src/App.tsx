@@ -1,9 +1,17 @@
 import React from 'react';
+import AboutMe from './sections/AboutMe';
+import HeaderPortfolio from './sections/HeaderPortfolio';
 
 const App: React.FC = () => {
     return (
         <div>
-            <h1>Roger Takeshita</h1>
+            <header>
+                <HeaderPortfolio />
+            </header>
+
+            <main>
+                <AboutMe />
+            </main>
         </div>
     );
 };

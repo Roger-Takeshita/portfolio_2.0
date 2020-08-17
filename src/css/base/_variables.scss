@@ -4,12 +4,22 @@ $color-grey-0: rgb(230, 230, 230);
 $color-grey-1: rgb(204, 204, 204);
 $color-grey-2: rgb(150, 150, 150);
 $color-grey-3: rgb(110, 110, 110);
+$color-green-3: rgb(19, 50, 64);
 
 $grid-width: 114rem;
 $grid-gap-vertical: 6rem;
 $grid-gap-horizontal: 3rem;
+$grid-padding-xsmall: 1rem;
+$grid-padding-small: 2rem;
+$grid-padding-medium: 4rem;
+$grid-padding-large: 6rem;
 
-$default-font-size: 1.6rem;
+$margin-bottom-top-xsmall: 1rem;
+$margin-bottom-top-small: 3rem;
+$margin-bottom-top-medium: 6rem;
+$margin-bottom-top-large: 9rem;
 
 $padding-top-section: 10rem;
 $padding-bottom-section: 10rem;
+
+$default-font-size: 1.6rem;

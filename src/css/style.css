@@ -8,6 +8,10 @@
           align-items: center !important;
 }
 
+.u-margin-bottom-xsmall {
+  margin-bottom: 1rem !important;
+}
+
 .u-margin-bottom-small {
   margin-bottom: 3rem !important;
 }
@@ -16,8 +20,12 @@
   margin-bottom: 6rem !important;
 }
 
-.u-margin-bottom-big {
+.u-margin-bottom-large {
   margin-bottom: 9rem !important;
+}
+
+.u-margin-top-xsmall {
+  margin-top: 1rem !important;
 }
 
 .u-margin-top-small {
@@ -28,97 +36,194 @@
   margin-top: 6rem !important;
 }
 
-.u-margin-top-big {
+.u-margin-top-large {
   margin-top: 9rem !important;
 }
 
 .u-skew-y {
   -webkit-transform: skew(-15deg);
           transform: skew(-15deg);
-  height: 50rem;
 }
 
 .u-skew-y-border-left {
-  border-left: 3px solid #969696;
+  border-left: 0.2rem solid rgba(150, 150, 150, 0.2) !important;
 }
 
 .u-no-skew-y {
-  -webkit-transform: skew(15deg);
-          transform: skew(15deg);
+  -webkit-transform: skew(15deg) !important;
+          transform: skew(15deg) !important;
 }
 
-.journal-box {
+.u-padding-xsmall {
+  padding: 1rem !important;
+}
+
+.u-padding-small {
+  padding: 2rem !important;
+}
+
+.u-padding-medium {
+  padding: 4rem !important;
+}
+
+.u-padding-large {
+  padding: 6rem !important;
+}
+
+@font-face {
+  font-family: 'WSJ-Regular';
+  font-weight: 400;
+  src: local("WSJ-Regular"), url("../assets/fonts/OldStandardTT-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: 'WSJ-Italic';
+  font-weight: 400;
+  src: local("WSJ-Regular"), url("../assets/fonts/OldStandardTT-Italic.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: 'WSJ-Bold';
+  font-weight: 700;
+  src: local("WSJ-Regular"), url("../assets/fonts/OldStandardTT-Bold.ttf") format("opentype");
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+}
+
+.heading-primary__text-title-1 {
+  font-family: WSJ-Bold, sans-serif;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  font-size: 6rem;
+  letter-spacing: 1.5rem;
+  -webkit-animation: move-in-left 1s ease-in-out;
+          animation: move-in-left 1s ease-in-out;
+}
+
+.heading-primary__text-title-2 {
+  font-family: WSJ-Bold, sans-serif;
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 2.15rem;
+  -webkit-transform: translateX(0.5rem);
+          transform: translateX(0.5rem);
+  -webkit-animation: move-in-right 1s ease-out;
+          animation: move-in-right 1s ease-out;
+}
+
+.heading-secondary {
   color: #000;
-  background-color: #cccccc;
+  text-transform: uppercase;
+}
+
+.heading-secondary__text-title-1 {
+  font-family: WSJ-Bold, sans-serif;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
-          box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
-  width: 45rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: auto;
-  text-align: center;
-  font-size: 0.5rem;
-  padding: 1.5rem;
 }
 
-.journal-box__heading-primary {
-  font-family: WSJ-Bold, sans-serif;
-  text-transform: uppercase;
-  font-size: 3.15rem;
-  -webkit-filter: blur(0.08rem);
-          filter: blur(0.08rem);
-}
-
-.journal-box__heading-secondary {
-  font-family: WSJ-Bold, sans-serif;
-  text-transform: uppercase;
-  font-size: 1rem;
-  text-align: center;
-  letter-spacing: 0.5rem;
-  -webkit-filter: blur(0.08rem);
-          filter: blur(0.08rem);
-}
-
-.journal-box__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-filter: blur(0.125rem);
-          filter: blur(0.125rem);
-}
-
-.journal-box__header__content {
+.heading-secondary__text-title-1 > span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 6rem;
+  height: 6rem;
+  line-height: 6rem;
+  background-color: #cccccc;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 0 0.4rem 5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.4rem 5rem rgba(0, 0, 0, 0.1);
 }
 
-.journal-box__header__content:last-child {
-  border-top: 0.1rem solid #000;
-  border-bottom: 0.1rem solid #000;
-  font-size: 4.5px;
+.heading-secondary__text-title-1:hover {
+  -webkit-transform: rotate(35deg), translateY(-50%);
+          transform: rotate(35deg), translateY(-50%);
 }
 
-.journal-box__content {
+.heading-secondary__text-title-1:hover span:nth-child(odd) {
+  -webkit-transform: skewY(15deg);
+          transform: skewY(15deg);
+  color: #6e6e6e;
+  background-color: #e6e6e6;
+}
+
+.heading-secondary__text-title-1:hover span:nth-child(even) {
+  -webkit-transform: skewY(-15deg);
+          transform: skewY(-15deg);
+  color: #000;
+  background-color: #969696;
+}
+
+.heading-tertiary {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  font-weight: 400;
+  font-family: WSJ-Regular, sans-serif;
+}
+
+.heading-tertiary__animated {
+  -webkit-animation: move-in-bottom 1s ease-out 0.5s;
+          animation: move-in-bottom 1s ease-out 0.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.heading-tertiary__quotes {
+  font-style: italic;
+}
+
+.paragraph {
+  font-family: WSJ-Regular, sans-serif;
+  color: #000;
+  font-size: 3rem;
+}
+
+.skills__logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skills__logo-box {
+  width: 10.1rem;
+  height: 10.1rem;
+  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,58 +231,23 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: justify;
-  width: 100%;
-  margin-top: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.journal-box__content__heading {
-  text-transform: uppercase;
-  text-align: center;
+.skills__logo {
+  font-size: 3.85rem;
 }
 
-.journal-box__content__photo {
-  width: 25rem;
-  height: 25rem;
-  float: left;
-  margin: 0 1rem 0 0;
-  -webkit-filter: grayscale(35%);
-          filter: grayscale(35%);
+.skills__logo--local {
+  width: 4rem;
+  height: 4rem;
 }
 
-.journal-box__content__paragraph {
-  font-size: 0.8rem;
-}
-
-.journal-box__content__paragraph--blur {
-  -webkit-filter: blur(0.125rem);
-          filter: blur(0.125rem);
-}
-
-.info-box {
-  white-space: nowrap;
-}
-
-.info-box:not(:first-child) {
-  margin-left: 0.2rem;
-}
-
-.info-box__text {
-  font-weight: bold;
-  margin-right: 0.2rem;
-}
-
-.info-box__symbol {
-  margin-right: 0.2rem;
-  margin-left: 0.2rem;
-}
-
-.info-box__symbol--up {
-  color: green;
-}
-
-.info-box__symbol--down {
-  color: red;
+.skills__paragraph {
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
 }
 
 @-webkit-keyframes move-in-left {
@@ -292,144 +362,10 @@ body {
           box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'WSJ-Regular';
-  font-weight: 400;
-  src: local("WSJ-Regular"), url("../assets/fonts/OldStandardTT-Regular.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: 'WSJ-Italic';
-  font-weight: 400;
-  src: local("WSJ-Regular"), url("../assets/fonts/OldStandardTT-Italic.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: 'WSJ-Bold';
-  font-weight: 700;
-  src: local("WSJ-Regular"), url("../assets/fonts/OldStandardTT-Bold.ttf") format("opentype");
-}
-
-body {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: #fff;
-}
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-}
-
-.heading-primary__text-title-1 {
-  font-family: WSJ-Bold, sans-serif;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  font-size: 6rem;
-  letter-spacing: 1.5rem;
-  -webkit-animation: move-in-left 1s ease-in-out;
-          animation: move-in-left 1s ease-in-out;
-}
-
-.heading-primary__text-title-2 {
-  font-family: WSJ-Bold, sans-serif;
-  display: block;
-  text-align: center;
-  font-size: 3rem;
-  letter-spacing: 2.15rem;
-  -webkit-transform: translateX(0.5rem);
-          transform: translateX(0.5rem);
-  -webkit-animation: move-in-right 1s ease-out;
-          animation: move-in-right 1s ease-out;
-}
-
-.heading-secondary {
+.journal-box {
   color: #000;
-  text-transform: uppercase;
-}
-
-.heading-secondary__text-title-1 {
-  font-family: WSJ-Bold, sans-serif;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  border-radius: 0.5rem;
-}
-
-.heading-secondary__text-title-1 > span {
-  display: block;
   background-color: #cccccc;
-  text-align: center;
-  width: 5rem;
-  height: 5rem;
-  line-height: 5rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-box-shadow: 0 0.4rem 5rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.4rem 5rem rgba(0, 0, 0, 0.1);
-}
-
-.heading-secondary__text-title-1:hover {
-  -webkit-transform: rotate(35deg), translateY(-50%);
-          transform: rotate(35deg), translateY(-50%);
-}
-
-.heading-secondary__text-title-1:hover span:nth-child(odd) {
-  -webkit-transform: skewY(15deg);
-          transform: skewY(15deg);
-  color: #6e6e6e;
-  background-color: #e6e6e6;
-}
-
-.heading-secondary__text-title-1:hover span:nth-child(even) {
-  -webkit-transform: skewY(-15deg);
-          transform: skewY(-15deg);
-  color: #000;
-  background-color: #969696;
-}
-
-.heading-tertiary {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 2.6rem;
-  font-weight: 400;
-}
-
-.heading-tertiary__animated {
-  -webkit-animation: move-in-bottom 1s ease-out 0.5s;
-          animation: move-in-bottom 1s ease-out 0.5s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-}
-
-.heading-tertiary__quotes {
-  font-style: italic;
-}
-
-.paragraph {
-  color: #000;
-}
-
-.skills__logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.skills__logo-box {
-  width: 10.1rem;
-  height: 10.1rem;
-  padding: 0.5rem;
+  width: 45rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,23 +373,154 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  text-align: center;
+  font-size: 0.5rem;
+  padding: 1.5rem;
+  position: relative;
 }
 
-.skills__logo {
-  font-size: 3.85rem;
+.journal-box__heading-primary {
+  font-family: WSJ-Bold, sans-serif;
+  text-transform: uppercase;
+  font-size: 3.15rem;
+  -webkit-filter: blur(0.08rem);
+          filter: blur(0.08rem);
 }
 
-.skills__logo--local {
-  width: 4rem;
-  height: 4rem;
+.journal-box__heading-secondary {
+  font-family: WSJ-Bold, sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  -webkit-filter: blur(0.08rem);
+          filter: blur(0.08rem);
 }
 
-.skills__paragraph {
-  font-size: 1.5rem;
-  padding-top: 0.5rem;
+.journal-box__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-filter: blur(0.125rem);
+          filter: blur(0.125rem);
+}
+
+.journal-box__header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.journal-box__header__content:last-child {
+  border-top: 0.1rem solid #000;
+  border-bottom: 0.1rem solid #000;
+  font-size: 4.5px;
+}
+
+.journal-box__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: justify;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.journal-box__content__heading {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.journal-box__content__photo {
+  width: 25rem;
+  height: 25rem;
+  float: left;
+  margin: 0 1rem 0 0;
+  -webkit-filter: grayscale(35%);
+          filter: grayscale(35%);
+}
+
+.journal-box__content__paragraph {
+  font-size: 0.8rem;
+}
+
+.journal-box__content__paragraph--blur {
+  -webkit-filter: blur(0.125rem);
+          filter: blur(0.125rem);
+}
+
+.journal-box, .journal-box::before, .journal-box::after {
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
+          box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.journal-box::before, .journal-box::after {
+  content: '';
+  position: absolute;
+  height: 95%;
+  width: 99%;
+  background-color: #eee;
+}
+
+.journal-box::before {
+  right: 0.8rem;
+  top: 1rem;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+  z-index: -1;
+}
+
+.journal-box::after {
+  top: 1.8rem;
+  right: -0.4rem;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+  z-index: -2;
+}
+
+.info-box {
+  white-space: nowrap;
+}
+
+.info-box:not(:first-child) {
+  margin-left: 0.2rem;
+}
+
+.info-box__text {
+  font-weight: bold;
+  margin-right: 0.2rem;
+}
+
+.info-box__symbol {
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+}
+
+.info-box__symbol--up {
+  color: green;
+}
+
+.info-box__symbol--down {
+  color: red;
 }
 
 .row {
@@ -474,37 +541,78 @@ body {
   clear: both;
 }
 
-.row [class^='col-'] {
+.row .col-1-of-2 {
+  width: calc(100% / 2);
+}
+
+.row .col-1-of-3 {
+  width: calc(100% / 3);
+}
+
+.row .col-2-of-3 {
+  width: calc(2 * 100% / 3);
+}
+
+.row .col-1-of-4 {
+  width: calc(100% / 4);
+}
+
+.row .col-2-of-4 {
+  width: calc(2 * 100% / 4);
+}
+
+.row .col-3-of-4 {
+  width: calc(3 * 100% / 4);
+}
+
+.row-gap {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row-gap:not(:last-child) {
+  margin-bottom: 6rem;
+}
+
+.row-gap::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.row-gap [class^='col-'] {
   float: left;
   font-size: 2rem;
 }
 
-.row [class^='col-']:not(:last-child) {
+.row-gap [class^='col-']:not(:last-child) {
   margin-right: 3rem;
 }
 
-.row .col-1-of-2 {
+.row-gap .col-1-of-2 {
   width: calc((100% - 3rem) / 2);
-  padding: 2rem;
 }
 
-.row .col-1-of-3 {
+.row-gap .col-1-of-3 {
   width: calc((100% - 2 * 3rem) / 3);
 }
 
-.row .col-2-of-3 {
+.row-gap .col-2-of-3 {
   width: calc( (2 * ((100% - 2 * 3rem)) / 3) + 3rem);
 }
 
-.row .col-1-of-4 {
+.row-gap .col-1-of-4 {
   width: calc((100% - 3 * 3rem) / 4);
 }
 
-.row .col-2-of-4 {
+.row-gap .col-2-of-4 {
   width: calc( (2 * ((100% - 3 * 3rem)) / 4) + 3rem);
 }
 
-.row .col-3-of-4 {
+.row-gap .col-3-of-4 {
   width: calc( (3 * ((100% - 3 * 3rem)) / 4) + 2 * 3rem);
 }
 

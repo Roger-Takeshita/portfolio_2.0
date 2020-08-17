@@ -9,6 +9,42 @@
 
     @include clearfix;
 
+    .col-1-of-2 {
+        width: calc(100% / 2);
+    }
+
+    .col-1-of-3 {
+        width: calc(100% / 3);
+    }
+
+    .col-2-of-3 {
+        width: calc(2 * 100% / 3);
+    }
+
+    .col-1-of-4 {
+        width: calc(100% / 4);
+    }
+
+    .col-2-of-4 {
+        width: calc(2 * 100% / 4);
+    }
+
+    .col-3-of-4 {
+        width: calc(3 * 100% / 4);
+    }
+}
+
+.row-gap {
+    max-width: $grid-width;
+    margin: 0 auto;
+    display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: $grid-gap-vertical;
+    }
+
+    @include clearfix;
+
     [class^='col-'] {
         float: left;
         font-size: 2rem;
@@ -20,7 +56,6 @@
 
     .col-1-of-2 {
         width: calc((100% - #{$grid-gap-horizontal}) / 2);
-        padding: 2rem;
     }
 
     .col-1-of-3 {

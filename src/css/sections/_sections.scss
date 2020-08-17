@@ -1,3 +1,10 @@
 .section-about {
-    padding: 5rem 0;
+    padding-top: $padding-top-section;
+    padding-bottom: $padding-bottom-section;
+}
+
+.section-skills {
+    padding-top: $padding-top-section;
+    padding-bottom: $padding-bottom-section;
+    background-color: rgb(19, 50, 64);
 }

@@ -5,7 +5,7 @@ import Journal from '../components/Journal';
 const AboutMe: React.FC = () => {
     return (
         <div className="section-about">
-            <div className="u-center-text u-margin-bottom-small u-margin-top-small">
+            <div className="u-center-text u-margin-bottom-medium">
                 <h2 className="heading-secondary heading-secondary__text-title-1">
                     <span>A</span>
                     <span>B</span>
@@ -17,7 +17,7 @@ const AboutMe: React.FC = () => {
                     <span>E</span>
                 </h2>
             </div>
-            <div className="row u-center-text">
+            <div className="row u-center-text u-center-items">
                 <div className="col-1-of-2">
                     <p className="paragraph">
                         Curious and detail-oriented, I approach problems with
@@ -26,11 +26,10 @@ const AboutMe: React.FC = () => {
                         and the love for automating tasks.
                     </p>
                 </div>
-                <div className="col-1-of-2">
+                <div className="col-1-of-2 u-center-item">
                     <Journal
                         imgURI={profilePhoto}
-                        titleOne="Full stack developer"
-                        titleTwo="Roger Takeshita"
+                        titleOne="Full-stack developer"
                         text="Curious and detail-oriented, I approach problems with
                         creativity and efficiency. My background in engineering
                         has allowed me to develop strong problem-solving skills

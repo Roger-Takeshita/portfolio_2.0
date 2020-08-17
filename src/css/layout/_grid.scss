@@ -20,9 +20,7 @@
 
     .col-1-of-2 {
         width: calc((100% - #{$grid-gap-horizontal}) / 2);
-        display: inherit;
-        justify-content: center;
-        align-items: center;
+        padding: 2rem;
     }
 
     .col-1-of-3 {

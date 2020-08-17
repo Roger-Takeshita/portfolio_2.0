@@ -7,15 +7,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: auto;
     text-align: center;
     font-size: 0.5rem;
     padding: 1.5rem;
-    margin: 5rem;
 
     &__heading-primary {
         font-family: WSJ-Bold, sans-serif;
         text-transform: uppercase;
-        font-size: 2.9rem;
+        font-size: 3.15rem;
         filter: blur(0.08rem);
     }
     &__heading-secondary {

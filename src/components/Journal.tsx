@@ -93,8 +93,8 @@ const Journal: React.FC<JournalProps> = ({
                 <h2 className="journal-box__heading-secondary">{titleTwo}</h2>
                 <p className="journal-box__content__paragraph">
                     <img
-                        src={`${imgURI}`}
-                        alt="Profile Photo"
+                        src={imgURI.toString()}
+                        alt="Profile Pic"
                         className="journal-box__content__photo"
                     />
                     <span className="journal-box__content__paragraph--blur">

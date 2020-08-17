@@ -9,6 +9,10 @@
 
     @include clearfix;
 
+    .col-1-of-1 {
+        width: 100%;
+    }
+
     .col-1-of-2 {
         width: calc(100% / 2);
     }
@@ -52,6 +56,10 @@
         &:not(:last-child) {
             margin-right: $grid-gap-horizontal;
         }
+    }
+
+    .col-1-of-1 {
+        width: 100%;
     }
 
     .col-1-of-2 {

@@ -1,6 +1,7 @@
 import React from 'react';
 import AboutMe from './sections/AboutMe';
 import HeaderPortfolio from './sections/HeaderPortfolio';
+import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 
 const App: React.FC = () => {
@@ -13,6 +14,7 @@ const App: React.FC = () => {
             <main>
                 <AboutMe />
                 <Skills />
+                <Projects />
             </main>
         </div>
     );

@@ -8,3 +8,15 @@
     padding-bottom: $padding-bottom-section;
     background-color: $color-green-3;
 }
+
+.section-projects {
+    padding-top: $padding-top-section;
+    padding-bottom: $padding-bottom-section;
+    background: linear-gradient(
+            to right bottom,
+            rgba($color-white, 0.8),
+            rgba($color-black, 0.8)
+        ),
+        url('../assets/images/bg_projects.GIF') no-repeat center fixed;
+    background-size: cover;
+}

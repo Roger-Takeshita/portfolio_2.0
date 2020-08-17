@@ -5,7 +5,7 @@ import Journal from '../components/Journal';
 const AboutMe: React.FC = () => {
     return (
         <div className="section-about">
-            <div className="u-center-text u-margin-bottom-medium">
+            <div className="u-text-center u-margin-bottom-large">
                 <h2 className="heading-secondary heading-secondary__text-title-1">
                     <span>A</span>
                     <span>B</span>
@@ -17,7 +17,7 @@ const AboutMe: React.FC = () => {
                     <span>E</span>
                 </h2>
             </div>
-            <div className="row u-center-text u-center-items">
+            <div className="row u-text-center u-items-center">
                 <div className="col-1-of-2">
                     <p className="paragraph">
                         Curious and detail-oriented, I approach problems with

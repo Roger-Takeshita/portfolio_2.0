@@ -4,7 +4,7 @@ import { strongSkills, workingSkills } from '../assets/data/skills';
 const Skills: React.FC = () => {
     return (
         <div className="section-skills">
-            <div className="u-center-text u-margin-bottom-medium">
+            <div className="u-text-center u-margin-bottom-large">
                 <h2 className="heading-secondary heading-secondary__text-title-1">
                     <span>S</span>
                     <span>K</span>
@@ -14,7 +14,7 @@ const Skills: React.FC = () => {
                     <span>S</span>
                 </h2>
             </div>
-            <div className="row u-center-text u-skew-y">
+            <div className="row u-text-center u-skew-y">
                 <div className="col-1-of-2">
                     <div className="skills">
                         <h3 className="heading-tertiary u-margin-bottom-small u-no-skew-y">

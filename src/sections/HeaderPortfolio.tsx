@@ -6,7 +6,7 @@ const HeaderPortfolio: React.FC = () => {
             <div className="header__bg">&nbsp;</div>
             <div className="header__logo-box">Logo</div>
             <div className="header__text-box">
-                <h1 className="heading-primary">
+                <h1 className="heading-primary u-margin-bottom-medium">
                     <span className="heading-primary__text-title-1">
                         Roger Takeshita
                     </span>

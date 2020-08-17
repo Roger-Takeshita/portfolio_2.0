@@ -12,3 +12,8 @@
         clear: both;
     }
 }
+
+@mixin display-inline-flex($align: center) {
+    display: inline-flex;
+    justify-content: $align;
+}

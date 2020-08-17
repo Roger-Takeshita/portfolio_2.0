@@ -1,11 +1,13 @@
 @import './base/variables';
-@import './base/utilities';
 @import './base/mixin';
+@import './base/utilities';
 @import './base/typography';
 @import './base/animations';
 @import './base/base';
 
 @import './components/journal';
+@import './components/card';
+@import './components/button';
 
 @import './layout/grid';
 @import './layout/header';

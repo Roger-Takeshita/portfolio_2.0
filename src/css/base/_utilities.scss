@@ -1,43 +1,198 @@
-.u-center-text {
+//= Display
+.u-display-inline-block {
+    display: inline-block !important;
+}
+
+.u-display-inline-flex {
+    display: inline-flex !important;
+}
+
+.u-display-inline-flex-end {
+    @include display-inline-flex(flex-end);
+}
+
+//= Text
+.u-text-center {
     text-align: center !important;
 }
 
-.u-center-items {
+.u-text-right {
+    text-align: right !important;
+}
+
+.u-text-left {
+    text-align: left !important;
+}
+
+//= Items
+.u-items-center {
     align-items: center !important;
 }
 
-.u-margin-bottom-xsmall {
-    margin-bottom: $margin-bottom-top-xsmall !important;
-}
-
-.u-margin-bottom-small {
-    margin-bottom: $margin-bottom-top-small !important;
-}
-
-.u-margin-bottom-medium {
-    margin-bottom: $margin-bottom-top-medium !important;
-}
-
-.u-margin-bottom-large {
-    margin-bottom: $margin-bottom-top-large !important;
-}
-
+//= Margins
+//_ Margin Top
 .u-margin-top-xsmall {
-    margin-top: $margin-bottom-top-xsmall !important;
+    margin-top: $margin-xsmall !important;
 }
 
 .u-margin-top-small {
-    margin-top: $margin-bottom-top-small !important;
+    margin-top: $margin-small !important;
 }
 
 .u-margin-top-medium {
-    margin-top: $margin-bottom-top-medium !important;
+    margin-top: $margin-medium !important;
 }
 
 .u-margin-top-large {
-    margin-top: $margin-bottom-top-large !important;
+    margin-top: $margin-large !important;
 }
 
+//_ Margin Right
+.u-margin-right-xsmall {
+    margin-right: $margin-xsmall !important;
+}
+
+.u-margin-right-small {
+    margin-right: $margin-small !important;
+}
+
+.u-margin-right-medium {
+    margin-right: $margin-medium !important;
+}
+
+.u-margin-right-large {
+    margin-right: $margin-large !important;
+}
+
+//_ Margin Bottom
+.u-margin-bottom-xsmall {
+    margin-bottom: $margin-xsmall !important;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: $margin-small !important;
+}
+
+.u-margin-bottom-medium {
+    margin-bottom: $margin-medium !important;
+}
+
+.u-margin-bottom-large {
+    margin-bottom: $margin-large !important;
+}
+
+//_ Margin Left
+.u-margin-left-xsmall {
+    margin-left: $margin-xsmall !important;
+}
+
+.u-margin-left-small {
+    margin-left: $margin-small !important;
+}
+
+.u-margin-left-medium {
+    margin-left: $margin-medium !important;
+}
+
+.u-margin-left-large {
+    margin-left: $margin-large !important;
+}
+
+//_ Margin Left Right
+.u-margin-left-right-xsmall {
+    margin-left: $margin-xsmall !important;
+    margin-right: $margin-xsmall !important;
+}
+
+.u-margin-left-right-small {
+    margin-left: $margin-small !important;
+    margin-right: $margin-small !important;
+}
+
+.u-margin-left-right-medium {
+    margin-left: $margin-medium !important;
+    margin-right: $margin-medium !important;
+}
+
+.u-margin-left-right-large {
+    margin-left: $margin-large !important;
+    margin-right: $margin-large !important;
+}
+
+//= Padding
+//_ General Padding
+.u-padding-xsmall {
+    padding: $padding-xsmall !important;
+}
+
+.u-padding-small {
+    padding: $padding-small !important;
+}
+
+.u-padding-medium {
+    padding: $padding-medium !important;
+}
+
+.u-padding-large {
+    padding: $padding-large !important;
+}
+
+//_ Padding Left
+.u-padding-left-xsmall {
+    padding-left: $padding-xsmall !important;
+}
+
+.u-padding-left-small {
+    padding-left: $padding-small !important;
+}
+
+.u-padding-left-medium {
+    padding-left: $padding-medium !important;
+}
+
+.u-padding-left-large {
+    padding-left: $padding-large !important;
+}
+
+//_ Padding Right
+.u-padding-right-xsmall {
+    padding-right: $padding-xsmall !important;
+}
+
+.u-padding-right-small {
+    padding-right: $padding-small !important;
+}
+
+.u-padding-right-medium {
+    padding-right: $padding-medium !important;
+}
+
+.u-padding-right-large {
+    padding-right: $padding-large !important;
+}
+
+//_ Padding Left and Right
+.u-padding-left-right-xsmall {
+    padding-left: $padding-xsmall !important;
+    padding-right: $padding-xsmall !important;
+}
+
+.u-padding-left-right-small {
+    padding-left: $padding-small !important;
+    padding-right: $padding-small !important;
+}
+
+.u-padding-left-right-medium {
+    padding-left: $padding-medium !important;
+    padding-right: $padding-medium !important;
+}
+
+.u-padding-left-right-large {
+    padding-left: $padding-large !important;
+    padding-right: $padding-large !important;
+}
+
+//= Skewy
 .u-skew-y {
     transform: skew(-15deg);
 }
@@ -48,20 +203,4 @@
 
 .u-no-skew-y {
     transform: skew(15deg) !important;
-}
-
-.u-padding-xsmall {
-    padding: $grid-padding-xsmall !important;
-}
-
-.u-padding-small {
-    padding: $grid-padding-small !important;
-}
-
-.u-padding-medium {
-    padding: $grid-padding-medium !important;
-}
-
-.u-padding-large {
-    padding: $grid-padding-large !important;
 }

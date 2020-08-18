@@ -107,6 +107,17 @@ body {
     &__quotes {
         font-style: italic;
     }
+    &--white {
+        letter-spacing: 0.5rem;
+        background-image: linear-gradient(
+            to right,
+            rgba($color-green-1, 0.8),
+            rgba($color-green-3, 0.8)
+        );
+        width: 100%;
+        align-items: center;
+        height: 4rem;
+    }
 }
 
 .heading-quaternary {
@@ -114,14 +125,21 @@ body {
     text-transform: uppercase;
     font-family: WSJ-Regular, sans-serif;
     letter-spacing: 0.5rem;
-    background-image: linear-gradient(
-        to right,
-        rgba($color-green-1, 0.8),
-        rgba($color-green-3, 0.8)
-    );
     display: inline-flex !important;
     align-items: center;
     height: 4rem;
+
+    &--bg-green {
+        background-image: linear-gradient(
+            to right,
+            rgba($color-green-1, 0.8),
+            rgba($color-green-3, 0.8)
+        );
+    }
+    &--black {
+        color: $color-black;
+        letter-spacing: 0.2rem;
+    }
 }
 
 .paragraph {
@@ -156,7 +174,4 @@ body {
         font-size: 1.5rem;
         padding-top: 0.5rem;
     }
-}
-
-.projects {
 }

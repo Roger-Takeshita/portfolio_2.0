@@ -333,13 +333,22 @@ body {
   font-style: italic;
 }
 
+.heading-tertiary--white {
+  letter-spacing: 0.5rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(48, 129, 167, 0.8)), to(rgba(19, 50, 64, 0.8)));
+  background-image: linear-gradient(to right, rgba(48, 129, 167, 0.8), rgba(19, 50, 64, 0.8));
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4rem;
+}
+
 .heading-quaternary {
   color: #fff;
   text-transform: uppercase;
   font-family: WSJ-Regular, sans-serif;
   letter-spacing: 0.5rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(48, 129, 167, 0.8)), to(rgba(19, 50, 64, 0.8)));
-  background-image: linear-gradient(to right, rgba(48, 129, 167, 0.8), rgba(19, 50, 64, 0.8));
   display: -webkit-inline-box !important;
   display: -ms-inline-flexbox !important;
   display: inline-flex !important;
@@ -347,6 +356,16 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 4rem;
+}
+
+.heading-quaternary--bg-green {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(48, 129, 167, 0.8)), to(rgba(19, 50, 64, 0.8)));
+  background-image: linear-gradient(to right, rgba(48, 129, 167, 0.8), rgba(19, 50, 64, 0.8));
+}
+
+.heading-quaternary--black {
+  color: #000;
+  letter-spacing: 0.2rem;
 }
 
 .paragraph {
@@ -674,8 +693,8 @@ body {
           perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 25rem;
-  width: 40rem;
+  height: 30rem;
+  width: 45rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -683,8 +702,8 @@ body {
 }
 
 .card__side {
-  height: 25rem;
-  width: 40rem;
+  height: 30rem;
+  width: 45rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   position: absolute;
@@ -751,8 +770,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+}
+
+.card__back-box a {
+  margin-top: 2rem;
 }
 
 .btn {
@@ -771,7 +792,7 @@ body {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   position: relative;
-  min-width: 15rem;
+  min-width: 17rem;
   font-family: WSJ-Regular, sans-serif;
 }
 
@@ -817,6 +838,50 @@ body {
   z-index: -1;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+
+.certificate {
+  width: 80rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+}
+
+.certificate__img {
+  width: 10rem;
+  height: 10rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.certificate__img:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.certificate__text-box {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.certificate__paragraph {
+  color: #000;
 }
 
 .row {
@@ -977,4 +1042,9 @@ body {
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(0, 0, 0, 0.8))), url("../assets/images/bg_projects.GIF") no-repeat center fixed;
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/images/bg_projects.GIF") no-repeat center fixed;
   background-size: cover;
+}
+
+.section-education {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }

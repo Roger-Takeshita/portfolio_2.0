@@ -26,14 +26,16 @@ const Card: React.FC<cardProp> = ({
                     alt="Project"
                 />
                 <div className="card__front-box u-display-inline-flex-end">
-                    <h4 className="heading-quaternary u-padding-left-right-small">
+                    <h4 className="heading-quaternary heading-quaternary--bg-green u-padding-left-right-small">
                         <span className="card__heading-span">{name}</span>
                     </h4>
                 </div>
             </div>
             <div className="card__side card__side--back">
                 <div className="card__back-box">
-                    <h3 className="heading-tertiary">Links</h3>
+                    <h3 className="heading-tertiary heading-tertiary--white u-margin-top-small u-margin-bottom-small">
+                        info
+                    </h3>
                     <a href="#popup" className="btn btn--white">
                         Project Info
                     </a>

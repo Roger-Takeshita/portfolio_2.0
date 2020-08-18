@@ -1,0 +1,29 @@
+.certificate {
+    width: 80rem;
+    padding: $padding-small;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: $default-font-size;
+    // transform: skewX(-10deg);
+
+    &__img {
+        width: 10rem;
+        height: 10rem;
+        transition: all 0.2s ease-in-out;
+        transform: scale(0.8);
+        // transform: skewX(10deg);
+        &:hover {
+            transform: scale(0.9);
+        }
+    }
+    &__text-box {
+        // transform: skewX(10deg);
+        flex-grow: 1;
+    }
+    &__paragraph {
+        color: $color-black;
+    }
+}

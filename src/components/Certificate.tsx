@@ -20,7 +20,7 @@ const Certificate: React.FC<certificateProps> = ({
     description,
 }) => {
     return (
-        <div className="certificate">
+        <div className="certificate u-margin-small">
             <a
                 href={url.toString()}
                 rel="noopener noreferrer"
@@ -32,15 +32,16 @@ const Certificate: React.FC<certificateProps> = ({
                     alt="logo"
                     className="certificate__img"
                 />
+
+                <div className="certificate__text-box">
+                    <h4 className="heading-quaternary heading-quaternary--black">
+                        {course}
+                    </h4>
+                    <p className="certificate__paragraph">{institution}</p>
+                    <p className="certificate__paragraph">{date}</p>
+                    <p className="certificate__paragraph">{location}</p>
+                </div>
             </a>
-            <div className="certificate__text-box">
-                <h4 className="heading-quaternary heading-quaternary--black">
-                    {course}
-                </h4>
-                <p className="certificate__paragraph">{institution}</p>
-                <p className="certificate__paragraph">{date}</p>
-                <p className="certificate__paragraph">{location}</p>
-            </div>
         </div>
     );
 };

@@ -119,6 +119,23 @@
     margin-right: $margin-large !important;
 }
 
+//_ Margin
+.u-margin-xsmall {
+    margin: $margin-xsmall !important;
+}
+
+.u-margin-small {
+    margin: $margin-small !important;
+}
+
+.u-margin-medium {
+    margin: $margin-medium !important;
+}
+
+.u-margin-large {
+    margin: $margin-large !important;
+}
+
 //= Padding
 //_ General Padding
 .u-padding-xsmall {
@@ -171,6 +188,40 @@
     padding-right: $padding-large !important;
 }
 
+//_ Padding top
+.u-padding-top-xsmall {
+    padding-top: $padding-xsmall !important;
+}
+
+.u-padding-top-small {
+    padding-top: $padding-small !important;
+}
+
+.u-padding-top-medium {
+    padding-top: $padding-medium !important;
+}
+
+.u-padding-top-large {
+    padding-top: $padding-large !important;
+}
+
+//_ Padding Bottom
+.u-padding-bottom-xsmall {
+    padding-bottom: $padding-xsmall !important;
+}
+
+.u-padding-bottom-small {
+    padding-bottom: $padding-small !important;
+}
+
+.u-padding-bottom-medium {
+    padding-bottom: $padding-medium !important;
+}
+
+.u-padding-bottom-large {
+    padding-bottom: $padding-large !important;
+}
+
 //_ Padding Left and Right
 .u-padding-left-right-xsmall {
     padding-left: $padding-xsmall !important;
@@ -192,7 +243,7 @@
     padding-right: $padding-large !important;
 }
 
-//= Skewy
+//= Skew Y
 .u-skew-y {
     transform: skew(-15deg);
 }

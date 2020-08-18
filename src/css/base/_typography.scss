@@ -8,14 +8,14 @@
 @font-face {
     font-family: 'WSJ-Italic';
     font-weight: 400;
-    src: local('WSJ-Regular'),
+    src: local('WSJ-Italic'),
         url('../assets/fonts/OldStandardTT-Italic.ttf') format('opentype');
 }
 
 @font-face {
     font-family: 'WSJ-Bold';
     font-weight: 700;
-    src: local('WSJ-Regular'),
+    src: local('WSJ-Bold'),
         url('../assets/fonts/OldStandardTT-Bold.ttf') format('opentype');
 }
 
@@ -137,8 +137,8 @@ body {
         );
     }
     &--black {
+        font-family: WSJ-Bold, sans-serif;
         color: $color-black;
-        letter-spacing: 0.2rem;
     }
 }
 

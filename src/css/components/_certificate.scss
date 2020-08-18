@@ -1,29 +1,42 @@
 .certificate {
-    width: 80rem;
-    padding: $padding-small;
+    width: 60rem;
+    height: 40rem;
     display: flex;
     flex-direction: column;
-    margin: auto;
     justify-content: center;
     align-items: center;
     font-size: $default-font-size;
+    background-image: url('../assets/images/bg_certificate.png');
+    background-size: 100% 100%;
+    padding: $padding-medium;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.5);
     // transform: skewX(-10deg);
 
+    &__link {
+        text-decoration: none;
+        color: $color-black;
+    }
     &__img {
-        width: 10rem;
-        height: 10rem;
-        transition: all 0.2s ease-in-out;
-        transform: scale(0.8);
+        width: 8rem;
+        height: 8rem;
+        margin: 1rem auto 2rem auto;
         // transform: skewX(10deg);
-        &:hover {
-            transform: scale(0.9);
-        }
     }
     &__text-box {
         // transform: skewX(10deg);
         flex-grow: 1;
+        width: 100%;
     }
     &__paragraph {
         color: $color-black;
+    }
+    p:nth-child(2) {
+        margin-top: $margin-xsmall;
+        margin-bottom: $margin-xsmall;
+    }
+    &:hover {
+        transform: scale(1.15) translateY(-3rem);
+        box-shadow: 0 2rem 5rem rgba($color-black, 0.4);
     }
 }

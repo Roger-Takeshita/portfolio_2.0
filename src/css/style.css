@@ -119,6 +119,22 @@
   margin-right: 9rem !important;
 }
 
+.u-margin-xsmall {
+  margin: 1rem !important;
+}
+
+.u-margin-small {
+  margin: 3rem !important;
+}
+
+.u-margin-medium {
+  margin: 6rem !important;
+}
+
+.u-margin-large {
+  margin: 9rem !important;
+}
+
 .u-padding-xsmall {
   padding: 0.5rem !important;
 }
@@ -167,6 +183,38 @@
   padding-right: 6rem !important;
 }
 
+.u-padding-top-xsmall {
+  padding-top: 0.5rem !important;
+}
+
+.u-padding-top-small {
+  padding-top: 2rem !important;
+}
+
+.u-padding-top-medium {
+  padding-top: 4rem !important;
+}
+
+.u-padding-top-large {
+  padding-top: 6rem !important;
+}
+
+.u-padding-bottom-xsmall {
+  padding-bottom: 0.5rem !important;
+}
+
+.u-padding-bottom-small {
+  padding-bottom: 2rem !important;
+}
+
+.u-padding-bottom-medium {
+  padding-bottom: 4rem !important;
+}
+
+.u-padding-bottom-large {
+  padding-bottom: 6rem !important;
+}
+
 .u-padding-left-right-xsmall {
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
@@ -210,13 +258,13 @@
 @font-face {
   font-family: 'WSJ-Italic';
   font-weight: 400;
-  src: local("WSJ-Regular"), url("../assets/fonts/OldStandardTT-Italic.ttf") format("opentype");
+  src: local("WSJ-Italic"), url("../assets/fonts/OldStandardTT-Italic.ttf") format("opentype");
 }
 
 @font-face {
   font-family: 'WSJ-Bold';
   font-weight: 700;
-  src: local("WSJ-Regular"), url("../assets/fonts/OldStandardTT-Bold.ttf") format("opentype");
+  src: local("WSJ-Bold"), url("../assets/fonts/OldStandardTT-Bold.ttf") format("opentype");
 }
 
 body {
@@ -364,8 +412,8 @@ body {
 }
 
 .heading-quaternary--black {
+  font-family: WSJ-Bold, sans-serif;
   color: #000;
-  letter-spacing: 0.2rem;
 }
 
 .paragraph {
@@ -841,8 +889,8 @@ body {
 }
 
 .certificate {
-  width: 80rem;
-  padding: 2rem;
+  width: 60rem;
+  height: 40rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -850,7 +898,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -858,30 +905,47 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.6rem;
+  background-image: url("../assets/images/bg_certificate.png");
+  background-size: 100% 100%;
+  padding: 4rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.certificate__link {
+  text-decoration: none;
+  color: #000;
 }
 
 .certificate__img {
-  width: 10rem;
-  height: 10rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-}
-
-.certificate__img:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  width: 8rem;
+  height: 8rem;
+  margin: 1rem auto 2rem auto;
 }
 
 .certificate__text-box {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  width: 100%;
 }
 
 .certificate__paragraph {
   color: #000;
+}
+
+.certificate p:nth-child(2) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.certificate:hover {
+  -webkit-transform: scale(1.15) translateY(-3rem);
+          transform: scale(1.15) translateY(-3rem);
+  -webkit-box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4);
 }
 
 .row {
@@ -1047,4 +1111,5 @@ body {
 .section-education {
   padding-top: 10rem;
   padding-bottom: 10rem;
+  background-color: #cccccc;
 }

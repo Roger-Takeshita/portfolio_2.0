@@ -19,21 +19,19 @@ const Education: React.FC = () => {
                 </h2>
             </div>
             <div className="row u-text-center u-items-center">
-                <div className="col-1-of-1">
-                    {education.map((course, idx) => {
-                        return (
-                            <Certificate
-                                key={idx}
-                                institution={course.institution}
-                                course={course.course}
-                                date={course.date}
-                                location={course.location}
-                                logoUri={course.logoUri.toString()}
-                                url={course.url.toString()}
-                            />
-                        );
-                    })}
-                </div>
+                {education.map((course, idx) => {
+                    return (
+                        <Certificate
+                            key={idx}
+                            institution={course.institution}
+                            course={course.course}
+                            date={course.date}
+                            location={course.location}
+                            logoUri={course.logoUri.toString()}
+                            url={course.url.toString()}
+                        />
+                    );
+                })}
             </div>
         </div>
     );

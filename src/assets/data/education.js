@@ -1,3 +1,8 @@
+import graphQLCert from '../images/certificates/certificate_001.jpg';
+import reactNativeCert from '../images/certificates/certificate_002.jpg';
+import typeScriptCert from '../images/certificates/certificate_003.jpg';
+import nodejsCert from '../images/certificates/certificate_004.jpg';
+import dataStructureCert from '../images/certificates/certificate_005.jpg';
 import gaLogo from '../images/logos/education/education_ga.png';
 import pucLogo from '../images/logos/education/education_puc.png';
 
@@ -20,5 +25,28 @@ export const education = [
         url: 'https://www.pucpr.br/cursos-graduacao/engenharia-mecatronica/',
         logoUri: pucLogo,
         description: '',
+    },
+];
+
+export const onlineEducation = [
+    {
+        certificateUri: graphQLCert,
+        alt: 'GraphQL Certificate',
+    },
+    {
+        certificateUri: reactNativeCert,
+        alt: 'React Native Certificate',
+    },
+    {
+        certificateUri: typeScriptCert,
+        alt: 'TypeScript Certificate',
+    },
+    {
+        certificateUri: nodejsCert,
+        alt: 'Node.js Certificate',
+    },
+    {
+        certificateUri: dataStructureCert,
+        alt: 'Data Structure + Algorithms Certificate',
     },
 ];

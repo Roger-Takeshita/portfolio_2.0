@@ -1,5 +1,6 @@
 import React from 'react';
 import { education } from '../assets/data/education';
+import Carousel from '../components/Carousel';
 import Certificate from '../components/Certificate';
 
 const Education: React.FC = () => {
@@ -32,6 +33,9 @@ const Education: React.FC = () => {
                         />
                     );
                 })}
+            </div>
+            <div className="row u-text-center u-items-center">
+                <Carousel />
             </div>
         </div>
     );

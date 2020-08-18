@@ -47,3 +47,29 @@
         transition: all 0.4s;
     }
 }
+
+.btn-carousel {
+    position: absolute;
+    top: 50%;
+    width: 6rem;
+    height: 6rem;
+    background: rgba($color-black, 0.1);
+    border-radius: 0.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: $color-white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+
+    &--left {
+        left: 1rem;
+    }
+    &--right {
+        right: 1rem;
+    }
+    &:focus {
+        border: 0.5rem solid rgb(111, 155, 167);
+    }
+}

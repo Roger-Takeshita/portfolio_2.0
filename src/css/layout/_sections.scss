@@ -17,7 +17,7 @@
             rgba($color-white, 0.8),
             rgba($color-black, 0.8)
         ),
-        url('../assets/images/bg_projects.GIF') no-repeat center fixed;
+        url('../assets/images/bg_projects.GIF') no-repeat center;
     background-size: cover;
 }
 
@@ -25,4 +25,10 @@
     padding-top: $padding-top-section;
     padding-bottom: $padding-bottom-section;
     background-color: $color-grey-1;
+}
+
+.section-contact-me {
+    padding-top: $padding-top-section;
+    padding-bottom: $padding-bottom-section;
+    background-color: $color-green-3;
 }

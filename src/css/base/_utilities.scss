@@ -11,6 +11,15 @@
     @include display-inline-flex(flex-end);
 }
 
+.u-width-100 {
+    width: 100% !important;
+}
+
+.u-flex-wrap-wrap {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+}
+
 //= Text
 .u-text-center {
     text-align: center !important;

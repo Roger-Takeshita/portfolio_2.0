@@ -17,6 +17,18 @@
           justify-content: flex-end;
 }
 
+.u-width-100 {
+  width: 100% !important;
+}
+
+.u-flex-wrap-wrap {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
+}
+
 .u-text-center {
   text-align: center !important;
 }
@@ -741,17 +753,16 @@ body {
           perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 30rem;
-  width: 45rem;
+  height: 35rem;
+  width: 50rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin: 1rem;
 }
 
 .card__side {
-  height: 30rem;
-  width: 45rem;
+  height: 35rem;
+  width: 50rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   position: absolute;
@@ -801,9 +812,13 @@ body {
 .card__front-box {
   position: absolute;
   bottom: 1.5rem;
-  right: 1.5rem;
+  right: 0;
   width: 100%;
   overflow: hidden;
+}
+
+.card__front-box > * {
+  margin-right: 1.5rem;
 }
 
 .card__back-box {
@@ -854,27 +869,27 @@ body {
   background-color: #fff;
 }
 
-.btn:hover {
+.btn:not(:disabled):hover {
   -webkit-transform: translateY(-0.4rem);
           transform: translateY(-0.4rem);
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.btn:hover::after {
+.btn:not(:disabled):hover::after {
   -webkit-transform: scaleX(1.4) scaleY(1.6);
           transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
 
-.btn:active, .btn:focus {
+.btn:not(:disabled):active, .btn:not(:disabled):focus {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn::after {
+.btn:not(:disabled)::after {
   content: '';
   display: inline-block;
   height: 100%;
@@ -886,6 +901,11 @@ body {
   z-index: -1;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+
+.btn:disabled {
+  color: #cccccc;
+  cursor: not-allowed;
 }
 
 .btn-carousel {
@@ -919,6 +939,7 @@ body {
 
 .certificate {
   min-width: 50rem;
+  max-width: 50rem;
   height: 35rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -978,7 +999,8 @@ body {
 }
 
 .carousel {
-  width: 50rem;
+  min-width: 50rem;
+  max-width: 50rem;
   height: 35rem;
   margin: auto;
   display: -webkit-box;
@@ -1024,13 +1046,21 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-image: linear-gradient(100deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 50%), url("../assets/images/bg_form_01.jpg");
   background-size: cover;
   -webkit-box-shadow: 0rem 2rem 5rem rgba(0, 0, 0, 0.5);
           box-shadow: 0rem 2rem 5rem rgba(0, 0, 0, 0.5);
 }
 
-.form > :last-child {
+.form__group:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.form__group--message {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1038,10 +1068,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
 }
 
-.form__group:not(:last-child) {
-  margin-bottom: 1rem;
+.form__group--ctrl {
+  text-align: right;
 }
 
 .form__input {
@@ -1057,18 +1088,11 @@ body {
   display: block;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  resize: none;
 }
 
 .form__input--message {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  height: 100%;
 }
 
 .form__input:focus {
@@ -1095,16 +1119,25 @@ body {
 }
 
 .form__label {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin-left: 2rem;
   margin-top: 0.7rem;
   display: block;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  text-align: left;
+  text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 .form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
+}
+
+.form_textarea:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateY(-4rem);
@@ -1181,7 +1214,7 @@ body {
 }
 
 .row-gap [class^='col-']:not(:last-child) {
-  margin-right: 3rem;
+  margin-right: 10rem;
 }
 
 .row-gap .col-1-of-1 {
@@ -1189,27 +1222,27 @@ body {
 }
 
 .row-gap .col-1-of-2 {
-  width: calc((100% - 3rem) / 2);
+  width: calc((100% - 10rem) / 2);
 }
 
 .row-gap .col-1-of-3 {
-  width: calc((100% - 2 * 3rem) / 3);
+  width: calc((100% - 2 * 10rem) / 3);
 }
 
 .row-gap .col-2-of-3 {
-  width: calc( (2 * ((100% - 2 * 3rem)) / 3) + 3rem);
+  width: calc( (2 * ((100% - 2 * 10rem)) / 3) + 10rem);
 }
 
 .row-gap .col-1-of-4 {
-  width: calc((100% - 3 * 3rem) / 4);
+  width: calc((100% - 3 * 10rem) / 4);
 }
 
 .row-gap .col-2-of-4 {
-  width: calc( (2 * ((100% - 3 * 3rem)) / 4) + 3rem);
+  width: calc( (2 * ((100% - 3 * 10rem)) / 4) + 10rem);
 }
 
 .row-gap .col-3-of-4 {
-  width: calc( (3 * ((100% - 3 * 3rem)) / 4) + 2 * 3rem);
+  width: calc( (3 * ((100% - 3 * 10rem)) / 4) + 2 * 10rem);
 }
 
 .header {
@@ -1253,32 +1286,32 @@ body {
 }
 
 .section-about {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 13rem;
+  padding-bottom: 13rem;
 }
 
 .section-skills {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 13rem;
+  padding-bottom: 13rem;
   background-color: #133240;
 }
 
 .section-projects {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 13rem;
+  padding-bottom: 13rem;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(0, 0, 0, 0.8))), url("../assets/images/bg_projects.GIF") no-repeat center;
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/images/bg_projects.GIF") no-repeat center;
   background-size: cover;
 }
 
 .section-education {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 13rem;
+  padding-bottom: 13rem;
   background-color: #cccccc;
 }
 
 .section-contact-me {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 13rem;
+  padding-bottom: 13rem;
   background-color: #133240;
 }

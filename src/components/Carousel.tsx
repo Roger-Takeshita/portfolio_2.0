@@ -16,7 +16,7 @@ const Carousel: React.FC = () => {
     };
 
     return (
-        <div className="carousel">
+        <div className="carousel u-margin-xsmall u-display-inline-flex">
             {onlineEducation.map((course, idx) => {
                 return (
                     <div

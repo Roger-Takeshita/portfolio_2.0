@@ -5,7 +5,6 @@
     height: $card-height;
     width: $card-width;
     display: inline-flex;
-    margin: $margin-xsmall;
 
     &__side {
         height: $card-height;
@@ -49,11 +48,16 @@
         border-radius: 0.5rem;
     }
     &__front-box {
+        // display: inline-flex;
         position: absolute;
         bottom: 1.5rem;
-        right: 1.5rem;
+        right: 0;
         width: 100%;
         overflow: hidden;
+
+        & > * {
+            margin-right: 1.5rem;
+        }
     }
     &__back-box {
         height: 100%;

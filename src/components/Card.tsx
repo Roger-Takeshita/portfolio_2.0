@@ -18,7 +18,7 @@ const Card: React.FC<cardProp> = ({
     description,
 }) => {
     return (
-        <div className="card">
+        <div className="card u-margin-xsmall">
             <div className="card__side card__side--front">
                 <img
                     src={imageUri.toString()}

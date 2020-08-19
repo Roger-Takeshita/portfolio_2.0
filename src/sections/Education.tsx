@@ -19,24 +19,25 @@ const Education: React.FC = () => {
                     <span>N</span>
                 </h2>
             </div>
-            <div className="row u-text-center u-items-center">
-                {education.map((course, idx) => {
-                    return (
-                        <Certificate
-                            key={idx}
-                            institution={course.institution}
-                            course={course.course}
-                            date={course.date}
-                            location={course.location}
-                            logoUri={course.logoUri.toString()}
-                            url={course.url.toString()}
-                        />
-                    );
-                })}
+            <div className="row u-text-center u-items-center u-flex-wrap-wrap">
+                <div className="col-1-of-1">
+                    {education.map((course, idx) => {
+                        return (
+                            <Certificate
+                                key={idx}
+                                institution={course.institution}
+                                course={course.course}
+                                date={course.date}
+                                location={course.location}
+                                logoUri={course.logoUri.toString()}
+                                url={course.url.toString()}
+                            />
+                        );
+                    })}
+                    <Carousel />
+                </div>
             </div>
-            <div className="row u-text-center u-items-center">
-                <Carousel />
-            </div>
+            {/* <div className="row u-text-center u-items-center"></div> */}
         </div>
     );
 };

@@ -1,6 +1,7 @@
 .certificate {
-    min-width: 50rem;
-    height: 35rem;
+    min-width: $certificate-width;
+    max-width: $certificate-width;
+    height: $certificate-height;
     display: flex;
     flex-direction: column;
     justify-content: center;

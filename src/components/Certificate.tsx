@@ -20,7 +20,7 @@ const Certificate: React.FC<certificateProps> = ({
     description,
 }) => {
     return (
-        <div className="certificate u-margin-small">
+        <div className="certificate u-margin-xsmall u-display-inline-flex">
             <a
                 href={url.toString()}
                 rel="noopener noreferrer"

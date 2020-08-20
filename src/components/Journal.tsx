@@ -1,11 +1,5 @@
 import React from 'react';
-
-interface JournalProps {
-    imgURI: String;
-    titleOne: String;
-    titleTwo?: String;
-    text: String;
-}
+import { JournalProps } from '../utils/interface';
 
 const Journal: React.FC<JournalProps> = ({
     imgURI,

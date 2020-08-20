@@ -16,27 +16,27 @@ import webapackLogo from '../../assets/images/logos/languages/webpack.svg';
 export const strongSkills = [
     {
         name: 'React.js',
-        icon: <i className="devicon-react-original colored skills__logo" />,
+        icon: <i className="devicon-react-original colored icon__skills" />,
     },
     {
         name: 'Redux',
         icon: (
-            <img src={reduxLogo} alt="logo" className="skills__logo--local" />
+            <img src={reduxLogo} alt="logo" className="icon__skills--local" />
         ),
     },
     {
         name: 'Node.js',
-        icon: <i className="devicon-nodejs-plain colored skills__logo" />,
+        icon: <i className="devicon-nodejs-plain colored icon__skills" />,
     },
     {
         name: 'Express.js',
-        icon: <i className="devicon-express-original skills__logo" />,
+        icon: <i className="devicon-express-original icon__skills" />,
     },
     {
         name: 'JavaScript',
         icon: (
             <i
-                className="devicon-javascript-plain colored skills__logo"
+                className="devicon-javascript-plain colored icon__skills"
                 style={{ background: 'black' }}
             />
         ),
@@ -44,40 +44,40 @@ export const strongSkills = [
     {
         name: 'Python',
         icon: (
-            <img src={pythonLogo} alt="logo" className="skills__logo--local" />
+            <img src={pythonLogo} alt="logo" className="icon__skills--local" />
         ),
     },
     {
         name: 'JWT',
-        icon: <img src={jwtLogo} alt="logo" className="skills__logo--local" />,
+        icon: <img src={jwtLogo} alt="logo" className="icon__skills--local" />,
     },
     {
         name: 'MongoDB',
-        icon: <i className="devicon-mongodb-plain colored skills__logo" />,
+        icon: <i className="devicon-mongodb-plain colored icon__skills" />,
     },
     {
         name: 'PostgreSQL',
-        icon: <i className="devicon-postgresql-plain colored skills__logo" />,
+        icon: <i className="devicon-postgresql-plain colored icon__skills" />,
     },
     {
         name: 'jQuery',
-        icon: <i className="devicon-jquery-plain colored skills__logo" />,
+        icon: <i className="devicon-jquery-plain colored icon__skills" />,
     },
     {
         name: 'HTML 5',
-        icon: <i className="devicon-html5-plain colored skills__logo" />,
+        icon: <i className="devicon-html5-plain colored icon__skills" />,
     },
     {
         name: 'CSS 3',
-        icon: <i className="devicon-css3-plain colored skills__logo" />,
+        icon: <i className="devicon-css3-plain colored icon__skills" />,
     },
     {
         name: 'Sass',
-        icon: <i className="devicon-sass-original colored skills__logo" />,
+        icon: <i className="devicon-sass-original colored icon__skills" />,
     },
     {
         name: 'Bootstrap 4',
-        icon: <i className="devicon-bootstrap-plain colored skills__logo" />,
+        icon: <i className="devicon-bootstrap-plain colored icon__skills" />,
     },
     {
         name: 'Material UI',
@@ -85,21 +85,21 @@ export const strongSkills = [
             <img
                 src={materialuiLogo}
                 alt="logo"
-                className="skills__logo--local"
+                className="icon__skills--local"
             />
         ),
     },
     {
         name: 'Git',
-        icon: <i className="devicon-git-plain colored skills__logo" />,
+        icon: <i className="devicon-git-plain colored icon__skills" />,
     },
     {
         name: 'GitHub',
-        icon: <i className="devicon-github-plain skills__logo" />,
+        icon: <i className="devicon-github-plain icon__skills" />,
     },
     {
         name: 'Heroku',
-        icon: <i className="devicon-heroku-original colored skills__logo" />,
+        icon: <i className="devicon-heroku-original colored icon__skills" />,
     },
     {
         name: 'Firebase',
@@ -107,14 +107,14 @@ export const strongSkills = [
             <img
                 src={firebaseLogo}
                 alt="logo"
-                className="skills__logo--local"
+                className="icon__skills--local"
             />
         ),
     },
     {
         name: 'Postman',
         icon: (
-            <img src={postmanLogo} alt="logo" className="skills__logo--local" />
+            <img src={postmanLogo} alt="logo" className="icon__skills--local" />
         ),
     },
 ];
@@ -123,24 +123,28 @@ export const workingSkills = [
     {
         name: 'Django',
         icon: (
-            <img src={djangoLogo} alt="logo" className="skills__logo--local" />
+            <img src={djangoLogo} alt="logo" className="icon__skills--local" />
         ),
+    },
+    {
+        name: 'TypeScript',
+        icon: <i className="devicon-typescript-plain colored icon__skills" />,
     },
     {
         name: 'GraphQL',
         icon: (
-            <img src={graphqlLogo} alt="logo" className="skills__logo--local" />
+            <img src={graphqlLogo} alt="logo" className="icon__skills--local" />
         ),
     },
     {
         name: 'Apollo',
         icon: (
-            <img src={apolloLogo} alt="logo" className="skills__logo--local" />
+            <img src={apolloLogo} alt="logo" className="icon__skills--local" />
         ),
     },
     {
         name: 'Bash',
-        icon: <img src={bashLogo} alt="logo" className="skills__logo--local" />,
+        icon: <img src={bashLogo} alt="logo" className="icon__skills--local" />,
     },
     {
         name: 'Socket.io',
@@ -148,7 +152,7 @@ export const workingSkills = [
             <img
                 src={socketioLogo}
                 alt="logo"
-                className="skills__logo--local"
+                className="icon__skills--local"
             />
         ),
     },
@@ -158,18 +162,18 @@ export const workingSkills = [
             <img
                 src={webapackLogo}
                 alt="logo"
-                className="skills__logo--local"
+                className="icon__skills--local"
             />
         ),
     },
     {
         name: 'AWS S3',
         icon: (
-            <i className="devicon-amazonwebservices-original colored skills__logo" />
+            <i className="devicon-amazonwebservices-original colored icon__skills" />
         ),
     },
     {
         name: 'Jest',
-        icon: <img src={jestLogo} alt="logo" className="skills__logo--local" />,
+        icon: <img src={jestLogo} alt="logo" className="icon__skills--local" />,
     },
 ];

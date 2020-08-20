@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeaderPortfolio: React.FC = () => {
     return (
-        <div className="header">
+        <div className="section-header">
             <div className="header__bg">&nbsp;</div>
             <div className="header__logo-box">Logo</div>
             <div className="header__text-box">

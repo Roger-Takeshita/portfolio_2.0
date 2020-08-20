@@ -1,0 +1,22 @@
+.icon {
+    &__skills {
+        font-size: $icon-skill-size;
+
+        &--local {
+            width: $icon-skill-size;
+            height: $icon-skill-size;
+        }
+    }
+    &__footer {
+        font-size: $icon-footer-size;
+        width: $icon-footer-size;
+        height: $icon-footer-size;
+
+        &--local {
+            height: $icon-footer-size;
+        }
+        &--resume {
+            height: $icon-footer-size * 2.5;
+        }
+    }
+}

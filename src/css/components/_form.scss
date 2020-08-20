@@ -9,7 +9,7 @@
             rgba($color-white, 0.5) 50%,
             transparent 50%
         ),
-        url('../assets/images/bg_form_01.jpg');
+        url('../assets/images/bg_form.jpg');
     background-size: cover;
     box-shadow: 0rem 2rem 5rem rgba($color-black, 0.5);
 
@@ -27,11 +27,11 @@
         }
     }
     &__input {
-        font-size: 2rem;
+        font-size: $default-font-size;
         font-family: inherit;
         color: $color-black;
-        padding: 1.5rem 2rem;
-        border-radius: 0.5rem;
+        padding: 1rem 1.5rem;
+        border-radius: $border-radius;
         background-color: rgba($color-white, 0.7);
         border: none;
         border-bottom: 0.3rem solid transparent;

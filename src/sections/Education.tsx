@@ -37,7 +37,6 @@ const Education: React.FC = () => {
                     <Carousel />
                 </div>
             </div>
-            {/* <div className="row u-text-center u-items-center"></div> */}
         </div>
     );
 };

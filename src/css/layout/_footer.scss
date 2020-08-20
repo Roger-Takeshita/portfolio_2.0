@@ -1,0 +1,36 @@
+.footer {
+    &__navigation {
+        border-top: 0.1rem solid $color-grey-1;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    &__list {
+        list-style: none;
+        font-size: 1.4rem;
+        display: flex;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+    &__resume-box {
+        display: flex;
+        justify-content: center;
+        margin-bottom: $margin-small;
+    }
+    &__resume-paragraph {
+        font-size: $default-font-size;
+        line-height: $default-font-size;
+    }
+    &__resume-link {
+        text-decoration: none;
+        color: $color-white;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}

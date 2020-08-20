@@ -1,14 +1,9 @@
 import emailjs from 'emailjs-com';
 import React, { ChangeEvent, FormEvent, useState } from 'react';
-
-interface Form {
-    name: string;
-    email: string;
-    msg: string;
-}
+import { FormEmail } from '../utils/interface';
 
 const ContactMeForm: React.FC = () => {
-    const [form, setForm] = useState<Form>({
+    const [form, setForm] = useState<FormEmail>({
         name: '',
         email: '',
         msg: '',
@@ -17,12 +12,10 @@ const ContactMeForm: React.FC = () => {
     const handleChange = (
         e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
-        console.log(e.target.name, e.target.value);
         setForm({
             ...form,
             [e.target.name]: e.target.value,
         });
-        // console.log(form);
     };
 
     const handleSubmit = async (e: FormEvent) => {
@@ -103,6 +96,7 @@ const ContactMeForm: React.FC = () => {
                                 className="form__input"
                                 placeholder="Your Email"
                                 required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                                 autoComplete="off"
                                 id="email"
                                 name="email"
@@ -124,6 +118,7 @@ const ContactMeForm: React.FC = () => {
                                 autoComplete="off"
                                 id="msg"
                                 name="msg"
+                                data-gramm="false"
                                 onChange={handleChange}
                                 spellCheck="false"
                                 value={form.msg}

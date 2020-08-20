@@ -1,5 +1,6 @@
 import React from 'react';
 import { strongSkills, workingSkills } from '../assets/data/skills';
+import SkillsLogos from '../components/SkillsLogos';
 
 const Skills: React.FC = () => {
     return (
@@ -16,26 +17,7 @@ const Skills: React.FC = () => {
             </div>
             <div className="row u-text-center u-skew-y">
                 <div className="col-1-of-2">
-                    <div className="skills">
-                        <h3 className="heading-tertiary u-margin-bottom-small u-no-skew-y">
-                            Strong
-                        </h3>
-                        <div className="skills__logos">
-                            {strongSkills.map((skill, idx) => {
-                                return (
-                                    <div
-                                        key={idx}
-                                        className="skills__logo-box u-no-skew-y"
-                                    >
-                                        {skill.icon}
-                                        <p className="skills__paragraph">
-                                            {skill.name}
-                                        </p>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
+                    <SkillsLogos title="Strong" skills={strongSkills} />
                 </div>
                 <div className="col-1-of-2 u-skew-y-border-left">
                     <div className="skills">

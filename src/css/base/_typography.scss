@@ -19,6 +19,13 @@
         url('../assets/fonts/OldStandardTT-Bold.ttf') format('opentype');
 }
 
+@font-face {
+    font-family: 'DancingScript-Bold';
+    font-weight: 700;
+    src: local('DancingScript'),
+        url('../assets/fonts/DancingScript.ttf') format('opentype');
+}
+
 body {
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
@@ -59,7 +66,7 @@ body {
         font-family: WSJ-Bold, sans-serif;
         display: inline-flex;
         transition: transform 0.3s ease-in-out;
-        border-radius: 0.5rem;
+        border-radius: $border-radius;
 
         & > span {
             display: flex;
@@ -114,7 +121,8 @@ body {
             rgba($color-green-1, 0.8),
             rgba($color-green-3, 0.8)
         );
-        width: 100%;
+        width: 90%;
+        border-radius: $border-radius;
         align-items: center;
         height: 4rem;
     }
@@ -146,32 +154,64 @@ body {
     font-family: WSJ-Regular, sans-serif;
     color: $color-black;
     font-size: 3rem;
-}
 
-.skills {
-    &__logos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    &__logo-box {
-        width: 10.1rem;
-        height: 10.1rem;
-        padding: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    &__logo {
-        font-size: 3.85rem;
-
-        &--local {
-            width: 4rem;
-            height: 4rem;
+    &--animated {
+        &:hover {
+            transform: scale(1.1) skewY(-2deg);
+            color: rgb(103, 190, 214);
+            text-shadow: 0 0.3rem 0.5rem rgba($color-white, 0.5);
         }
     }
-    &__paragraph {
-        font-size: 1.5rem;
-        padding-top: 0.5rem;
+    &__footer {
+        display: flex;
+        font-size: 1rem;
+        display: inline-block;
+        transition: all 0.2s;
+
+        &--link {
+            color: $color-white;
+            text-decoration: none;
+        }
+        &--developed {
+            font-family: DancingScript-Bold, sans-serif;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+    &__tooltip-text {
+        visibility: hidden;
+        width: 12rem;
+        background-color: $color-grey-3;
+        color: $color-white;
+        text-align: center;
+        border-radius: 0.6rem;
+        padding: 0.5rem 0;
+        position: absolute;
+        bottom: 125%;
+        left: 50%;
+        z-index: 1;
+        margin-left: -6rem;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -0.5rem;
+            border-width: 0.5rem;
+            border-style: solid;
+            border-color: $color-grey-2 transparent transparent transparent;
+        }
+    }
+    &:hover &__tooltip-text {
+        visibility: visible;
+        opacity: 1;
     }
 }

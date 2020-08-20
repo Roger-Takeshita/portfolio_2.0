@@ -1,31 +1,36 @@
 .btn {
+    @include display-inline-flex;
+    font-family: WSJ-Regular, sans-serif;
+    padding: $padding-xsmall $padding-small;
+    font-size: $default-font-size;
     text-transform: uppercase;
     text-decoration: none;
-    @include display-inline-flex;
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
     border: none;
-    cursor: pointer;
-    font-size: $default-font-size;
-    transition: all 0.2s;
+    width: 17rem;
+    height: 3.5rem;
     position: relative;
-    min-width: 17rem;
-    font-family: WSJ-Regular, sans-serif;
+    align-items: flex-end;
+    line-height: initial;
+    transition: all 0.2s;
+    cursor: pointer;
 
     &--white {
         background-color: $color-white;
         color: $color-black;
-        padding: $padding-xsmall $padding-small;
 
         &::after {
+            color: $color-black;
             background-color: $color-white;
         }
     }
     &:not(:disabled) {
         &:hover {
-            transform: translateY(-0.4rem);
+            transform: scale(1.00000001) translateY(-0.4rem);
             box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
             &::after {
+                background-color: $color-white;
                 transform: scaleX(1.4) scaleY(1.6);
                 opacity: 0;
             }
@@ -37,15 +42,17 @@
         }
         &::after {
             content: '';
-            display: inline-block;
+            @include display-inline-flex;
             height: 100%;
             width: 100%;
-            border-radius: 0.5rem;
+            border-radius: $border-radius;
             position: absolute;
             top: 0;
             left: 0;
-            z-index: -1;
             transition: all 0.4s;
+            color: $color-black;
+            background-color: transparent;
+            z-index: -1;
         }
     }
     &:disabled {
@@ -60,7 +67,7 @@
     width: 6rem;
     height: 6rem;
     background: rgba($color-black, 0.1);
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
     font-size: 3rem;
     font-weight: bold;
     color: $color-white;

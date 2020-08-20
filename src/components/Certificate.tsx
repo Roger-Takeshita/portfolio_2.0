@@ -1,16 +1,7 @@
 import React from 'react';
+import { CertificateProps } from '../utils/interface';
 
-interface certificateProps {
-    institution: String;
-    course: String;
-    date?: String;
-    location?: String;
-    url: String;
-    logoUri: String;
-    description?: String;
-}
-
-const Certificate: React.FC<certificateProps> = ({
+const Certificate: React.FC<CertificateProps> = ({
     institution,
     course,
     date,

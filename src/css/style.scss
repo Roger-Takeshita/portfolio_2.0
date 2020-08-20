@@ -5,14 +5,17 @@
 @import './base/animations';
 @import './base/base';
 
+@import './layout/header';
+@import './layout/grid';
+@import './layout/navigation';
+@import './layout/sections';
+@import './layout/footer';
+
 @import './components/journal';
 @import './components/card';
 @import './components/button';
 @import './components/certificate';
 @import './components/carousel';
 @import './components/form';
-
-@import './layout/grid';
-@import './layout/header';
-@import './layout/navigation';
-@import './layout/sections';
+@import './components/icon';
+@import './components/skills';

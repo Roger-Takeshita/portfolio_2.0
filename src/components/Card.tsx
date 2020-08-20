@@ -1,15 +1,7 @@
 import React from 'react';
+import { CardProps } from '../utils/interface';
 
-interface cardProp {
-    name: String;
-    imageUri: String;
-    liveUrl: String;
-    repoUrl: String;
-    technologies: any[];
-    description: String;
-}
-
-const Card: React.FC<cardProp> = ({
+const Card: React.FC<CardProps> = ({
     name,
     imageUri,
     liveUrl,
@@ -34,7 +26,7 @@ const Card: React.FC<cardProp> = ({
             <div className="card__side card__side--back">
                 <div className="card__back-box">
                     <h3 className="heading-tertiary heading-tertiary--white u-margin-top-small u-margin-bottom-small">
-                        info
+                        {name}
                     </h3>
                     <a href="#popup" className="btn btn--white">
                         Project Info

@@ -1,17 +1,24 @@
+.section-header {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
 .section-about {
-    padding-top: $padding-top-section;
-    padding-bottom: $padding-bottom-section;
+    padding-top: $padding-top-section-2;
+    padding-bottom: $padding-bottom-section-2;
 }
 
 .section-skills {
-    padding-top: $padding-top-section;
-    padding-bottom: $padding-bottom-section;
+    padding-top: $padding-top-section-2;
+    padding-bottom: $padding-bottom-section-2;
     background-color: $color-green-3;
 }
 
 .section-projects {
-    padding-top: $padding-top-section;
-    padding-bottom: $padding-bottom-section;
+    padding-top: $padding-top-section-2;
+    padding-bottom: $padding-bottom-section-2;
     background: linear-gradient(
             to right bottom,
             rgba($color-white, 0.8),
@@ -22,13 +29,19 @@
 }
 
 .section-education {
-    padding-top: $padding-top-section;
-    padding-bottom: $padding-bottom-section;
+    padding-top: $padding-top-section-2;
+    padding-bottom: $padding-bottom-section-1;
     background-color: $color-grey-1;
 }
 
 .section-contact-me {
-    padding-top: $padding-top-section;
-    padding-bottom: $padding-bottom-section;
-    background-color: $color-green-3;
+    padding-top: $padding-top-section-1;
+    padding-bottom: $padding-bottom-section-1;
+    background-color: $color-grey-1;
+}
+
+.section-footer {
+    padding-top: $padding-top-section-1;
+    padding-bottom: $padding-bottom-section-1;
+    background-color: $color-grey-4;
 }

@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
                     <span>S</span>
                 </h2>
             </div>
-            <div className="projects">
+            <div className="projects" id="projects">
                 <div className="row u-text-center u-items-center u-flex-wrap-wrap">
                     <div className="col-1-of-1">
                         {projects.map((project, idx) => {

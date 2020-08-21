@@ -5,7 +5,7 @@ import Certificate from '../components/Certificate';
 
 const Education: React.FC = () => {
     return (
-        <div className="section-education">
+        <div className="section-education" id="education">
             <div className="u-text-center u-margin-bottom-large">
                 <h2 className="heading-secondary heading-secondary__text-title-1">
                     <span>E</span>

@@ -67,7 +67,7 @@ const AboutMe: React.FC = () => {
     }, [intersectionParagraph, intersectionPhoto]);
 
     return (
-        <div className="section-about">
+        <div className="section-about" id="about-me">
             <div className="u-text-center u-margin-bottom-large">
                 <h2 className="heading-secondary heading-secondary__text-title-1">
                     <span>A</span>

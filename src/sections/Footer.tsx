@@ -64,7 +64,10 @@ const Footer: React.FC = () => {
                                         <span className="paragraph__footer--developed">
                                             Developed by
                                         </span>
-                                        &nbsp; Roger Takeshita
+                                        &nbsp;
+                                        <span className="paragraph__footer--name">
+                                            Roger Takeshita
+                                        </span>
                                     </a>
                                     <br />
                                     This website was developed using React.js,

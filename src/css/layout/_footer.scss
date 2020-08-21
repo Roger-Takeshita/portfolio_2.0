@@ -18,11 +18,11 @@
     &__resume-box {
         display: flex;
         justify-content: center;
-        margin-bottom: $margin-small;
+        margin-bottom: $margin-medium;
     }
     &__resume-paragraph {
-        font-size: $default-font-size;
-        line-height: $default-font-size;
+        font-size: 1.5rem;
+        line-height: 0.5rem;
     }
     &__resume-link {
         text-decoration: none;

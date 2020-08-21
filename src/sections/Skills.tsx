@@ -4,7 +4,7 @@ import SkillsLogos from '../components/SkillsLogos';
 
 const Skills: React.FC = () => {
     return (
-        <div className="section-skills">
+        <div className="section-skills" id="skills">
             <div className="u-text-center u-margin-bottom-large">
                 <h2 className="heading-secondary heading-secondary__text-title-1">
                     <span>S</span>

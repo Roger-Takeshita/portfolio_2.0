@@ -26,6 +26,13 @@
         url('../assets/fonts/DancingScript.ttf') format('opentype');
 }
 
+@font-face {
+    font-family: 'Allura-Regular';
+    font-weight: 400;
+    src: local('Allura-Regular'),
+        url('../assets/fonts/Allura-Regular.ttf') format('opentype');
+}
+
 body {
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
@@ -185,6 +192,10 @@ body {
         &--developed {
             font-family: DancingScript-Bold, sans-serif;
             font-size: 1.5rem;
+        }
+        &--name {
+            font-family: Allura-Regular, sans-serif;
+            font-size: 1.8rem;
         }
     }
 }

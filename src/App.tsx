@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from './components/Modal';
+import Navbar from './components/Navbar';
 import AboutMe from './sections/AboutMe';
 import ContactMe from './sections/ContactMe';
 import Education from './sections/Education';
@@ -10,8 +11,9 @@ import Skills from './sections/Skills';
 
 const App: React.FC = () => {
     return (
-        <div>
+        <div className="App">
             <header>
+                <Navbar />
                 <HeaderPortfolio />
             </header>
 

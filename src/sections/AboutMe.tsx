@@ -1,8 +1,71 @@
-import React from 'react';
+import { gsap } from 'gsap';
+import React, { useEffect, useRef } from 'react';
+import { useIntersection } from 'react-use';
 import profilePhoto from '../assets/images/profile_pic.jpeg';
 import Journal from '../components/Journal';
 
 const AboutMe: React.FC = () => {
+    let paragraphRef = useRef(null);
+    let photoRef = useRef(null);
+
+    const intersectionParagraph = useIntersection(paragraphRef, {
+        root: null, // browser viewport
+        rootMargin: '100px', // Margin, 0px only when hits the end it will animate
+        threshold: 1, // Do the animation only after the element is complete visible
+    });
+
+    const intersectionPhoto = useIntersection(photoRef, {
+        root: null,
+        rootMargin: '183px',
+        threshold: 1,
+    });
+
+    const fadeInFromLeft = (element: string) => {
+        gsap.to(element, 2, {
+            opacity: 1,
+            x: 0,
+            ease: 'power4.out',
+            stagger: {
+                amount: 0.15,
+            },
+        });
+    };
+
+    const fadeOutToRight = (element: string) => {
+        gsap.to(element, 2, {
+            opacity: 0,
+            x: 285,
+            ease: 'power4.out',
+        });
+    };
+
+    const moveToRight = (element: string) => {
+        gsap.to(element, 3, {
+            x: 0,
+            ease: 'power4.out',
+            stagger: {
+                amount: 0.15,
+            },
+        });
+    };
+
+    const moveFromLeft = (element: string) => {
+        gsap.to(element, 3, {
+            x: -285,
+            ease: 'power4.out',
+        });
+    };
+
+    useEffect(() => {
+        intersectionParagraph && intersectionParagraph.intersectionRatio < 1
+            ? fadeOutToRight('.paragraph-fade-in')
+            : fadeInFromLeft('.paragraph-fade-in');
+
+        intersectionPhoto && intersectionPhoto.intersectionRatio < 1
+            ? moveFromLeft('.block-move')
+            : moveToRight('.block-move');
+    }, [intersectionParagraph, intersectionPhoto]);
+
     return (
         <div className="section-about">
             <div className="u-text-center u-margin-bottom-large">
@@ -18,15 +81,21 @@ const AboutMe: React.FC = () => {
                 </h2>
             </div>
             <div className="row u-text-center u-items-center">
-                <div className="col-1-of-2">
-                    <p className="paragraph">
+                <div
+                    className="col-1-of-2 paragraph-fade-in"
+                    ref={paragraphRef}
+                >
+                    <p className="paragraph paragraph">
                         Curious and detail-oriented, I approach problems with
                         creativity and efficiency. My background in engineering
                         has allowed me to develop strong problem-solving skills
                         and the love for automating tasks.
                     </p>
                 </div>
-                <div className="col-1-of-2 u-center-item">
+                <div
+                    className="col-1-of-2 u-center-item block-move"
+                    ref={photoRef}
+                >
                     <Journal
                         imgURI={profilePhoto}
                         titleOne="Full-stack developer"

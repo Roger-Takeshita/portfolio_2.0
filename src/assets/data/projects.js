@@ -25,7 +25,7 @@ export const projects = [
             <i className="devicon-nodejs-plain colored icon__project" />,
             <img src={reduxLogo} alt="logo" className="icon__project--local" />,
             <i
-                class="devicon-javascript-plain colored icon__project"
+                className="devicon-javascript-plain colored icon__project"
                 style={{ background: 'black' }}
             />,
             <i className="devicon-html5-plain colored icon__project" />,
@@ -54,7 +54,7 @@ export const projects = [
             />,
             <i className="devicon-nodejs-plain colored icon__project" />,
             <i
-                class="devicon-javascript-plain colored icon__project"
+                className="devicon-javascript-plain colored icon__project"
                 style={{ background: 'black' }}
             />,
             <i className="devicon-html5-plain colored icon__project" />,
@@ -78,7 +78,7 @@ export const projects = [
                 className="icon__project--local"
             />,
             <i
-                class="devicon-javascript-plain colored icon__project"
+                className="devicon-javascript-plain colored icon__project"
                 style={{ background: 'black' }}
             />,
             <i className="devicon-jquery-plain colored icon__project" />,
@@ -124,7 +124,7 @@ export const projects = [
         repoUrl: 'https://github.com/Roger-Takeshita/game-minesweeper',
         technologies: [
             <i
-                class="devicon-javascript-plain colored icon__project"
+                className="devicon-javascript-plain colored icon__project"
                 style={{ background: 'black' }}
             />,
             <i className="devicon-jquery-plain colored icon__project" />,

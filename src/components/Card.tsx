@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { setModal } from '../redux/modal';
 import { CardProps } from '../utils/interface';
 
 const Card: React.FC<CardProps> = ({
@@ -8,7 +10,13 @@ const Card: React.FC<CardProps> = ({
     repoUrl,
     technologies,
     description,
+    setModal,
 }) => {
+    const handleClick = (e: any, data: CardProps) => {
+        e.preventDefault();
+        setModal && setModal(data);
+    };
+
     return (
         <div className="card u-margin-xsmall">
             <div className="card__side card__side--front">
@@ -28,11 +36,24 @@ const Card: React.FC<CardProps> = ({
                     <h3 className="heading-tertiary heading-tertiary--white u-margin-top-small u-margin-bottom-small">
                         {name}
                     </h3>
-                    <a href="#popup" className="btn btn--white">
+                    <a
+                        href="/"
+                        onClick={(e) =>
+                            handleClick(e, {
+                                name,
+                                imageUri,
+                                liveUrl,
+                                repoUrl,
+                                technologies,
+                                description,
+                            })
+                        }
+                        className="btn btn--white"
+                    >
                         Project Info
                     </a>
                     <a
-                        href={liveUrl.toString()}
+                        href={liveUrl}
                         rel="noopener noreferrer"
                         target="_blank"
                         className="btn btn--white"
@@ -40,7 +61,7 @@ const Card: React.FC<CardProps> = ({
                         Live Project
                     </a>
                     <a
-                        href={repoUrl.toString()}
+                        href={repoUrl}
                         rel="noopener noreferrer"
                         target="_blank"
                         className="btn btn--white"
@@ -53,4 +74,8 @@ const Card: React.FC<CardProps> = ({
     );
 };
 
-export default Card;
+const mapDispatchToProps = (dispatch: any) => ({
+    setModal: (data: CardProps) => dispatch(setModal(data)),
+});
+
+export default connect(null, mapDispatchToProps)(Card);

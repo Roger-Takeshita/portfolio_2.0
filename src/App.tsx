@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from './components/Modal';
 import AboutMe from './sections/AboutMe';
 import ContactMe from './sections/ContactMe';
 import Education from './sections/Education';
@@ -22,6 +23,7 @@ const App: React.FC = () => {
                 <ContactMe />
                 <Footer />
             </main>
+            <Modal />
         </div>
     );
 };

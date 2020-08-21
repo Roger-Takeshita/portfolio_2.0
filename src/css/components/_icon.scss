@@ -19,4 +19,16 @@
             height: $icon-footer-size * 2.5;
         }
     }
+    &__project {
+        font-size: $icon-footer-size;
+        width: $icon-footer-size;
+        height: $icon-footer-size;
+
+        &--local {
+            height: $icon-footer-size;
+        }
+        &--resume {
+            height: $icon-footer-size * 2.5;
+        }
+    }
 }

@@ -98,6 +98,16 @@ body {
             }
         }
     }
+    &__text-title-2 {
+        font-family: WSJ-Bold, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &--black {
+        padding: 0 $padding-small;
+        border-bottom: 1px solid $color-black;
+    }
 }
 
 .heading-tertiary {

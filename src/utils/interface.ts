@@ -1,27 +1,29 @@
 export interface CardProps {
-    name: String;
-    imageUri: String;
-    liveUrl: String;
-    repoUrl: String;
+    name: string;
+    imageUri: string;
+    liveUrl?: string;
+    repoUrl?: string;
     technologies: JSX.Element[];
-    description: String;
+    description: string;
+    // setModal?: ((object: object | undefined) => object) | undefined;
+    setModal?: (object: any) => any;
 }
 
 export interface CertificateProps {
-    institution: String;
-    course: String;
-    date?: String;
-    location?: String;
-    url: String;
-    logoUri: String;
-    description?: String;
+    institution: string;
+    course: string;
+    date?: string;
+    location?: string;
+    url: string;
+    logoUri: string;
+    description?: string;
 }
 
 export interface JournalProps {
-    imgURI: String;
-    titleOne: String;
-    titleTwo?: String;
-    text: String;
+    imgURI: string;
+    titleOne: string;
+    titleTwo?: string;
+    text: string;
 }
 
 export interface Skills {
@@ -38,4 +40,13 @@ export interface FormEmail {
     name: string;
     email: string;
     msg: string;
+}
+
+export interface ModalProps {
+    modal: CardProps;
+    clearModal: () => void;
+}
+
+export interface KeyValue {
+    [key: string]: string | object;
 }

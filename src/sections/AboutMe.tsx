@@ -1,12 +1,13 @@
 import { gsap } from 'gsap';
 import React, { useEffect, useRef } from 'react';
+import { Element } from 'react-scroll';
 import { useIntersection } from 'react-use';
 import profilePhoto from '../assets/images/profile_pic.jpeg';
 import Journal from '../components/Journal';
 
 const AboutMe: React.FC = () => {
-    let paragraphRef = useRef(null);
-    let photoRef = useRef(null);
+    const paragraphRef = useRef(null);
+    const photoRef = useRef(null);
 
     const intersectionParagraph = useIntersection(paragraphRef, {
         root: null, // browser viewport
@@ -67,39 +68,41 @@ const AboutMe: React.FC = () => {
     }, [intersectionParagraph, intersectionPhoto]);
 
     return (
-        <div className="section-about" id="about-me">
-            <div className="u-text-center u-margin-bottom-large">
-                <h2 className="heading-secondary heading-secondary__text-title-1">
-                    <span>A</span>
-                    <span>B</span>
-                    <span>O</span>
-                    <span>U</span>
-                    <span>T</span>
-                    <span></span>
-                    <span>M</span>
-                    <span>E</span>
-                </h2>
-            </div>
-            <div className="row u-text-center u-items-center">
-                <div
-                    className="col-1-of-2 paragraph-fade-in"
-                    ref={paragraphRef}
-                >
-                    <p className="paragraph paragraph">
-                        Curious and detail-oriented, I approach problems with
-                        creativity and efficiency. My background in engineering
-                        has allowed me to develop strong problem-solving skills
-                        and the love for automating tasks.
-                    </p>
+        <Element name="about-me">
+            <div className="section-about">
+                <div className="u-text-center u-margin-bottom-large">
+                    <h2 className="heading-secondary heading-secondary__text-title-1">
+                        <span>A</span>
+                        <span>B</span>
+                        <span>O</span>
+                        <span>U</span>
+                        <span>T</span>
+                        <span></span>
+                        <span>M</span>
+                        <span>E</span>
+                    </h2>
                 </div>
-                <div
-                    className="col-1-of-2 u-center-item block-move"
-                    ref={photoRef}
-                >
-                    <Journal
-                        imgURI={profilePhoto}
-                        titleOne="Full-stack developer"
-                        text="Curious and detail-oriented, I approach problems with
+                <div className="row u-text-center u-items-center">
+                    <div
+                        className="col-1-of-2 paragraph-fade-in"
+                        ref={paragraphRef}
+                    >
+                        <p className="paragraph paragraph">
+                            Curious and detail-oriented, I approach problems
+                            with creativity and efficiency. My background in
+                            engineering has allowed me to develop strong
+                            problem-solving skills and the love for automating
+                            tasks.
+                        </p>
+                    </div>
+                    <div
+                        className="col-1-of-2 u-center-item block-move"
+                        ref={photoRef}
+                    >
+                        <Journal
+                            imgURI={profilePhoto}
+                            titleOne="Full-stack developer"
+                            text="Curious and detail-oriented, I approach problems with
                         creativity and efficiency. My background in engineering
                         has allowed me to develop strong problem-solving skills
                         and the love for automating tasks. Working with
@@ -116,10 +119,11 @@ const AboutMe: React.FC = () => {
                         websites for Toronto’s small businesses and artists, in
                         order to provide them with an easy way to transition to
                         to sell online during the pandemic."
-                    />
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
+        </Element>
     );
 };
 

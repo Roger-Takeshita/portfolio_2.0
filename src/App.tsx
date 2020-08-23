@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from './components/Modal';
+import ModalMSg from './components/ModalMsg';
 import Navbar from './components/Navbar';
 import AboutMe from './sections/AboutMe';
 import ContactMe from './sections/ContactMe';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
                 <Footer />
             </main>
             <Modal />
+            <ModalMSg />
         </div>
     );
 };

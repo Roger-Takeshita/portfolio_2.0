@@ -5,7 +5,7 @@ import pdfLogo from '../assets/images/logos/pdf.svg';
 const Footer: React.FC = () => {
     return (
         <div className="section-footer">
-            <div className="row u-text-center">
+            <div className="row">
                 <div className="col-1-of-1">
                     <div className="footer__resume">
                         <div className="footer__resume-box">
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="row-gap u-text-center u-items-center u-flex-wrap-wrap">
+                    <div className="row-gap u-text-center u-items-center ">
                         <div className="col-1-of-2">
                             <div className="footer__navigation">
                                 <ul className="footer__list">

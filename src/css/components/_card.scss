@@ -2,11 +2,12 @@
     -moz-perspective: 150rem;
     perspective: 150rem;
     position: relative;
-    height: $card-height;
-    width: $card-width;
+    height: $card-height * 1rem;
+    width: $card-width * 1rem;
     display: inline-flex;
+
     &__side {
-        height: $card-height;
+        height: $card-height * 1rem;
         width: 100%;
         transition: all 0.5s ease;
         position: absolute;
@@ -62,6 +63,15 @@
 
         a {
             margin-top: 2rem;
+        }
+    }
+    @include mq-manager(phone) {
+        // width < 600px ?
+        height: resize($card-height, $resize-to-phone);
+        width: resize($card-width, $resize-to-phone);
+
+        &__side {
+            height: resize($card-height, $resize-to-phone);
         }
     }
 }

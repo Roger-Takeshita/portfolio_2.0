@@ -2,10 +2,7 @@
     max-width: $grid-width;
     margin: 0 auto;
     display: flex;
-
-    &:not(:last-child) {
-        margin-bottom: $grid-gap-vertical;
-    }
+    justify-content: center;
 
     @include clearfix;
 
@@ -36,12 +33,27 @@
     .col-3-of-4 {
         width: calc(3 * 100% / 4);
     }
+
+    @include mq-manager(mid-tab-land-tab-port) {
+        // width < 1050px ?
+        flex-direction: column;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: $grid-gap-horizontal;
+        }
+
+        .col-1-of-2 {
+            min-width: 20rem;
+        }
+    }
 }
 
 .row-gap {
     max-width: $grid-width;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
 
     &:not(:last-child) {
         margin-bottom: $grid-gap-vertical;
@@ -90,5 +102,31 @@
         width: calc(
             (3 * ((100% - 3 * #{$grid-gap-horizontal})) / 4) + 2 * #{$grid-gap-horizontal}
         );
+    }
+
+    @include mq-manager(mid-tab-land-tab-port) {
+        // width < 1050px ?
+        flex-direction: column;
+        align-items: center;
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        [class^='col-'] {
+            float: left;
+            font-size: 2rem;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+
+        .col-1-of-1 {
+            display: flex;
+            width: 80%;
+        }
+        .col-1-of-2 {
+            width: 80%;
+        }
     }
 }

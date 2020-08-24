@@ -17,3 +17,48 @@
     display: inline-flex;
     justify-content: $align;
 }
+
+@mixin mq-manager($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {
+            // 600px
+            @content;
+        }
+    }
+    @if $breakpoint == mid-tab-port-phone {
+        @media (max-width: 46.88em) {
+            // 750px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) {
+            // 900px
+            @content;
+        }
+    }
+    @if $breakpoint == mid-tab-land-tab-port {
+        @media (max-width: 65.63em) {
+            // 1050px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) {
+            // 1200px
+            @content;
+        }
+    }
+    @if $breakpoint == mid-desk-tab-land {
+        @media (max-width: 81.25em) {
+            // 1300px
+            @content;
+        }
+    }
+    @if $breakpoint == desk {
+        @media (max-width: 112.5em) {
+            // 1800px
+            @content;
+        }
+    }
+}

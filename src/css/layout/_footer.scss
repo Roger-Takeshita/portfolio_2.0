@@ -3,6 +3,8 @@
         border-top: 0.1rem solid $color-grey-1;
         padding-top: 2rem;
         display: flex;
+        align-items: center;
+        min-height: 7rem;
         flex-direction: column;
     }
     &__list {
@@ -31,6 +33,17 @@
 
         &:hover {
             transform: scale(1.2);
+        }
+    }
+    @include mq-manager(mid-tab-land-tab-port) {
+        // width < 1050px ?
+
+        &__navigation {
+            display: flex;
+            flex-grow: 1;
+        }
+        &__list {
+            justify-content: center;
         }
     }
 }

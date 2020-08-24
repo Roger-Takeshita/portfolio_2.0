@@ -31,4 +31,25 @@
             height: $icon-footer-size * 2.5;
         }
     }
+    @include mq-manager(desk) {
+        // width < 1800px ?
+    }
+    @include mq-manager(mid-desk-tab-land) {
+        // width < 1300px ?
+    }
+    @include mq-manager(tab-land) {
+        // width < 1200px ?
+    }
+    @include mq-manager(mid-tab-land-tab-port) {
+        // width < 1050px ?
+    }
+    @include mq-manager(tab-port) {
+        // width < 900px ?
+    }
+    @include mq-manager(mid-tab-port-phone) {
+        // width < 750px ?
+    }
+    @include mq-manager(phone) {
+        // width < 600px ?
+    }
 }

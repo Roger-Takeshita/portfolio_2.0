@@ -25,21 +25,28 @@ $margin-small: 3rem;
 $margin-medium: 6rem;
 $margin-large: 9rem;
 
+$card-height: 35;
+$card-width: 50;
+
+$certificate-height: 35;
+$certificate-width: 50;
+
+$default-font-size: 1.6;
+
+$border-radius: 0.5rem;
+
 $padding-top-section-1: 5rem;
 $padding-bottom-section-1: 5rem;
 $padding-top-section-2: 13rem;
 $padding-bottom-section-2: 13rem;
 
-$card-height: 35rem;
-$card-width: 50rem;
-
-$certificate-height: 35rem;
-$certificate-width: 50rem;
-
-$default-font-size: 1.6rem;
-
-$border-radius: 0.5rem;
-
-$logo-box-technologies-size: 10rem;
+$logo-box-technologies-size: 10;
 $icon-skill-size: 4rem;
 $icon-footer-size: 3rem;
+
+$resize-to-mid-desk-tab-land: 0.95;
+$resize-to-tab-land: 0.9;
+$resize-to-mid-tab-land-tab-port: 0.85;
+$resize-to-tab-port: 0.8;
+$resize-to-mid-tab-port-phone: 0.75;
+$resize-to-phone: 0.7;

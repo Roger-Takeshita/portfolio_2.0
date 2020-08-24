@@ -27,7 +27,7 @@
         }
     }
     &__input {
-        font-size: $default-font-size;
+        font-size: $default-font-size * 1rem;
         font-family: inherit;
         color: $color-black;
         padding: 1rem 1.5rem;
@@ -62,7 +62,7 @@
         }
     }
     &__label {
-        font-size: $default-font-size;
+        font-size: $default-font-size * 1rem;
         font-weight: 700;
         margin-left: 2rem;
         margin-top: 0.7rem;
@@ -77,9 +77,25 @@
         visibility: hidden;
         transform: translateY(-4rem);
     }
-    &_textarea:placeholder-shown + &__label {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-4rem);
+    @include mq-manager(mid-tab-land-tab-port) {
+        &__input {
+            &--message {
+                height: 15rem;
+            }
+        }
+        &__group {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            &--ctrl {
+                align-items: flex-end;
+            }
+        }
+    }
+    @include mq-manager(tab-land) {
+        // width < 1200px ?
+        width: 90%;
+        height: 90%;
     }
 }

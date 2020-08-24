@@ -1,13 +1,14 @@
-@import './base/variables';
 @import './base/mixin';
+@import './base/functions';
+@import './base/variables';
 @import './base/utilities';
 @import './base/typography';
 @import './base/animations';
 @import './base/base';
 
+@import './layout/navbar';
 @import './layout/header';
 @import './layout/grid';
-@import './layout/navigation';
 @import './layout/sections';
 @import './layout/footer';
 
@@ -20,4 +21,3 @@
 @import './components/icon';
 @import './components/skills';
 @import './components/modal';
-@import './components/navbar';

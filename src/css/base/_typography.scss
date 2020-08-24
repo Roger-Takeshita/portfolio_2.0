@@ -143,6 +143,11 @@ body {
         align-items: center;
         height: 4rem;
     }
+
+    @include mq-manager(mid-tab-land-tab-port) {
+        // width < 1050px ?
+        margin-top: $margin-small;
+    }
 }
 
 .heading-quaternary {

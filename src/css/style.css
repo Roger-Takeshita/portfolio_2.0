@@ -29,6 +29,15 @@
       flex-wrap: wrap !important;
 }
 
+.u-item-right {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .u-text-center {
   text-align: center !important;
 }
@@ -895,7 +904,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: auto;
   text-align: center;
   font-size: 0.5rem;
   padding: 1.5rem;

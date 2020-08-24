@@ -15,7 +15,7 @@ export const setModalMsg = (data) => {
                 'default_service',
                 'portfolio',
                 data,
-                'user_svVzdsNvPIpH9UZdGsjUwd'
+                'user_svVzdsNvPIpH9UZdGsjUw'
             );
 
             payload = {

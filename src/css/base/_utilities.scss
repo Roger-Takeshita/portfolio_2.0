@@ -20,6 +20,11 @@
     flex-wrap: wrap !important;
 }
 
+.u-item-right {
+    display: flex !important;
+    justify-content: flex-end;
+}
+
 //= Text
 .u-text-center {
     text-align: center !important;

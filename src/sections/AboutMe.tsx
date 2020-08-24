@@ -52,7 +52,7 @@ const AboutMe: React.FC = () => {
 
     const moveFromLeft = (element: string) => {
         gsap.to(element, 3, {
-            x: -285,
+            x: -345,
             ease: 'power4.out',
         });
     };
@@ -87,7 +87,7 @@ const AboutMe: React.FC = () => {
                         className="col-1-of-2 paragraph-fade-in"
                         ref={paragraphRef}
                     >
-                        <p className="paragraph paragraph">
+                        <p className="paragraph">
                             Curious and detail-oriented, I approach problems
                             with creativity and efficiency. My background in
                             engineering has allowed me to develop strong
@@ -96,7 +96,7 @@ const AboutMe: React.FC = () => {
                         </p>
                     </div>
                     <div
-                        className="col-1-of-2 u-center-item block-move"
+                        className="col-1-of-2 u-item-right block-move"
                         ref={photoRef}
                     >
                         <Journal

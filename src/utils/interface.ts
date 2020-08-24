@@ -47,6 +47,19 @@ export interface ModalProps {
     clearModal: () => void;
 }
 
+export interface ModalMsgProps {
+    modalMsg: {
+        code: number;
+        title: string;
+        msg: string;
+    };
+    clearModalMsg: () => void;
+}
+
 export interface KeyValue {
     [key: string]: string | object;
+}
+
+export interface ReduxForm {
+    setModalMsg: (object: any) => any;
 }

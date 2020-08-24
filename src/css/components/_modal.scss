@@ -98,7 +98,7 @@
 .modal-msg {
     position: fixed;
     bottom: 0;
-    right: 2rem;
+    right: 5%;
     color: $color-black;
     width: 40rem;
     border-top-left-radius: $border-radius;
@@ -118,13 +118,13 @@
     }
     &__title {
         font-family: WSJ-Bold, sans-serif;
-        text-transform: uppercase;
+        text-transform: capitalize;
         padding-right: $padding-medium;
         flex-grow: 1;
-        font-size: 2rem;
+        font-size: $default-font-size;
         height: 4rem;
         line-height: 4rem;
-        padding-left: $padding-small;
+        text-align: center;
         align-items: flex-end;
         color: $color-white;
     }
@@ -154,19 +154,26 @@
     &__body {
         display: flex;
         background-color: $color-grey-1;
-        height: 10rem;
+        height: 7rem;
+        padding: $padding-xsmall;
     }
     &__msg {
         height: 100%;
         width: 100%;
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-family: WSJ-Regular, sans-serif;
-        display: flex;
+        display: inline-block;
         text-align: center;
-        justify-content: center;
-        align-items: center;
     }
     &:hover {
         opacity: 1;
+    }
+    &--visible-false {
+        opacity: 0;
+        display: none;
+    }
+    &--visible-true {
+        opacity: 1;
+        display: flex;
     }
 }

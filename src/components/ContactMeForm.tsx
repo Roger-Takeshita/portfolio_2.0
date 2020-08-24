@@ -1,8 +1,9 @@
-import emailjs from 'emailjs-com';
 import React, { ChangeEvent, FormEvent, useState } from 'react';
-import { FormEmail } from '../utils/interface';
+import { connect } from 'react-redux';
+import { setModalMsg } from '../redux/modalMsg';
+import { FormEmail, ReduxForm } from '../utils/interface';
 
-const ContactMeForm: React.FC = () => {
+const ContactMeForm: React.FC<ReduxForm> = ({ setModalMsg }) => {
     const [form, setForm] = useState<FormEmail>({
         name: '',
         email: '',
@@ -20,30 +21,17 @@ const ContactMeForm: React.FC = () => {
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        const data = {
+        await setModalMsg({
             user_name: form.name,
             user_email: form.email,
             message_html: form.msg,
-        };
+        });
 
-        try {
-            await emailjs.send(
-                'default_service',
-                'portfolio',
-                data,
-                'user_svVzdsNvPIpH9UZdGsjUw'
-            );
-
-            //TODO ADD the popup
-
-            setForm({
-                name: '',
-                email: '',
-                msg: '',
-            });
-        } catch (error) {
-            console.log(error);
-        }
+        setForm({
+            name: '',
+            email: '',
+            msg: '',
+        });
     };
 
     const emailVerification = (email: string) => {
@@ -149,4 +137,8 @@ const ContactMeForm: React.FC = () => {
     );
 };
 
-export default ContactMeForm;
+const mapDispatchToProps = (dispatch: any) => ({
+    setModalMsg: (data: FormEmail) => dispatch(setModalMsg(data)),
+});
+
+export default connect(null, mapDispatchToProps)(ContactMeForm);

@@ -143,6 +143,8 @@ body {
         border-radius: $border-radius;
         align-items: center;
         height: 4rem;
+        margin-top: $margin-small;
+        margin-bottom: $margin-small;
     }
 
     @include mq-manager(mid-tab-land-tab-port) {
@@ -467,6 +469,10 @@ body {
         &__quotes {
             font-size: resize($h3-font-size, $resize-to-phone * 0.9);
             font-family: WSJ-Bold, sans-serif;
+        }
+        &--white {
+            margin-top: $margin-xsmall;
+            margin-bottom: $margin-xsmall;
         }
     }
 }

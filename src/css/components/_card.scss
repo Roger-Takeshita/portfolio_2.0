@@ -73,5 +73,10 @@
         &__side {
             height: resize($card-height, $resize-to-phone);
         }
+        &__back-box {
+            a {
+                margin-top: 1.5rem;
+            }
+        }
     }
 }

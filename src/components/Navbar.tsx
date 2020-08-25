@@ -3,6 +3,31 @@ import { Events, Link, scrollSpy } from 'react-scroll';
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
+    const [btnStatus, setBtnStatus] = useState(false);
+    const [windowDom, setWindowDom] = useState({
+        width: 0,
+        height: 0,
+    });
+
+    useEffect(() => {
+        updateWindowDimensions();
+    }, []);
+
+    useEffect(() => {
+        if (windowDom.width < 1050) {
+            console.log('entrou');
+            setBtnStatus(false);
+        }
+        window.addEventListener('resize', updateWindowDimensions);
+
+        return () => {
+            window.removeEventListener('resize', updateWindowDimensions);
+        };
+    }, [windowDom]);
+
+    const updateWindowDimensions = () => {
+        setWindowDom({ width: window.innerWidth, height: window.innerHeight });
+    };
 
     useEffect(() => {
         Events.scrollEvent.register('begin', function (to, element) {
@@ -29,8 +54,22 @@ const Navbar = () => {
         }
     };
 
+    const handleClick = (e: any) => {
+        e.preventDefault();
+        setBtnStatus((prevState) => !prevState);
+        console.log(btnStatus);
+    };
+
     return (
-        <div className={visible ? 'navbar navbar--visible' : 'navbar'}>
+        <div
+            className={
+                visible
+                    ? `navbar navbar--visible ${
+                          btnStatus ? 'navbar--column' : ''
+                      }`
+                    : `navbar ${btnStatus ? 'navbar--column' : ''}`
+            }
+        >
             <Link
                 className="navbar__logo"
                 to="header-portfolio"
@@ -41,7 +80,11 @@ const Navbar = () => {
             >
                 Roger Takeshita
             </Link>
-            <ul className="navbar__list">
+            <ul
+                className={`navbar__list ${
+                    btnStatus ? 'navbar__list--visible' : 'navbar__list--hidden'
+                }`}
+            >
                 <li className="navbar__item">
                     <Link
                         className="navbar__link"
@@ -113,6 +156,24 @@ const Navbar = () => {
                     </Link>
                 </li>
             </ul>
+            <div
+                onClick={handleClick}
+                className={
+                    visible
+                        ? `navbar__btn ${
+                              btnStatus
+                                  ? 'navbar__btn--open'
+                                  : 'navbar__btn--close'
+                          }`
+                        : `navbar__btn navbar__btn--fade ${
+                              btnStatus
+                                  ? 'navbar__btn--open'
+                                  : 'navbar__btn--close'
+                          }`
+                }
+            >
+                <div className="navbar__btn__burger"></div>
+            </div>
         </div>
     );
 };

@@ -33,7 +33,7 @@ const Card: React.FC<CardProps> = ({
             </div>
             <div className="card__side card__side--back">
                 <div className="card__back-box">
-                    <h3 className="heading-tertiary heading-tertiary--white u-margin-top-small u-margin-bottom-small">
+                    <h3 className="heading-tertiary heading-tertiary--white">
                         {name}
                     </h3>
                     <a

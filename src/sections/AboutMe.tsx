@@ -9,9 +9,13 @@ const AboutMe: React.FC = () => {
     const paragraphRef = useRef(null);
     const photoRef = useRef(null);
     const [windowDom, setWindowDom] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: 0,
+        height: 0,
     });
+
+    useEffect(() => {
+        updateWindowDimensions();
+    }, []);
 
     useEffect(() => {
         window.addEventListener('resize', updateWindowDimensions);
@@ -82,8 +86,6 @@ const AboutMe: React.FC = () => {
                 moveToRight('.block-move');
                 fadeInToLeft('.paragraph-fade-in');
             }
-            // intersectionParagraph && intersectionParagraph.intersectionRatio < 1 ? fadeOutToRight('.paragraph-fade-in') : fadeInToLeft('.paragraph-fade-in');
-            // intersectionPhoto && intersectionPhoto.intersectionRatio < 1 ? moveToLeft('.block-move') : moveToRight('.block-move');
         }
     }, [intersectionParagraph, intersectionPhoto, windowDom]);
 

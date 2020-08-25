@@ -2588,3 +2588,15 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+
+@media (max-width: 37.5em) {
+  .modal-msg {
+    position: fixed;
+    bottom: 0;
+    right: 0%;
+    width: 100%;
+  }
+  .modal-msg__body {
+    height: 8.5rem;
+  }
+}

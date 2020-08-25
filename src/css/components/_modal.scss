@@ -176,4 +176,15 @@
         opacity: 1;
         display: flex;
     }
+
+    @include mq-manager(phone) {
+        // width < 600px ?
+        position: fixed;
+        bottom: 0;
+        right: 0%;
+        width: 100%;
+        &__body {
+            height: 8.5rem;
+        }
+    }
 }

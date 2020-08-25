@@ -7,7 +7,7 @@ const Skills: React.FC = () => {
     return (
         <Element name="skills">
             <div className="section-skills">
-                <div className="u-text-center u-margin-bottom-large">
+                <div className="u-text-center">
                     <h2 className="heading-secondary heading-secondary__text-title-1">
                         <span>S</span>
                         <span>K</span>

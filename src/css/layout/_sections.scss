@@ -6,19 +6,27 @@
 }
 
 .section-about {
-    padding-top: $padding-top-section-2;
-    padding-bottom: $padding-bottom-section-2;
+    padding-top: $padding-top-section-2 * 1rem;
+    padding-bottom: $padding-bottom-section-2 * 1rem;
+
+    &__row {
+        display: flex;
+    }
+    &__photo {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 .section-skills {
-    padding-top: $padding-top-section-2;
-    padding-bottom: $padding-bottom-section-2;
+    padding-top: $padding-top-section-2 * 1rem;
+    padding-bottom: $padding-bottom-section-2 * 1rem;
     background-color: $color-green-3;
 }
 
 .section-projects {
-    padding-top: $padding-top-section-2;
-    padding-bottom: $padding-bottom-section-2;
+    padding-top: $padding-top-section-2 * 1rem;
+    padding-bottom: $padding-bottom-section-2 * 1rem;
     background: linear-gradient(
             to right bottom,
             rgba($color-white, 0.8),
@@ -29,19 +37,285 @@
 }
 
 .section-education {
-    padding-top: $padding-top-section-2;
-    padding-bottom: $padding-bottom-section-1;
+    padding-top: $padding-top-section-2 * 1rem;
+    padding-bottom: $padding-bottom-section-1 * 1rem;
     background-color: $color-grey-1;
 }
 
 .section-contact-me {
-    padding-top: $padding-top-section-1;
-    padding-bottom: $padding-bottom-section-1;
+    padding-top: $padding-top-section-1 * 1rem;
+    padding-bottom: $padding-bottom-section-1 * 1rem;
     background-color: $color-grey-1;
 }
 
 .section-footer {
-    padding-top: $padding-top-section-1;
-    padding-bottom: $padding-bottom-section-1;
+    padding-top: $padding-top-section-1 * 1rem;
+    padding-bottom: $padding-bottom-section-1 * 1rem;
     background-color: $color-grey-4;
+}
+
+@include mq-manager(mid-desk-tab-land) {
+    // width < 1300px ?
+    .section-about {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-desk-tab-land
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-2,
+            $resize-to-mid-desk-tab-land
+        );
+    }
+
+    .section-skills {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-desk-tab-land
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-2,
+            $resize-to-mid-desk-tab-land
+        );
+    }
+
+    .section-projects {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-desk-tab-land
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-2,
+            $resize-to-mid-desk-tab-land
+        );
+    }
+
+    .section-education {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-desk-tab-land
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-1,
+            $resize-to-mid-desk-tab-land
+        );
+    }
+
+    .section-contact-me {
+        padding-top: resize(
+            $padding-top-section-1,
+            $resize-to-mid-desk-tab-land
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-1,
+            $resize-to-mid-desk-tab-land
+        );
+    }
+}
+@include mq-manager(tab-land) {
+    // width < 1200px ?
+    .section-about {
+        padding-top: resize($padding-top-section-2, $resize-to-tab-land);
+        padding-bottom: resize($padding-bottom-section-2, $resize-to-tab-land);
+    }
+
+    .section-skills {
+        padding-top: resize($padding-top-section-2, $resize-to-tab-land);
+        padding-bottom: resize($padding-bottom-section-2, $resize-to-tab-land);
+    }
+
+    .section-projects {
+        padding-top: resize($padding-top-section-2, $resize-to-tab-land);
+        padding-bottom: resize($padding-bottom-section-2, $resize-to-tab-land);
+    }
+
+    .section-education {
+        padding-top: resize($padding-top-section-2, $resize-to-tab-land);
+        padding-bottom: resize($padding-bottom-section-1, $resize-to-tab-land);
+    }
+
+    .section-contact-me {
+        padding-top: resize($padding-top-section-1, $resize-to-tab-land);
+        padding-bottom: resize($padding-bottom-section-1, $resize-to-tab-land);
+    }
+}
+@include mq-manager(mid-tab-land-tab-port) {
+    // width < 1050px ?
+    .section-about {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-tab-land-tab-port
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-2,
+            $resize-to-mid-tab-land-tab-port
+        );
+
+        &__row {
+            flex-direction: column-reverse;
+        }
+        &__photo {
+            justify-content: center;
+            margin-bottom: $margin-medium;
+        }
+    }
+
+    .section-skills {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-tab-land-tab-port
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-2,
+            $resize-to-mid-tab-land-tab-port
+        );
+    }
+
+    .section-projects {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-tab-land-tab-port
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-2,
+            $resize-to-mid-tab-land-tab-port
+        );
+    }
+
+    .section-education {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-tab-land-tab-port
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-1,
+            $resize-to-mid-tab-land-tab-port
+        );
+    }
+
+    .section-contact-me {
+        padding-top: resize(
+            $padding-top-section-1,
+            $resize-to-mid-tab-land-tab-port
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-1,
+            $resize-to-mid-tab-land-tab-port
+        );
+    }
+}
+@include mq-manager(tab-port) {
+    // width < 900px ?
+    .section-about {
+        padding-top: resize($padding-top-section-2, $resize-to-tab-port);
+        padding-bottom: resize($padding-bottom-section-2, $resize-to-tab-port);
+    }
+
+    .section-skills {
+        padding-top: resize($padding-top-section-2, $resize-to-tab-port);
+        padding-bottom: resize($padding-bottom-section-2, $resize-to-tab-port);
+    }
+
+    .section-projects {
+        padding-top: resize($padding-top-section-2, $resize-to-tab-port);
+        padding-bottom: resize($padding-bottom-section-2, $resize-to-tab-port);
+    }
+
+    .section-education {
+        padding-top: resize($padding-top-section-2, $resize-to-tab-port);
+        padding-bottom: resize($padding-bottom-section-1, $resize-to-tab-port);
+    }
+
+    .section-contact-me {
+        padding-top: resize($padding-top-section-1, $resize-to-tab-port);
+        padding-bottom: resize($padding-bottom-section-1, $resize-to-tab-port);
+    }
+}
+@include mq-manager(mid-tab-port-phone) {
+    // width < 750px ?
+    .section-about {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-tab-port-phone
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-2,
+            $resize-to-mid-tab-port-phone
+        );
+    }
+
+    .section-skills {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-tab-port-phone
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-2,
+            $resize-to-mid-tab-port-phone
+        );
+    }
+
+    .section-projects {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-tab-port-phone
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-2,
+            $resize-to-mid-tab-port-phone
+        );
+    }
+
+    .section-education {
+        padding-top: resize(
+            $padding-top-section-2,
+            $resize-to-mid-tab-port-phone
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-1,
+            $resize-to-mid-tab-port-phone
+        );
+    }
+
+    .section-contact-me {
+        padding-top: resize(
+            $padding-top-section-1,
+            $resize-to-mid-tab-port-phone
+        );
+        padding-bottom: resize(
+            $padding-bottom-section-1,
+            $resize-to-mid-tab-port-phone
+        );
+    }
+}
+@include mq-manager(phone) {
+    // width < 600px ?
+    .section-about {
+        padding-top: resize($padding-top-section-2, $resize-to-phone);
+        padding-bottom: resize($padding-bottom-section-2, $resize-to-phone);
+
+        &__photo {
+            height: auto;
+            margin-bottom: $margin-xsmall;
+        }
+    }
+
+    .section-skills {
+        padding-top: resize($padding-top-section-2, $resize-to-phone);
+        padding-bottom: resize($padding-bottom-section-2, $resize-to-phone);
+    }
+
+    .section-projects {
+        padding-top: resize($padding-top-section-2, $resize-to-phone);
+        padding-bottom: resize($padding-bottom-section-2, $resize-to-phone);
+    }
+
+    .section-education {
+        padding-top: resize($padding-top-section-2, $resize-to-phone);
+        padding-bottom: resize($padding-bottom-section-1, $resize-to-phone);
+    }
+
+    .section-contact-me {
+        padding-top: resize($padding-top-section-1, $resize-to-phone);
+        padding-bottom: resize($padding-bottom-section-1, $resize-to-phone);
+    }
 }

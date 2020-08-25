@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Element } from 'react-scroll';
 import { useIntersection } from 'react-use';
 import profilePhoto from '../assets/images/profile_pic.jpeg';
@@ -8,6 +8,22 @@ import Journal from '../components/Journal';
 const AboutMe: React.FC = () => {
     const paragraphRef = useRef(null);
     const photoRef = useRef(null);
+    const [windowDom, setWindowDom] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+    });
+
+    useEffect(() => {
+        window.addEventListener('resize', updateWindowDimensions);
+
+        return () => {
+            window.removeEventListener('resize', updateWindowDimensions);
+        };
+    }, [windowDom]);
+
+    const updateWindowDimensions = () => {
+        setWindowDom({ width: window.innerWidth, height: window.innerHeight });
+    };
 
     const intersectionParagraph = useIntersection(paragraphRef, {
         root: null, // browser viewport
@@ -21,7 +37,7 @@ const AboutMe: React.FC = () => {
         threshold: 1,
     });
 
-    const fadeInFromLeft = (element: string) => {
+    const fadeInToLeft = (element: string) => {
         gsap.to(element, 2, {
             opacity: 1,
             x: 0,
@@ -35,7 +51,7 @@ const AboutMe: React.FC = () => {
     const fadeOutToRight = (element: string) => {
         gsap.to(element, 2, {
             opacity: 0,
-            x: 285,
+            x: 345,
             ease: 'power4.out',
         });
     };
@@ -50,7 +66,7 @@ const AboutMe: React.FC = () => {
         });
     };
 
-    const moveFromLeft = (element: string) => {
+    const moveToLeft = (element: string) => {
         gsap.to(element, 3, {
             x: -345,
             ease: 'power4.out',
@@ -58,19 +74,23 @@ const AboutMe: React.FC = () => {
     };
 
     useEffect(() => {
-        intersectionParagraph && intersectionParagraph.intersectionRatio < 1
-            ? fadeOutToRight('.paragraph-fade-in')
-            : fadeInFromLeft('.paragraph-fade-in');
-
-        intersectionPhoto && intersectionPhoto.intersectionRatio < 1
-            ? moveFromLeft('.block-move')
-            : moveToRight('.block-move');
-    }, [intersectionParagraph, intersectionPhoto]);
+        if (windowDom.width > 1050) {
+            if (intersectionPhoto && intersectionPhoto.intersectionRatio < 1) {
+                moveToLeft('.block-move');
+                fadeOutToRight('.paragraph-fade-in');
+            } else {
+                moveToRight('.block-move');
+                fadeInToLeft('.paragraph-fade-in');
+            }
+            // intersectionParagraph && intersectionParagraph.intersectionRatio < 1 ? fadeOutToRight('.paragraph-fade-in') : fadeInToLeft('.paragraph-fade-in');
+            // intersectionPhoto && intersectionPhoto.intersectionRatio < 1 ? moveToLeft('.block-move') : moveToRight('.block-move');
+        }
+    }, [intersectionParagraph, intersectionPhoto, windowDom]);
 
     return (
         <Element name="about-me">
             <div className="section-about">
-                <div className="u-text-center u-margin-bottom-large">
+                <div className="u-text-center">
                     <h2 className="heading-secondary heading-secondary__text-title-1">
                         <span>A</span>
                         <span>B</span>
@@ -82,7 +102,7 @@ const AboutMe: React.FC = () => {
                         <span>E</span>
                     </h2>
                 </div>
-                <div className="row u-text-center u-items-center">
+                <div className="row u-text-center u-items-center section-about__row">
                     <div
                         className="col-1-of-2 paragraph-fade-in"
                         ref={paragraphRef}
@@ -96,29 +116,29 @@ const AboutMe: React.FC = () => {
                         </p>
                     </div>
                     <div
-                        className="col-1-of-2 u-item-right block-move"
+                        className="col-1-of-2 section-about__photo block-move"
                         ref={photoRef}
                     >
                         <Journal
                             imgURI={profilePhoto}
                             titleOne="Full-stack developer"
                             text="Curious and detail-oriented, I approach problems with
-                        creativity and efficiency. My background in engineering
-                        has allowed me to develop strong problem-solving skills
-                        and the love for automating tasks. Working with
-                        Vaughan’s Economic and Cultural Development Department
-                        and General Assembly, the Digital Boost supports local
-                        small business owners in finding new opportunities
-                        during the COVID-19 crisis by launching/improving an
-                        e-commerce store, developing new product lines and
-                        services. Working with Digital Main St. and The City of
-                        Toronto to build websites for Toronto’s small businesses
-                        and artists, in order to provide them with an easy way
-                        to transition to sell online during the pandemic. Worked
-                        with Digital Main St. and The City of Toronto to build
-                        websites for Toronto’s small businesses and artists, in
-                        order to provide them with an easy way to transition to
-                        to sell online during the pandemic."
+                            creativity and efficiency. My background in engineering
+                            has allowed me to develop strong problem-solving skills
+                            and the love for automating tasks. Working with
+                            Vaughan’s Economic and Cultural Development Department
+                            and General Assembly, the Digital Boost supports local
+                            small business owners in finding new opportunities
+                            during the COVID-19 crisis by launching/improving an
+                            e-commerce store, developing new product lines and
+                            services. Working with Digital Main St. and The City of
+                            Toronto to build websites for Toronto’s small businesses
+                            and artists, in order to provide them with an easy way
+                            to transition to sell online during the pandemic. Worked
+                            with Digital Main St. and The City of Toronto to build
+                            websites for Toronto’s small businesses and artists, in
+                            order to provide them with an easy way to transition to
+                            to sell online during the pandemic."
                         />
                     </div>
                 </div>

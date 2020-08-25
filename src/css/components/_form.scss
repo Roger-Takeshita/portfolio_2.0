@@ -12,6 +12,8 @@
         url('../assets/images/bg_form.jpg');
     background-size: cover;
     box-shadow: 0rem 2rem 5rem rgba($color-black, 0.5);
+    margin-top: $margin-large;
+    margin-bottom: $margin-large;
 
     &__group {
         &:not(:last-child) {
@@ -97,5 +99,10 @@
         // width < 1200px ?
         width: 90%;
         height: 90%;
+    }
+    @include mq-manager(phone) {
+        // width < 600px ?
+        margin-top: $margin-small;
+        margin-bottom: $margin-small;
     }
 }

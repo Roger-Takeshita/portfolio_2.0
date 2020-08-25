@@ -7,7 +7,7 @@ const Projects: React.FC = () => {
     return (
         <Element name="projects">
             <div className="section-projects">
-                <div className="u-text-center u-margin-bottom-large">
+                <div className="u-text-center">
                     <h2 className="heading-secondary heading-secondary__text-title-1">
                         <span>P</span>
                         <span>R</span>
@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
                         <span>S</span>
                     </h2>
                 </div>
-                <div className="projects" id="projects">
+                <div className="projects">
                     <div className="row u-text-center u-items-center u-flex-wrap-wrap">
                         <div className="col-1-of-1">
                             {projects.map((project, idx) => {

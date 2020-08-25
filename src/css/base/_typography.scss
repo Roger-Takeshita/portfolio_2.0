@@ -50,16 +50,16 @@ body {
         font-weight: 400;
         display: block;
         width: 100%;
-        font-size: 6rem;
-        letter-spacing: 1.5rem;
+        font-size: $h1-font-size-title-1 * 1rem;
+        letter-spacing: $h1-font-size-title-1-space * 1rem;
         animation: move-in-left 1s ease-in-out;
     }
     &__text-title-2 {
         font-family: WSJ-Bold, sans-serif;
         display: block;
         text-align: center;
-        font-size: 3rem;
-        letter-spacing: 2.15rem;
+        font-size: $h1-font-size-title-2 * 1rem;
+        letter-spacing: $h1-font-size-title-2-space * 1rem;
         transform: translateX(0.5rem);
         animation: move-in-right 1s ease-out;
     }
@@ -74,15 +74,16 @@ body {
         display: inline-flex;
         transition: transform 0.3s ease-in-out;
         border-radius: $border-radius;
+        margin-bottom: $margin-large;
 
         & > span {
             display: flex;
             flex-grow: 1;
             justify-content: center;
             align-items: center;
-            width: 6rem;
-            height: 6rem;
-            line-height: 6rem;
+            width: $h2-square * 1rem;
+            height: $h2-square * 1rem;
+            line-height: $h2-square * 1rem;
             background-color: $color-grey-1;
             transition: all 0.2s ease-in-out;
             box-shadow: 0 0.4rem 5rem rgba($color-black, 0.1);
@@ -120,7 +121,7 @@ body {
 .heading-tertiary {
     color: $color-white;
     text-transform: uppercase;
-    font-size: 2.6rem;
+    font-size: $h3-font-size * 1rem;
     font-weight: 400;
     font-family: WSJ-Regular, sans-serif;
 
@@ -175,7 +176,7 @@ body {
 .paragraph {
     font-family: WSJ-Regular, sans-serif;
     color: $color-black;
-    font-size: 3rem;
+    font-size: $p-font-size * 1rem;
 
     &--animated {
         &:hover {
@@ -239,5 +240,233 @@ body {
     &:hover &__tooltip-text {
         visibility: visible;
         opacity: 1;
+    }
+}
+
+@include mq-manager(mid-desk-tab-land) {
+    // width < 1300px ?
+    .paragraph {
+        font-size: resize($p-font-size, $resize-to-tab-land);
+    }
+    .heading-primary {
+        &__text-title-1 {
+            font-size: resize(
+                $h1-font-size-title-1,
+                $resize-to-mid-desk-tab-land
+            );
+            letter-spacing: resize(
+                $h1-font-size-title-1-space,
+                $resize-to-mid-desk-tab-land
+            );
+        }
+        &__text-title-2 {
+            font-size: resize(
+                $h1-font-size-title-2,
+                $resize-to-mid-desk-tab-land
+            );
+            letter-spacing: resize(
+                $h1-font-size-title-2-space,
+                $resize-to-mid-desk-tab-land
+            );
+        }
+    }
+    .heading-secondary {
+        & > span {
+            width: resize($h2-square, $resize-to-mid-desk-tab-land);
+            height: resize($h2-square, $resize-to-mid-desk-tab-land);
+            line-height: resize($h2-square, $resize-to-mid-desk-tab-land);
+        }
+    }
+    .heading-tertiary {
+        &__quotes {
+            font-size: resize($h3-font-size, $resize-to-mid-desk-tab-land);
+        }
+    }
+}
+@include mq-manager(tab-land) {
+    // width < 1200px ?
+    .paragraph {
+        font-size: resize($p-font-size, $resize-to-tab-land);
+    }
+    .heading-primary {
+        &__text-title-1 {
+            font-size: resize($h1-font-size-title-1, $resize-to-tab-land);
+            letter-spacing: resize(
+                $h1-font-size-title-1-space,
+                $resize-to-tab-land
+            );
+        }
+        &__text-title-2 {
+            font-size: resize($h1-font-size-title-2, $resize-to-tab-land);
+            letter-spacing: resize(
+                $h1-font-size-title-2-space,
+                $resize-to-tab-land
+            );
+        }
+    }
+    .heading-secondary {
+        & > span {
+            width: resize($h2-square, $resize-to-tab-land);
+            height: resize($h2-square, $resize-to-tab-land);
+            line-height: resize($h2-square, $resize-to-tab-land);
+        }
+    }
+    .heading-tertiary {
+        &__quotes {
+            font-size: resize($h3-font-size, $resize-to-tab-land);
+        }
+    }
+}
+@include mq-manager(mid-tab-land-tab-port) {
+    // width < 1050px ?
+    .paragraph {
+        font-size: resize($p-font-size, $resize-to-mid-tab-land-tab-port);
+    }
+    .heading-primary {
+        &__text-title-1 {
+            font-size: resize(
+                $h1-font-size-title-1,
+                $resize-to-mid-tab-land-tab-port
+            );
+            letter-spacing: resize(
+                $h1-font-size-title-1-space,
+                $resize-to-mid-tab-land-tab-port
+            );
+        }
+        &__text-title-2 {
+            font-size: resize(
+                $h1-font-size-title-2,
+                $resize-to-mid-tab-land-tab-port
+            );
+            letter-spacing: resize(
+                $h1-font-size-title-2-space,
+                $resize-to-mid-tab-land-tab-port
+            );
+        }
+    }
+    .heading-secondary {
+        & > span {
+            width: resize($h2-square, $resize-to-mid-tab-land-tab-port);
+            height: resize($h2-square, $resize-to-mid-tab-land-tab-port);
+            line-height: resize($h2-square, $resize-to-mid-tab-land-tab-port);
+        }
+    }
+    .heading-tertiary {
+        &__quotes {
+            font-size: resize($h3-font-size, $resize-to-mid-tab-land-tab-port);
+        }
+    }
+}
+@include mq-manager(tab-port) {
+    .paragraph {
+        font-size: resize($p-font-size, $resize-to-tab-port);
+    }
+    // width < 900px ?
+    .heading-primary {
+        &__text-title-1 {
+            font-size: resize($h1-font-size-title-1, $resize-to-tab-port);
+            letter-spacing: resize(
+                $h1-font-size-title-1-space,
+                $resize-to-tab-port
+            );
+        }
+        &__text-title-2 {
+            font-size: resize($h1-font-size-title-2, $resize-to-tab-port);
+            letter-spacing: resize(
+                $h1-font-size-title-2-space,
+                $resize-to-tab-port
+            );
+        }
+    }
+    .heading-secondary {
+        & > span {
+            width: resize($h2-square, $resize-to-tab-port);
+            height: resize($h2-square, $resize-to-tab-port);
+            line-height: resize($h2-square, $resize-to-tab-port);
+        }
+    }
+    .heading-tertiary {
+        &__quotes {
+            font-size: resize($h3-font-size, $resize-to-tab-port);
+        }
+    }
+}
+@include mq-manager(mid-tab-port-phone) {
+    // width < 750px ?
+    .paragraph {
+        font-size: resize($p-font-size, $resize-to-mid-tab-port-phone);
+    }
+    .heading-primary {
+        &__text-title-1 {
+            font-size: resize(
+                $h1-font-size-title-1,
+                $resize-to-mid-tab-port-phone
+            );
+            letter-spacing: resize(
+                $h1-font-size-title-1-space,
+                $resize-to-mid-tab-port-phone
+            );
+        }
+        &__text-title-2 {
+            font-size: resize(
+                $h1-font-size-title-2,
+                $resize-to-mid-tab-port-phone
+            );
+            letter-spacing: resize(
+                $h1-font-size-title-2-space,
+                $resize-to-mid-tab-port-phone
+            );
+        }
+    }
+    .heading-secondary {
+        & > span {
+            width: resize($h2-square, $resize-to-mid-tab-port-phone);
+            height: resize($h2-square, $resize-to-mid-tab-port-phone);
+            line-height: resize($h2-square, $resize-to-mid-tab-port-phone);
+        }
+    }
+    .heading-tertiary {
+        &__quotes {
+            font-size: resize($h3-font-size, $resize-to-mid-tab-port-phone);
+        }
+    }
+}
+@include mq-manager(phone) {
+    // width < 600px ?
+    .paragraph {
+        font-size: resize($p-font-size, $resize-to-phone);
+    }
+    .heading-primary {
+        &__text-title-1 {
+            font-size: resize($h1-font-size-title-1, $resize-to-phone);
+            letter-spacing: resize(
+                $h1-font-size-title-1-space,
+                $resize-to-phone
+            );
+        }
+        &__text-title-2 {
+            font-size: resize($h1-font-size-title-2, $resize-to-phone);
+            letter-spacing: resize(
+                $h1-font-size-title-2-space,
+                $resize-to-phone
+            );
+        }
+    }
+    .heading-secondary {
+        &__text-title-1 {
+            margin-bottom: $margin-small;
+
+            & > span {
+                width: resize($h2-square, $resize-to-phone);
+                height: resize($h2-square, $resize-to-phone);
+                line-height: resize($h2-square, $resize-to-phone);
+            }
+        }
+    }
+    .heading-tertiary {
+        &__quotes {
+            font-size: resize($h3-font-size, $resize-to-phone * 0.9);
+            font-family: WSJ-Bold, sans-serif;
+        }
     }
 }

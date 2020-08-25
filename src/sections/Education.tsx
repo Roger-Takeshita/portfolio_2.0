@@ -8,7 +8,7 @@ const Education: React.FC = () => {
     return (
         <Element name="education">
             <div className="section-education">
-                <div className="u-text-center u-margin-bottom-large">
+                <div className="u-text-center">
                     <h2 className="heading-secondary heading-secondary__text-title-1">
                         <span>E</span>
                         <span>D</span>

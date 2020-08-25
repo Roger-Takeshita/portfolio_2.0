@@ -4,9 +4,7 @@ import { SkillsLogosProps } from '../utils/interface';
 const SkillsLogos: React.FC<SkillsLogosProps> = ({ title, skills }) => {
     return (
         <div className="skills">
-            <h3 className="heading-tertiary u-margin-bottom-small skills__skew-y--none">
-                {title}
-            </h3>
+            <h3 className="heading-tertiary skills__skew-y--none">{title}</h3>
             <div className="skills__logos">
                 {skills.map((skill: any, idx: number) => {
                     return (

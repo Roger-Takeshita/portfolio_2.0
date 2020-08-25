@@ -124,6 +124,7 @@ body {
     font-size: $h3-font-size * 1rem;
     font-weight: 400;
     font-family: WSJ-Regular, sans-serif;
+    margin-bottom: $margin-small;
 
     &__animated {
         animation: move-in-bottom 1s ease-out 0.5s;

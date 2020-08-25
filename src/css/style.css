@@ -420,6 +420,7 @@ body {
   font-size: 2.6rem;
   font-weight: 400;
   font-family: WSJ-Regular, sans-serif;
+  margin-bottom: 3rem;
 }
 
 .heading-tertiary__animated {
@@ -1674,6 +1675,7 @@ body {
   top: 1rem;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+  background-color: #cccccc;
   z-index: -1;
 }
 
@@ -2257,6 +2259,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 10rem;
+  height: 10rem;
+}
+
+.skills__paragraph {
+  font-size: 1.6rem;
+  padding-top: 0.5rem;
 }
 
 .skills__skew-y {
@@ -2271,17 +2280,6 @@ body {
 .skills__skew-y--none {
   -webkit-transform: skew(15deg);
           transform: skew(15deg);
-}
-
-@media (max-width: 112.5em) {
-  .skills__logo-box {
-    width: 10rem;
-    height: 10rem;
-  }
-  .skills__paragraph {
-    font-size: 1.6rem;
-    padding-top: 0.5rem;
-  }
 }
 
 @media (max-width: 81.25em) {

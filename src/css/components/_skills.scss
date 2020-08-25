@@ -9,8 +9,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: $logo-box-technologies-size * 1rem;
+        height: $logo-box-technologies-size * 1rem;
+    }
+    &__paragraph {
+        font-size: $default-font-size * 1rem;
+        padding-top: 0.5rem;
     }
     &__skew-y {
+        -moz-transform: skew(-15deg);
         transform: skew(-15deg);
 
         &--border-left {
@@ -21,16 +28,6 @@
         }
     }
 
-    @include mq-manager(desk) {
-        &__logo-box {
-            width: $logo-box-technologies-size * 1rem;
-            height: $logo-box-technologies-size * 1rem;
-        }
-        &__paragraph {
-            font-size: $default-font-size * 1rem;
-            padding-top: 0.5rem;
-        }
-    }
     @include mq-manager(mid-desk-tab-land) {
         // width < 1300px ?
         &__paragraph {

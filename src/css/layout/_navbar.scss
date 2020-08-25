@@ -23,9 +23,6 @@
     &--active {
         border-bottom: 0.5rem solid $color-green-1;
     }
-    &--column {
-        flex-direction: column;
-    }
     &__logo {
         font-family: Allura-Regular, sans-serif;
         text-transform: capitalize;
@@ -149,13 +146,18 @@
 @include mq-manager(mid-tab-land-tab-port) {
     // width < 1050px ?
     .navbar {
+        justify-content: center;
+
         &--active {
             border-bottom: 0.2rem solid $color-green-1;
+        }
+        &--column {
+            flex-direction: column;
         }
         &__logo {
             margin: 0;
             padding: 0;
-            flex-grow: 1;
+            flex-grow: 0;
         }
         &__list {
             &--visible {

@@ -4,38 +4,14 @@ import { Events, Link, scrollSpy } from 'react-scroll';
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
     const [btnStatus, setBtnStatus] = useState(false);
-    const [windowDom, setWindowDom] = useState({
-        width: 0,
-        height: 0,
-    });
-
-    useEffect(() => {
-        updateWindowDimensions();
-    }, []);
-
-    useEffect(() => {
-        if (windowDom.width < 1050) {
-            console.log('entrou');
-            setBtnStatus(false);
-        }
-        window.addEventListener('resize', updateWindowDimensions);
-
-        return () => {
-            window.removeEventListener('resize', updateWindowDimensions);
-        };
-    }, [windowDom]);
-
-    const updateWindowDimensions = () => {
-        setWindowDom({ width: window.innerWidth, height: window.innerHeight });
-    };
 
     useEffect(() => {
         Events.scrollEvent.register('begin', function (to, element) {
-            console.log('begin', arguments);
+            // console.log('begin', arguments);
         });
 
         Events.scrollEvent.register('end', function (to, element) {
-            console.log('end', arguments);
+            // console.log('end', arguments);
         });
 
         scrollSpy.update();
@@ -57,7 +33,6 @@ const Navbar = () => {
     const handleClick = (e: any) => {
         e.preventDefault();
         setBtnStatus((prevState) => !prevState);
-        console.log(btnStatus);
     };
 
     return (

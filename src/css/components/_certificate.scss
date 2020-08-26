@@ -41,7 +41,6 @@
         box-shadow: 0 2rem 5rem rgba($color-black, 0.4);
     }
     @include mq-manager(phone) {
-        // width < 600px ?
         height: resize($card-height, $resize-to-phone);
         min-width: resize($card-width, $resize-to-phone);
         max-width: resize($card-width, $resize-to-phone);

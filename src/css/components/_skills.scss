@@ -29,7 +29,6 @@
     }
 
     @include mq-manager(mid-desk-tab-land) {
-        // width < 1300px ?
         &__paragraph {
             font-size: resize($default-font-size, $resize-to-mid-desk-tab-land);
             padding-top: 0.4rem;
@@ -43,10 +42,9 @@
         }
     }
     @include mq-manager(tab-land) {
-        // width < 1200px ?
         &__logo-box {
-            width: resize($logo-box-technologies-size, $resize-to-phone);
-            height: resize($logo-box-technologies-size, $resize-to-phone);
+            width: resize($logo-box-technologies-size, $resize-to-tab-land);
+            height: resize($logo-box-technologies-size, $resize-to-tab-land);
         }
 
         &__paragraph {
@@ -55,7 +53,6 @@
         }
     }
     @include mq-manager(mid-tab-land-tab-port) {
-        // width < 1050px ?
         &__skew-y {
             &--border-left {
                 border-left: none;
@@ -63,14 +60,12 @@
         }
     }
     @include mq-manager(tab-port) {
-        // width < 900px ?
         &__paragraph {
             font-size: 1.1rem;
             padding-top: 0.2rem;
         }
     }
     @include mq-manager(phone) {
-        // width < 600px ?
         &__paragraph {
             font-size: 1rem;
             padding-top: 0.1rem;

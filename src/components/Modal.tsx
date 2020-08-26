@@ -55,9 +55,11 @@ const Modal: React.FC<ModalProps> = ({ modal, clearModal }) => {
                     >
                         &times;
                     </a>
-                    <h2 className="heading-secondary heading-secondary__text-title-2 heading-secondary--black u-margin-bottom-xsmall">
-                        {project.name}
-                    </h2>
+                    <div className="modal__header">
+                        <h2 className="heading-secondary heading-secondary__text-title-2 heading-secondary--black u-margin-bottom-xsmall">
+                            {project.name}
+                        </h2>
+                    </div>
                     <div className="modal__text-box">
                         <p className="modal__text ">{project.description}</p>
                     </div>

@@ -1,55 +1,163 @@
 .icon {
     &__skills {
-        font-size: $icon-skill-size;
+        font-size: $icon-skill-size * 1rem;
 
         &--local {
-            width: $icon-skill-size;
-            height: $icon-skill-size;
+            width: $icon-skill-size * 1rem;
+            height: $icon-skill-size * 1rem;
         }
     }
     &__footer {
-        font-size: $icon-footer-size;
-        width: $icon-footer-size;
-        height: $icon-footer-size;
+        font-size: $icon-footer-size * 1rem;
+        width: $icon-footer-size * 1rem;
+        height: $icon-footer-size * 1rem;
 
         &--local {
-            height: $icon-footer-size;
+            height: $icon-footer-size * 1rem;
         }
         &--resume {
-            height: $icon-footer-size * 2;
+            height: $icon-footer-size * 2rem;
         }
     }
     &__project {
-        font-size: $icon-footer-size;
-        width: $icon-footer-size;
-        height: $icon-footer-size;
+        font-size: $icon-skill-size * 1rem;
+        width: $icon-skill-size * 1rem;
+        height: $icon-skill-size * 1rem;
 
         &--local {
-            height: $icon-footer-size;
+            height: $icon-skill-size * 1rem;
         }
         &--resume {
-            height: $icon-footer-size * 2.5;
+            height: $icon-skill-size * 2.5rem;
         }
     }
-    @include mq-manager(desk) {
-        // width < 1800px ?
-    }
     @include mq-manager(mid-desk-tab-land) {
-        // width < 1300px ?
+        &__skills {
+            font-size: resize($icon-skill-size, $resize-to-mid-desk-tab-land);
+
+            &--local {
+                width: resize($icon-skill-size, $resize-to-mid-desk-tab-land);
+                height: resize($icon-skill-size, $resize-to-mid-desk-tab-land);
+            }
+        }
+        &__project {
+            font-size: resize($icon-skill-size, $resize-to-mid-desk-tab-land);
+            width: resize($icon-skill-size, $resize-to-mid-desk-tab-land);
+            height: resize($icon-skill-size, $resize-to-mid-desk-tab-land);
+
+            &--local {
+                height: resize($icon-skill-size, $resize-to-mid-desk-tab-land);
+            }
+        }
     }
     @include mq-manager(tab-land) {
-        // width < 1200px ?
+        &__skills {
+            font-size: resize($icon-skill-size, $resize-to-tab-land);
+
+            &--local {
+                width: resize($icon-skill-size, $resize-to-tab-land);
+                height: resize($icon-skill-size, $resize-to-tab-land);
+            }
+        }
+        &__project {
+            font-size: resize($icon-skill-size, $resize-to-tab-land);
+            width: resize($icon-skill-size, $resize-to-tab-land);
+            height: resize($icon-skill-size, $resize-to-tab-land);
+
+            &--local {
+                height: resize($icon-skill-size, $resize-to-tab-land);
+            }
+        }
     }
     @include mq-manager(mid-tab-land-tab-port) {
-        // width < 1050px ?
+        &__skills {
+            font-size: resize(
+                $icon-skill-size,
+                $resize-to-mid-tab-land-tab-port
+            );
+
+            &--local {
+                width: resize(
+                    $icon-skill-size,
+                    $resize-to-mid-tab-land-tab-port
+                );
+                height: resize(
+                    $icon-skill-size,
+                    $resize-to-mid-tab-land-tab-port
+                );
+            }
+        }
+        &__project {
+            font-size: resize(
+                $icon-skill-size,
+                $resize-to-mid-tab-land-tab-port
+            );
+            width: resize($icon-skill-size, $resize-to-mid-tab-land-tab-port);
+            height: resize($icon-skill-size, $resize-to-mid-tab-land-tab-port);
+
+            &--local {
+                height: resize(
+                    $icon-skill-size,
+                    $resize-to-mid-tab-land-tab-port
+                );
+            }
+        }
     }
     @include mq-manager(tab-port) {
-        // width < 900px ?
+        &__skills {
+            font-size: resize($icon-skill-size, $resize-to-tab-port);
+
+            &--local {
+                width: resize($icon-skill-size, $resize-to-tab-port);
+                height: resize($icon-skill-size, $resize-to-tab-port);
+            }
+        }
+        &__project {
+            font-size: resize($icon-skill-size, $resize-to-tab-port);
+            width: resize($icon-skill-size, $resize-to-tab-port);
+            height: resize($icon-skill-size, $resize-to-tab-port);
+
+            &--local {
+                height: resize($icon-skill-size, $resize-to-tab-port);
+            }
+        }
     }
     @include mq-manager(mid-tab-port-phone) {
-        // width < 750px ?
+        &__skills {
+            font-size: resize($icon-skill-size, $resize-to-mid-tab-port-phone);
+
+            &--local {
+                width: resize($icon-skill-size, $resize-to-mid-tab-port-phone);
+                height: resize($icon-skill-size, $resize-to-mid-tab-port-phone);
+            }
+        }
+        &__project {
+            font-size: resize($icon-skill-size, $resize-to-mid-tab-port-phone);
+            width: resize($icon-skill-size, $resize-to-mid-tab-port-phone);
+            height: resize($icon-skill-size, $resize-to-mid-tab-port-phone);
+
+            &--local {
+                height: resize($icon-skill-size, $resize-to-mid-tab-port-phone);
+            }
+        }
     }
     @include mq-manager(phone) {
-        // width < 600px ?
+        &__skills {
+            font-size: resize($icon-skill-size, $resize-to-phone);
+
+            &--local {
+                width: resize($icon-skill-size, $resize-to-phone);
+                height: resize($icon-skill-size, $resize-to-phone);
+            }
+        }
+        &__project {
+            font-size: resize($icon-skill-size, $resize-to-phone);
+            width: resize($icon-skill-size, $resize-to-phone);
+            height: resize($icon-skill-size, $resize-to-phone);
+
+            &--local {
+                height: resize($icon-skill-size, $resize-to-phone);
+            }
+        }
     }
 }

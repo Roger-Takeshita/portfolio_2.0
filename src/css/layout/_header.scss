@@ -20,7 +20,6 @@
     }
 
     @include mq-manager(phone) {
-        // width < 600px ?
         &__bg {
             filter: grayscale(70%);
         }

@@ -1,8 +1,8 @@
 .modal {
     // transition: all 0.4s ease-in-out;
-    height: 100vh;
-    width: 100vw;
-    min-width: 38rem;
+    height: 100%;
+    width: 100%;
+    min-width: $min-width;
     position: fixed;
     top: 0;
     left: 0;
@@ -21,7 +21,8 @@
     &__content {
         @include abs-center;
         width: 110rem;
-        height: 50rem;
+        height: 60rem;
+        max-height: 70rem;
         background-color: $color-white;
         display: flex;
         border-radius: $border-radius;
@@ -46,6 +47,7 @@
     }
     &__link {
         text-decoration: none;
+        display: flex;
     }
     &__photo {
         width: 100%;
@@ -82,7 +84,8 @@
     }
     &__technologies-box {
         margin-top: $margin-xsmall;
-        height: 100%;
+        height: 25%;
+        width: 100%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -94,12 +97,15 @@
         width: 4rem;
         height: 4rem;
         font-size: 3.5rem;
+
+        &:not(:last-child) {
+            margin-left: 1rem;
+        }
     }
     @include mq-manager(mid-tab-land-tab-port) {
-        // width < 1050px ?
         &__content {
             width: 100%;
-            height: 75%;
+            height: 70%;
             flex-direction: column;
             padding: $padding-medium;
         }
@@ -107,13 +113,10 @@
             width: 100%;
             height: 50%;
             padding: 0;
-            display: flex;
-            text-align: center;
-            // background-color: blue;
         }
         &__right {
             width: 100%;
-            height: 50%;
+            height: 100%;
             padding: 0;
             margin-top: $margin-small;
         }
@@ -125,28 +128,49 @@
         }
         &__photo {
             width: 100%;
-            transform: translateY(-20%);
             border-radius: $border-radius;
+            object-fit: scale-down;
         }
         &__text-box {
-            margin-top: $margin-small;
+            margin-top: $margin-xsmall;
+            height: 100%;
+        }
+        // &__technologies-box {
+        //     height: 20%;
+        // }
+        &__logo-box {
+            &:not(:last-child) {
+                margin-left: 0.75rem;
+            }
         }
     }
     @include mq-manager(phone) {
-        // width < 600 ?
-
-        &__photo {
-            width: 100%;
-            transform: translate(0);
-            object-fit: cover;
-            border-radius: $border-radius;
+        &__content {
+            padding: $padding-small;
+        }
+        &__left {
+            height: 40%;
+            padding: 0;
+        }
+        &__right {
+            height: 60%;
+            margin-top: 0;
+            padding-top: 1.5rem;
         }
         &__text-box {
             font-size: resize($default-font-size, $resize-to-mid-desk-tab-land);
-            margin-top: $margin-xsmall;
+            margin-top: 0;
         }
         &__text {
-            font-size: resize($default-font-size, $resize-to-mid-desk-tab-land);
+            font-size: resize($default-font-size, $resize-to-tab-land);
+        }
+        &__technologies-box {
+            height: 50%;
+        }
+        &__logo-box {
+            &:not(:last-child) {
+                margin-left: 0.5rem;
+            }
         }
     }
 }
@@ -234,7 +258,6 @@
     }
 
     @include mq-manager(phone) {
-        // width < 600px ?
         position: fixed;
         bottom: 0;
         right: 0%;

@@ -50,8 +50,8 @@ $p-font-size: 3;
 $h2-square: 6;
 
 $logo-box-technologies-size: 10;
-$icon-skill-size: 4rem;
-$icon-footer-size: 3rem;
+$icon-skill-size: 4;
+$icon-footer-size: 3;
 
 $resize-to-mid-desk-tab-land: 0.95;
 $resize-to-tab-land: 0.9;
@@ -59,3 +59,33 @@ $resize-to-mid-tab-land-tab-port: 0.85;
 $resize-to-tab-port: 0.8;
 $resize-to-mid-tab-port-phone: 0.75;
 $resize-to-phone: 0.7;
+
+$min-width: 38rem;
+
+/* @include mq-manager(desk) {
+    // width < 1800px ?
+}
+@include mq-manager(mid-desk-tab-land) {
+    // width < 1300px ?
+    property: resize(xxxxxxx, $resize-to-mid-desk-tab-land)
+}
+@include mq-manager(tab-land) {
+    // width < 1200px ?
+    property: resize(xxxxxxx, $resize-to-tab-land)
+}
+@include mq-manager(mid-tab-land-tab-port) {
+    // width < 1050px ?
+    property: resize(xxxxxxx, $resize-to-mid-tab-land-tab-port)
+}
+@include mq-manager(tab-port) {
+    // width < 900px ?
+    property: resize(xxxxxxx, $resize-to-tab-port)
+}
+@include mq-manager(mid-tab-port-phone) {
+    // width < 750px ?
+    property: resize(xxxxxxx, $resize-to-mid-tab-port-phone)
+}
+@include mq-manager(phone) {
+    // width < 600px ?
+    property: resize(xxxxxxx, $resize-to-phone)
+} */

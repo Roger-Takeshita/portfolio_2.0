@@ -1,48 +1,21 @@
 import { gsap } from 'gsap';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Element } from 'react-scroll';
 import { useIntersection } from 'react-use';
 import profilePhoto from '../assets/images/profile_pic.jpeg';
 import Journal from '../components/Journal';
 
 const AboutMe: React.FC = () => {
-    const paragraphRef = useRef(null);
-    const photoRef = useRef(null);
-    const [windowDom, setWindowDom] = useState({
-        width: 0,
-        height: 0,
-    });
+    const journalRef = useRef(null);
 
-    useEffect(() => {
-        updateWindowDimensions();
-    }, []);
-
-    useEffect(() => {
-        window.addEventListener('resize', updateWindowDimensions);
-
-        return () => {
-            window.removeEventListener('resize', updateWindowDimensions);
-        };
-    }, [windowDom]);
-
-    const updateWindowDimensions = () => {
-        setWindowDom({ width: window.innerWidth, height: window.innerHeight });
-    };
-
-    const intersectionParagraph = useIntersection(paragraphRef, {
-        root: null, // browser viewport
-        rootMargin: '100px', // Margin, 0px only when hits the end it will animate
-        threshold: 1, // Do the animation only after the element is complete visible
-    });
-
-    const intersectionPhoto = useIntersection(photoRef, {
+    const intersectionJournal = useIntersection(journalRef, {
         root: null,
-        rootMargin: '183px',
+        rootMargin: '150px',
         threshold: 1,
     });
 
     const fadeInToLeft = (element: string) => {
-        gsap.to(element, 2, {
+        gsap.to(element, 3, {
             opacity: 1,
             x: 0,
             ease: 'power4.out',
@@ -53,9 +26,9 @@ const AboutMe: React.FC = () => {
     };
 
     const fadeOutToRight = (element: string) => {
-        gsap.to(element, 2, {
+        gsap.to(element, 3, {
             opacity: 0,
-            x: 345,
+            x: 48,
             ease: 'power4.out',
         });
     };
@@ -72,22 +45,20 @@ const AboutMe: React.FC = () => {
 
     const moveToLeft = (element: string) => {
         gsap.to(element, 3, {
-            x: -345,
+            x: -48,
             ease: 'power4.out',
         });
     };
 
     useEffect(() => {
-        if (windowDom.width > 1050) {
-            if (intersectionPhoto && intersectionPhoto.intersectionRatio < 1) {
-                moveToLeft('.block-move');
-                fadeOutToRight('.paragraph-fade-in');
-            } else {
-                moveToRight('.block-move');
-                fadeInToLeft('.paragraph-fade-in');
-            }
+        if (intersectionJournal && intersectionJournal.intersectionRatio < 1) {
+            moveToLeft('.block-move');
+            fadeOutToRight('.paragraph-fade-in');
+        } else {
+            moveToRight('.block-move');
+            fadeInToLeft('.paragraph-fade-in');
         }
-    }, [intersectionParagraph, intersectionPhoto, windowDom]);
+    }, [intersectionJournal]);
 
     return (
         <Element name="about-me">
@@ -104,11 +75,11 @@ const AboutMe: React.FC = () => {
                         <span>E</span>
                     </h2>
                 </div>
-                <div className="row u-text-center u-items-center section-about__row">
-                    <div
-                        className="col-1-of-2 paragraph-fade-in"
-                        ref={paragraphRef}
-                    >
+                <div
+                    className="row u-text-center u-items-center section-about__row"
+                    ref={journalRef}
+                >
+                    <div className="col-1-of-2 paragraph-fade-in">
                         <p className="paragraph">
                             Curious and detail-oriented, I approach problems
                             with creativity and efficiency. My background in
@@ -117,10 +88,7 @@ const AboutMe: React.FC = () => {
                             tasks.
                         </p>
                     </div>
-                    <div
-                        className="col-1-of-2 section-about__photo block-move"
-                        ref={photoRef}
-                    >
+                    <div className="col-1-of-2 section-about__photo block-move">
                         <Journal
                             imgURI={profilePhoto}
                             titleOne="Full-stack developer"

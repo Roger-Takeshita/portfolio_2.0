@@ -28,7 +28,6 @@
         }
     }
     @include mq-manager(phone) {
-        // width < 600px ?
         height: resize($card-height, $resize-to-phone);
         min-width: resize($card-width, $resize-to-phone);
         max-width: resize($card-width, $resize-to-phone);

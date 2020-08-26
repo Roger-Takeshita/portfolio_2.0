@@ -149,7 +149,6 @@ body {
     }
 
     @include mq-manager(mid-tab-land-tab-port) {
-        // width < 1050px ?
         margin-top: $margin-small;
     }
 }
@@ -247,7 +246,6 @@ body {
 }
 
 @include mq-manager(mid-desk-tab-land) {
-    // width < 1300px ?
     .paragraph {
         font-size: resize($p-font-size, $resize-to-tab-land);
     }
@@ -287,7 +285,6 @@ body {
     }
 }
 @include mq-manager(tab-land) {
-    // width < 1200px ?
     .paragraph {
         font-size: resize($p-font-size, $resize-to-tab-land);
     }
@@ -321,7 +318,6 @@ body {
     }
 }
 @include mq-manager(mid-tab-land-tab-port) {
-    // width < 1050px ?
     .paragraph {
         font-size: resize($p-font-size, $resize-to-mid-tab-land-tab-port);
     }
@@ -364,7 +360,6 @@ body {
     .paragraph {
         font-size: resize($p-font-size, $resize-to-tab-port);
     }
-    // width < 900px ?
     .heading-primary {
         &__text-title-1 {
             font-size: resize($h1-font-size-title-1, $resize-to-tab-port);
@@ -395,7 +390,6 @@ body {
     }
 }
 @include mq-manager(mid-tab-port-phone) {
-    // width < 750px ?
     .paragraph {
         font-size: resize($p-font-size, $resize-to-mid-tab-port-phone);
     }
@@ -435,7 +429,6 @@ body {
     }
 }
 @include mq-manager(phone) {
-    // width < 600px ?
     .paragraph {
         font-size: resize($p-font-size, $resize-to-phone);
     }

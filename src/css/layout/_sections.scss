@@ -55,7 +55,6 @@
 }
 
 @include mq-manager(mid-desk-tab-land) {
-    // width < 1300px ?
     .section-about {
         padding-top: resize(
             $padding-top-section-2,
@@ -112,7 +111,6 @@
     }
 }
 @include mq-manager(tab-land) {
-    // width < 1200px ?
     .section-about {
         padding-top: resize($padding-top-section-2, $resize-to-tab-land);
         padding-bottom: resize($padding-bottom-section-2, $resize-to-tab-land);
@@ -139,7 +137,6 @@
     }
 }
 @include mq-manager(mid-tab-land-tab-port) {
-    // width < 1050px ?
     .section-about {
         padding-top: resize(
             $padding-top-section-2,
@@ -204,7 +201,6 @@
     }
 }
 @include mq-manager(tab-port) {
-    // width < 900px ?
     .section-about {
         padding-top: resize($padding-top-section-2, $resize-to-tab-port);
         padding-bottom: resize($padding-bottom-section-2, $resize-to-tab-port);
@@ -231,7 +227,6 @@
     }
 }
 @include mq-manager(mid-tab-port-phone) {
-    // width < 750px ?
     .section-about {
         padding-top: resize(
             $padding-top-section-2,
@@ -288,7 +283,6 @@
     }
 }
 @include mq-manager(phone) {
-    // width < 600px ?
     .section-about {
         padding-top: resize($padding-top-section-2, $resize-to-phone);
         padding-bottom: resize($padding-bottom-section-2, $resize-to-phone);

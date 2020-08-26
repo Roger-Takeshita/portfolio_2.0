@@ -36,8 +36,6 @@
         }
     }
     @include mq-manager(mid-tab-land-tab-port) {
-        // width < 1050px ?
-
         &__navigation {
             display: flex;
             flex-grow: 1;

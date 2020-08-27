@@ -347,8 +347,10 @@ body {
   width: 100%;
   font-size: 6rem;
   letter-spacing: 1.5rem;
-  -webkit-animation: move-in-left 1s ease-in-out;
-          animation: move-in-left 1s ease-in-out;
+  -webkit-animation: move-in-left 1s ease-in-out 0.5s;
+          animation: move-in-left 1s ease-in-out 0.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 .heading-primary__text-title-2 {
@@ -359,8 +361,10 @@ body {
   letter-spacing: 2.15rem;
   -webkit-transform: translateX(0.5rem);
           transform: translateX(0.5rem);
-  -webkit-animation: move-in-right 1s ease-out;
-          animation: move-in-right 1s ease-out;
+  -webkit-animation: move-in-right 1s ease-out 0.5s;
+          animation: move-in-right 1s ease-out 0.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 .heading-secondary {
@@ -451,8 +455,8 @@ body {
 }
 
 .heading-tertiary__animated {
-  -webkit-animation: move-in-bottom 1s ease-out 0.5s;
-          animation: move-in-bottom 1s ease-out 0.5s;
+  -webkit-animation: move-in-bottom 1s ease-out 0.8s;
+          animation: move-in-bottom 1s ease-out 0.8s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
@@ -816,6 +820,72 @@ body {
   }
 }
 
+@-webkit-keyframes pulse {
+  0% {
+    background-color: transparent;
+  }
+  25% {
+    background-color: rgba(255, 144, 54, 0.1);
+  }
+  50% {
+    background-color: rgba(255, 65, 54, 0.1);
+  }
+  75% {
+    background-color: rgba(255, 144, 54, 0.1);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-color: transparent;
+  }
+  25% {
+    background-color: rgba(255, 144, 54, 0.1);
+  }
+  50% {
+    background-color: rgba(255, 65, 54, 0.1);
+  }
+  75% {
+    background-color: rgba(255, 144, 54, 0.1);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -1042,6 +1112,10 @@ body {
           transform: translateY(0.8rem);
 }
 
+.navbar__btn--open {
+  border: 0.3rem solid #235f7a;
+}
+
 .navbar__btn--open > .navbar__btn__burger {
   background-color: transparent;
 }
@@ -1050,12 +1124,14 @@ body {
   top: 50%;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
+  background-color: #235f7a;
 }
 
 .navbar__btn--open > .navbar__btn__burger::after {
   top: 50%;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
+  background-color: #235f7a;
 }
 
 @media (max-width: 65.63em) {
@@ -1072,6 +1148,10 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   }
   .navbar__logo {
     margin: 0;
@@ -1327,9 +1407,31 @@ body {
 .section-projects {
   padding-top: 13rem;
   padding-bottom: 13rem;
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(0, 0, 0, 0.8))), url("../assets/images/bg_projects.GIF") no-repeat center;
-  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/images/bg_projects.GIF") no-repeat center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-projects--bg {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(0, 0, 0, 0.8))), url("../assets/images/bg_projects.jpg") no-repeat center;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/images/bg_projects.jpg") no-repeat center;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: zoom 12s infinite;
+          animation: zoom 12s infinite;
+}
+
+.section-projects--pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: pulse 12s infinite;
+          animation: pulse 12s infinite;
 }
 
 .section-education {

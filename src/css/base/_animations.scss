@@ -36,3 +36,33 @@
         transform: translate(0);
     }
 }
+
+@keyframes pulse {
+    0% {
+        background-color: transparent;
+    }
+    25% {
+        background-color: rgba(#ff9036, 0.1);
+    }
+    50% {
+        background-color: rgba(#ff4136, 0.1);
+    }
+    75% {
+        background-color: rgba(#ff9036, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

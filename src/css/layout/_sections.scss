@@ -27,13 +27,32 @@
 .section-projects {
     padding-top: $padding-top-section-2 * 1rem;
     padding-bottom: $padding-bottom-section-2 * 1rem;
-    background: linear-gradient(
-            to right bottom,
-            rgba($color-white, 0.8),
-            rgba($color-black, 0.8)
-        ),
-        url('../assets/images/bg_projects.GIF') no-repeat center;
-    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    &--bg {
+        background: linear-gradient(
+                to right bottom,
+                rgba($color-white, 0.8),
+                rgba($color-black, 0.8)
+            ),
+            url('../assets/images/bg_projects.jpg') no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation: zoom 12s infinite;
+    }
+    &--pulse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation: pulse 12s infinite;
+    }
 }
 
 .section-education {

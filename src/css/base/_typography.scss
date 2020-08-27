@@ -52,7 +52,8 @@ body {
         width: 100%;
         font-size: $h1-font-size-title-1 * 1rem;
         letter-spacing: $h1-font-size-title-1-space * 1rem;
-        animation: move-in-left 1s ease-in-out;
+        animation: move-in-left 1s ease-in-out 0.5s;
+        animation-fill-mode: backwards;
     }
     &__text-title-2 {
         font-family: WSJ-Bold, sans-serif;
@@ -61,7 +62,8 @@ body {
         font-size: $h1-font-size-title-2 * 1rem;
         letter-spacing: $h1-font-size-title-2-space * 1rem;
         transform: translateX(0.5rem);
-        animation: move-in-right 1s ease-out;
+        animation: move-in-right 1s ease-out 0.5s;
+        animation-fill-mode: backwards;
     }
 }
 
@@ -127,7 +129,7 @@ body {
     margin-bottom: $margin-small;
 
     &__animated {
-        animation: move-in-bottom 1s ease-out 0.5s;
+        animation: move-in-bottom 1s ease-out 0.8s;
         animation-fill-mode: backwards;
     }
     &__quotes {

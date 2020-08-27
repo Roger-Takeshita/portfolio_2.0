@@ -128,16 +128,22 @@
                 transform: translateY(0.8rem);
             }
         }
+        &--open {
+            border: 0.3rem solid $color-green-2;
+        }
+
         &--open > &__burger {
             background-color: transparent;
 
             &::before {
                 top: 50%;
                 transform: rotate(-135deg);
+                background-color: $color-green-2;
             }
             &::after {
                 top: 50%;
                 transform: rotate(135deg);
+                background-color: $color-green-2;
             }
         }
     }
@@ -152,6 +158,9 @@
         }
         &--column {
             flex-direction: column;
+            background-color: $color-white;
+            color: $color-black;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
         }
         &__logo {
             margin: 0;

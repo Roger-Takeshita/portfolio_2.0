@@ -7,6 +7,8 @@ const Projects: React.FC = () => {
     return (
         <Element name="projects">
             <div className="section-projects">
+                <div className="section-projects--bg">&nbsp;</div>
+                <div className="section-projects--pulse">&nbsp;</div>
                 <div className="u-text-center">
                     <h2 className="heading-secondary heading-secondary__text-title-1">
                         <span>P</span>

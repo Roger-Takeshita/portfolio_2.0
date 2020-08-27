@@ -1422,6 +1422,7 @@ body {
   height: 100%;
   -webkit-animation: zoom 12s infinite;
           animation: zoom 12s infinite;
+  z-index: -2;
 }
 
 .section-projects--pulse {
@@ -1432,6 +1433,7 @@ body {
   height: 100%;
   -webkit-animation: pulse 12s infinite;
           animation: pulse 12s infinite;
+  z-index: -1;
 }
 
 .section-education {

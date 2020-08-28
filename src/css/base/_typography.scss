@@ -61,7 +61,6 @@ body {
         text-align: center;
         font-size: $h1-font-size-title-2 * 1rem;
         letter-spacing: $h1-font-size-title-2-space * 1rem;
-        transform: translateX(0.5rem);
         animation: move-in-right 1s ease-out 0.5s;
         animation-fill-mode: backwards;
     }
@@ -134,6 +133,8 @@ body {
     }
     &__quotes {
         font-style: italic;
+        padding: 0 $padding-small;
+        flex-wrap: wrap;
     }
     &--white {
         letter-spacing: 0.5rem;
@@ -210,6 +211,13 @@ body {
     }
 }
 
+.paragraph-fade-in {
+    padding: $padding-medium;
+
+    @include mq-manager(phone) {
+        // padding: $padding-large;
+    }
+}
 .tooltip {
     position: relative;
     display: inline-block;

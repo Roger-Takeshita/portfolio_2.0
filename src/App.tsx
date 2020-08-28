@@ -24,10 +24,12 @@ const App: React.FC = () => {
                 <Projects />
                 <Education />
                 <ContactMe />
-                <Footer />
+                <Modal />
+                <ModalMSg />
             </main>
-            <Modal />
-            <ModalMSg />
+            <footer>
+                <Footer />
+            </footer>
         </div>
     );
 };

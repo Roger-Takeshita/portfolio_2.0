@@ -28,7 +28,7 @@ const AboutMe: React.FC = () => {
     const fadeOutToRight = (element: string) => {
         gsap.to(element, 3, {
             opacity: 0,
-            x: 48,
+            x: 300,
             ease: 'power4.out',
         });
     };
@@ -36,6 +36,7 @@ const AboutMe: React.FC = () => {
     const moveToRight = (element: string) => {
         gsap.to(element, 3, {
             x: 0,
+            opacity: 1,
             ease: 'power4.out',
             stagger: {
                 amount: 0.15,
@@ -45,7 +46,8 @@ const AboutMe: React.FC = () => {
 
     const moveToLeft = (element: string) => {
         gsap.to(element, 3, {
-            x: -48,
+            opacity: 0.75,
+            x: -300,
             ease: 'power4.out',
         });
     };

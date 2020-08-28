@@ -8,6 +8,7 @@
 .section-about {
     padding-top: $padding-top-section-2 * 1rem;
     padding-bottom: $padding-bottom-section-2 * 1rem;
+    overflow: hidden;
 
     &__row {
         display: flex;
@@ -15,6 +16,7 @@
     &__photo {
         display: flex;
         justify-content: flex-end;
+        padding: $padding-medium;
     }
 }
 
@@ -135,6 +137,10 @@
     .section-about {
         padding-top: resize($padding-top-section-2, $resize-to-tab-land);
         padding-bottom: resize($padding-bottom-section-2, $resize-to-tab-land);
+
+        &__photo {
+            padding: 0;
+        }
     }
 
     .section-skills {

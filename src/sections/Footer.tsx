@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                         </div>
                     </div>
                     <div className="row-gap u-text-center u-items-center ">
-                        <div className="col-1-of-2">
+                        <div className="col-1-of-2 col-1-of-2--footer">
                             <div className="footer__navigation">
                                 <ul className="footer__list">
                                     {socialMedias.map((media, idx) => {
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-1-of-2">
+                        <div className="col-1-of-2 col-1-of-2--footer">
                             <div className="footer__navigation">
                                 <p className="paragraph__footer">
                                     <a

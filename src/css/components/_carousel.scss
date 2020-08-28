@@ -36,5 +36,8 @@
             width: resize($card-width, $resize-to-phone);
             height: resize($card-height, $resize-to-phone);
         }
+        &:hover {
+            transform: scale(1.1) translateY(-3rem);
+        }
     }
 }

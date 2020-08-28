@@ -3,11 +3,11 @@ import materialuiLogo from '../images/logos/languages/materialui.svg';
 import pythonLogo from '../images/logos/languages/python.svg';
 import reduxLogo from '../images/logos/languages/redux.svg';
 import socketIoLogo from '../images/logos/languages/socketio.svg';
-import minesweeperImg from '../images/projects/001-minesweeper.jpg';
-import icheatsImg from '../images/projects/002-icheats.jpg';
-import fellasImg from '../images/projects/003-bookfellas.jpg';
-import pennyImg from '../images/projects/004-penny-pinchers.jpg';
-import myfollowupImg from '../images/projects/005-my-follow-up.jpg';
+import minesweeperImg from '../images/projects/project_001.png';
+import icheatsImg from '../images/projects/project_002.png';
+import fellasImg from '../images/projects/project_003.png';
+import pennyImg from '../images/projects/project_004.png';
+import myfollowupImg from '../images/projects/project_005.png';
 
 export const projects = [
     {

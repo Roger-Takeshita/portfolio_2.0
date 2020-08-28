@@ -359,8 +359,6 @@ body {
   text-align: center;
   font-size: 3rem;
   letter-spacing: 2.15rem;
-  -webkit-transform: translateX(0.5rem);
-          transform: translateX(0.5rem);
   -webkit-animation: move-in-right 1s ease-out 0.5s;
           animation: move-in-right 1s ease-out 0.5s;
   -webkit-animation-fill-mode: backwards;
@@ -463,6 +461,9 @@ body {
 
 .heading-tertiary__quotes {
   font-style: italic;
+  padding: 0 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .heading-tertiary--white {
@@ -545,6 +546,10 @@ body {
 .paragraph__footer--name {
   font-family: Allura-Regular, sans-serif;
   font-size: 1.8rem;
+}
+
+.paragraph-fade-in {
+  padding: 4rem;
 }
 
 .tooltip {
@@ -897,6 +902,7 @@ body {
 
 html {
   font-size: 62.5%;
+  min-width: 25rem;
 }
 
 @media (max-width: 37.5em) {
@@ -924,7 +930,7 @@ html {
 }
 
 body {
-  min-width: 38rem;
+  min-width: 25rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1226,6 +1232,7 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1279,10 +1286,11 @@ body {
             align-items: center;
   }
   .row:not(:last-child) {
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
   }
   .row .col-1-of-2 {
-    min-width: 30rem;
+    min-width: 25rem;
+    width: 100%;
   }
 }
 
@@ -1360,11 +1368,12 @@ body {
   .row-gap [class^='col-'] {
     float: left;
     font-size: 2rem;
+    width: 100%;
   }
   .row-gap [class^='col-']:not(:last-child) {
     margin-right: 0;
   }
-  .row-gap .col-1-of-2 {
+  .row-gap .col-1-of-2--footer {
     width: 80%;
   }
 }
@@ -1381,6 +1390,7 @@ body {
 .section-about {
   padding-top: 13rem;
   padding-bottom: 13rem;
+  overflow: hidden;
 }
 
 .section-about__row {
@@ -1396,6 +1406,7 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding: 4rem;
 }
 
 .section-skills {
@@ -1481,6 +1492,9 @@ body {
   .section-about {
     padding-top: 11.7rem;
     padding-bottom: 11.7rem;
+  }
+  .section-about__photo {
+    padding: 0;
   }
   .section-skills {
     padding-top: 11.7rem;
@@ -2086,6 +2100,7 @@ body {
   transition: all 0.2s ease-in-out;
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  background-color: #fff;
 }
 
 .certificate__link {
@@ -2133,6 +2148,10 @@ body {
     width: 3rem;
     height: 3rem;
     margin: 0.5rem auto 1rem auto;
+  }
+  .certificate:hover {
+    -webkit-transform: scale(1.1) translateY(-3rem);
+            transform: scale(1.1) translateY(-3rem);
   }
 }
 
@@ -2187,6 +2206,10 @@ body {
   .carousel__img {
     width: 35rem;
     height: 24.5rem;
+  }
+  .carousel:hover {
+    -webkit-transform: scale(1.1) translateY(-3rem);
+            transform: scale(1.1) translateY(-3rem);
   }
 }
 
@@ -2295,7 +2318,6 @@ body {
     height: 15rem;
   }
   .form__group {
-    widows: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2307,10 +2329,13 @@ body {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
+  .form__group--message {
+    margin-top: 1rem;
+  }
   .form__group--ctrl {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -2537,10 +2562,6 @@ body {
 }
 
 @media (max-width: 75em) {
-  .skills__logo-box {
-    width: 9rem;
-    height: 9rem;
-  }
   .skills__paragraph {
     font-size: 1.44rem;
     padding-top: 0.3rem;
@@ -2548,6 +2569,10 @@ body {
 }
 
 @media (max-width: 65.63em) {
+  .skills__logo-box {
+    width: 9rem;
+    height: 9rem;
+  }
   .skills__skew-y--border-left {
     border-left: none;
   }
@@ -2556,26 +2581,18 @@ body {
 @media (max-width: 56.25em) {
   .skills__paragraph {
     font-size: 1.1rem;
-    padding-top: 0.2rem;
-  }
-}
-
-@media (max-width: 37.5em) {
-  .skills__paragraph {
-    font-size: 1rem;
-    padding-top: 0.1rem;
   }
 }
 
 .modal {
   height: 100%;
   width: 100%;
-  min-width: 38rem;
+  min-width: 25rem;
   position: fixed;
   top: 0;
   left: 0;
   color: #000;
-  z-index: 2;
+  z-index: 10;
 }
 
 .modal--true {
@@ -2817,6 +2834,7 @@ body {
   opacity: 0.7;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  z-index: 3;
 }
 
 .modal-msg__header {

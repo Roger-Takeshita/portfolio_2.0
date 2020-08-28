@@ -10,12 +10,12 @@ const ContactMeForm: React.FC<ReduxForm> = ({ setModalMsg }) => {
         msg: '',
     });
 
-    const handleChange = (
-        e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
+    const handleChange = ({
+        target: { name, value },
+    }: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setForm({
             ...form,
-            [e.target.name]: e.target.value,
+            [name]: value,
         });
     };
 
@@ -53,8 +53,8 @@ const ContactMeForm: React.FC<ReduxForm> = ({ setModalMsg }) => {
 
     return (
         <div className="row-gap">
-            <form onSubmit={handleSubmit} className="form u-padding-medium">
-                <div className="row u-width-100 u-margin-bottom-xsmall">
+            <form onSubmit={handleSubmit} className="form">
+                <div className="row">
                     <div className="col-1-of-2">
                         <div className="u-margin-bottom-xsmall">
                             <h2 className="heading-secondary heading-secondary__text-title-1">
@@ -65,7 +65,7 @@ const ContactMeForm: React.FC<ReduxForm> = ({ setModalMsg }) => {
                             <input
                                 type="text"
                                 className="form__input"
-                                placeholder="Your Name"
+                                placeholder="Your Name (Required)"
                                 required
                                 autoComplete="off"
                                 id="name"
@@ -82,7 +82,7 @@ const ContactMeForm: React.FC<ReduxForm> = ({ setModalMsg }) => {
                             <input
                                 type="email"
                                 className="form__input"
-                                placeholder="Your Email"
+                                placeholder="Your Email (Required)"
                                 required
                                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                                 autoComplete="off"
@@ -118,7 +118,7 @@ const ContactMeForm: React.FC<ReduxForm> = ({ setModalMsg }) => {
                         </div>
                     </div>
                 </div>
-                <div className="row u-width-100">
+                <div className="row">
                     <div className="col-1-of-1">
                         <div className="form__group form__group--ctrl">
                             <button

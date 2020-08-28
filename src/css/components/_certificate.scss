@@ -12,7 +12,7 @@
     padding: $padding-medium;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.5);
-    // transform: skewX(-10deg);
+    background-color: $color-white;
 
     &__link {
         text-decoration: none;
@@ -51,6 +51,9 @@
             height: 3rem;
             margin: 0.5rem auto 1rem auto;
             // transform: skewX(10deg);
+        }
+        &:hover {
+            transform: scale(1.1) translateY(-3rem);
         }
     }
 }

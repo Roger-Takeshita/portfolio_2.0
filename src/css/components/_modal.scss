@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     color: $color-black;
-    z-index: 2;
+    z-index: 10;
 
     &--true {
         background-color: rgba($color-black, 0.9);
@@ -191,6 +191,7 @@
     transition: all 0.2s ease-in-out;
     opacity: 0.7;
     box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+    z-index: 3;
 
     &__header {
         background-color: $color-green-2;

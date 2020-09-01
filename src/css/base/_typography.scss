@@ -48,20 +48,22 @@ body {
     &__text-title-1 {
         font-family: WSJ-Bold, sans-serif;
         font-weight: 400;
-        display: block;
-        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
         font-size: $h1-font-size-title-1 * 1rem;
         letter-spacing: $h1-font-size-title-1-space * 1rem;
-        animation: move-in-left 1s ease-in-out 0.5s;
+        animation: move-in-left 1s ease-in-out 1s;
         animation-fill-mode: backwards;
     }
     &__text-title-2 {
         font-family: WSJ-Bold, sans-serif;
-        display: block;
-        text-align: center;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
         font-size: $h1-font-size-title-2 * 1rem;
         letter-spacing: $h1-font-size-title-2-space * 1rem;
-        animation: move-in-right 1s ease-out 0.5s;
+        animation: move-in-right 1s ease-out 1s;
         animation-fill-mode: backwards;
     }
 }
@@ -126,15 +128,19 @@ body {
     font-weight: 400;
     font-family: WSJ-Regular, sans-serif;
     margin-bottom: $margin-small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__animated {
-        animation: move-in-bottom 1s ease-out 0.8s;
+        animation: move-in-bottom 1s ease-out 1.3s;
         animation-fill-mode: backwards;
-    }
-    &__quotes {
         font-style: italic;
-        padding: 0 $padding-small;
         flex-wrap: wrap;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        padding: 0 $padding-small;
     }
     &--white {
         letter-spacing: 0.5rem;
@@ -150,7 +156,9 @@ body {
         margin-top: $margin-small;
         margin-bottom: $margin-small;
     }
-
+    @include mq-manager(phone) {
+        font-size: resize($h3-font-size, 0.75);
+    }
     @include mq-manager(mid-tab-land-tab-port) {
         margin-top: $margin-small;
     }

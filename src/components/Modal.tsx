@@ -30,8 +30,14 @@ const Modal: React.FC<ModalProps> = ({ modal, clearModal }) => {
     };
 
     return (
-        <div className={`modal modal--${modalState}`}>
-            <div className="modal__content">
+        <div
+            className={`modal modal--${modalState}`}
+            onClick={(e) => handleClick(e, 'close')}
+        >
+            <div
+                className="modal__content"
+                onClick={(e) => e.stopPropagation()}
+            >
                 <div className="modal__left">
                     <a
                         href={project.liveUrl}

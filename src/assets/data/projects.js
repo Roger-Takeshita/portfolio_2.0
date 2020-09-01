@@ -8,8 +8,30 @@ import icheatsImg from '../images/projects/project_002.png';
 import fellasImg from '../images/projects/project_003.png';
 import pennyImg from '../images/projects/project_004.png';
 import myfollowupImg from '../images/projects/project_005.png';
+import theNinjaBoardImg from '../images/projects/project_006.png';
 
 export const projects = [
+    {
+        name: 'The Ninja Board',
+        imageUri: theNinjaBoardImg,
+        liveUrl:
+            'https://roger-takeshita.github.io/Mintbean_Hackathons_JS_Bootcamp_Olympics/',
+        repoUrl:
+            'https://github.com/Roger-Takeshita/Mintbean_Hackathons_JS_Bootcamp_Olympics',
+        technologies: [
+            <i
+                className="devicon-react-original colored icon__project"
+                style={{ color: 'darkblue' }}
+            />,
+            <img src={reduxLogo} alt="logo" className="icon__project--local" />,
+            <i className="devicon-typescript-plain colored icon__project" />,
+            <i className="devicon-html5-plain colored icon__project" />,
+            <i className="devicon-css3-plain colored icon__project" />,
+            <i className="devicon-sass-original colored icon__project" />,
+        ],
+        description:
+            'On August 29th 2020, the Team Ninja (Suzy Nakayama and I) attended the Olympics Hackathon from Mintbean. It was 3 days project where the goal was to create a SPA Kanban board using only front-end technologies. Technologies used: React/Redux, TypeScript, HTML, and CSS/SASS (BEM).',
+    },
     {
         name: 'My Follow-up',
         imageUri: myfollowupImg,

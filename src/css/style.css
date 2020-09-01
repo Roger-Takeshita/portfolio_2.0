@@ -343,24 +343,38 @@ body {
 .heading-primary__text-title-1 {
   font-family: WSJ-Bold, sans-serif;
   font-weight: 400;
-  display: block;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 6rem;
   letter-spacing: 1.5rem;
-  -webkit-animation: move-in-left 1s ease-in-out 0.5s;
-          animation: move-in-left 1s ease-in-out 0.5s;
+  -webkit-animation: move-in-left 1s ease-in-out 1s;
+          animation: move-in-left 1s ease-in-out 1s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
 
 .heading-primary__text-title-2 {
   font-family: WSJ-Bold, sans-serif;
-  display: block;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 3rem;
   letter-spacing: 2.15rem;
-  -webkit-animation: move-in-right 1s ease-out 0.5s;
-          animation: move-in-right 1s ease-out 0.5s;
+  -webkit-animation: move-in-right 1s ease-out 1s;
+          animation: move-in-right 1s ease-out 1s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
@@ -450,20 +464,35 @@ body {
   font-weight: 400;
   font-family: WSJ-Regular, sans-serif;
   margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .heading-tertiary__animated {
-  -webkit-animation: move-in-bottom 1s ease-out 0.8s;
-          animation: move-in-bottom 1s ease-out 0.8s;
+  -webkit-animation: move-in-bottom 1s ease-out 1.3s;
+          animation: move-in-bottom 1s ease-out 1.3s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
-}
-
-.heading-tertiary__quotes {
   font-style: italic;
-  padding: 0 2rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 2rem;
 }
 
 .heading-tertiary--white {
@@ -478,6 +507,12 @@ body {
   height: 4rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+@media (max-width: 37.5em) {
+  .heading-tertiary {
+    font-size: 1.95rem;
+  }
 }
 
 @media (max-width: 65.63em) {
@@ -960,7 +995,7 @@ body {
   background-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #969696;
+  color: #fff;
 }
 
 .navbar--visible {
@@ -1205,7 +1240,6 @@ body {
 }
 
 .header__text-box {
-  position: absolute;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2596,7 +2630,7 @@ body {
 }
 
 .modal--true {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
   opacity: 1;
   visibility: unset;
 }
@@ -2620,14 +2654,14 @@ body {
   display: -ms-flexbox;
   display: flex;
   border-radius: 0.5rem;
-  background-color: #969696;
+  background-color: #e6e6e6;
   overflow: hidden;
   -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.7);
 }
 
 .modal__left {
-  width: 60%;
+  width: 55%;
   padding: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2642,7 +2676,7 @@ body {
 }
 
 .modal__right {
-  width: 40%;
+  width: 45%;
   padding: 4rem;
   padding-left: 0;
   display: -webkit-box;
@@ -2667,6 +2701,8 @@ body {
 .modal__photo {
   width: 100%;
   border-radius: 0.5rem;
+  -webkit-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
+          box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
 }
 
 .modal__close {
@@ -2735,7 +2771,7 @@ body {
   font-size: 3.5rem;
 }
 
-.modal__logo-box:not(:last-child) {
+.modal__logo-box:not(:first-child) {
   margin-left: 1rem;
 }
 

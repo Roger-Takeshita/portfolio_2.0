@@ -30,7 +30,7 @@ export const projects = [
             <i className="devicon-sass-original colored icon__project" />,
         ],
         description:
-            'On August 29th 2020, the Team Ninja (Suzy Nakayama and I) attended the Olympics Hackathon from Mintbean. It was 3 days project where the goal was to create a SPA Kanban board using only front-end technologies. Technologies used: React/Redux, TypeScript, HTML, and CSS/SASS (BEM).',
+            'On August 29th 2020, the Team Ninja (Suzy Nakayama and I) attended the Olympics Hackathon from Mintbean. It was 3 days project where the goal was to create a Kanban board using only front-end technologies. Single Page App (SPA) using React/Redux, TypeScript, HTML, and CSS/SASS (BEM).',
     },
     {
         name: 'My Follow-up',

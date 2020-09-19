@@ -1,18 +1,34 @@
 import React, { useState } from 'react';
 import { onlineEducation } from '../assets/data/education';
+import Dots from './Dots';
 
 const Carousel: React.FC = () => {
-    const [translateX, setTranslateX] = useState(0);
+    const [translateX, setTranslateX] = useState<number>(0);
+    const [cert, setCert] = useState<number>(0);
 
     const handleClickLeft = () => {
-        translateX === 0
-            ? setTranslateX(-100 * (onlineEducation.length - 1))
-            : setTranslateX((prev) => prev + 100);
+        if (translateX === 0) {
+            setTranslateX(-100 * (onlineEducation.length - 1));
+            setCert(onlineEducation.length - 1);
+        } else {
+            setTranslateX((prev) => prev + 100);
+            setCert((prev) => prev - 1);
+        }
     };
+
     const handleClickRight = () => {
-        translateX === -100 * (onlineEducation.length - 1)
-            ? setTranslateX(0)
-            : setTranslateX((prev) => prev - 100);
+        if (translateX === -100 * (onlineEducation.length - 1)) {
+            setTranslateX(0);
+            setCert(0);
+        } else {
+            setTranslateX((prev) => prev - 100);
+            setCert((prev) => prev + 1);
+        }
+    };
+
+    const handleDotClick = (idx: number) => {
+        setTranslateX(-100 * idx);
+        setCert(idx);
     };
 
     return (
@@ -45,6 +61,11 @@ const Carousel: React.FC = () => {
             >
                 &gt;
             </button>
+            <Dots
+                idx={cert}
+                certificates={onlineEducation}
+                handleDotClick={handleDotClick}
+            />
         </div>
     );
 };

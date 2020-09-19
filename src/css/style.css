@@ -1727,6 +1727,36 @@ body {
   }
 }
 
+.dots {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dots__dot {
+  padding: 0.7rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.dots__dot:not(:last-child) {
+  margin-right: 0.7rem;
+}
+
+.dots__dot--active {
+  border: 0.2rem solid #133240;
+}
+
 .journal-box {
   color: #000;
   background-color: #cccccc;
@@ -2229,6 +2259,10 @@ body {
 
 .carousel:hover > button {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.carousel:hover > .dots > .dots__dot {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 37.5em) {

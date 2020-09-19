@@ -26,6 +26,9 @@
         & > button {
             background: rgba($color-black, 0.3);
         }
+        & > .dots > .dots__dot {
+            background: rgba($color-black, 0.4);
+        }
     }
     @include mq-manager(phone) {
         height: resize($card-height, $resize-to-phone);

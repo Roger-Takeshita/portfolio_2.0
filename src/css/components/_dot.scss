@@ -1,0 +1,22 @@
+.dots {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__dot {
+        padding: 0.7rem;
+        border-radius: 50%;
+        cursor: pointer;
+        background: rgba($color-black, 0.25);
+
+        &:not(:last-child) {
+            margin-right: 0.7rem;
+        }
+        &--active {
+            border: 0.2rem solid $color-green-3;
+        }
+    }
+}

@@ -19,6 +19,17 @@ export interface CertificateProps {
     description?: string;
 }
 
+export interface Certificate {
+    certificateUri: string;
+    alt: string;
+}
+
+export interface DotsProps {
+    idx: number;
+    certificates: Certificate[];
+    handleDotClick: (idx: number) => any;
+}
+
 export interface JournalProps {
     imgURI: string;
     titleOne: string;

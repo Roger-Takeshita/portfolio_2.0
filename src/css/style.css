@@ -416,8 +416,8 @@ body {
   background-color: #cccccc;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-box-shadow: 0 0.4rem 5rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.4rem 5rem rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0.6rem 5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.6rem 5rem rgba(0, 0, 0, 0.3);
 }
 
 .heading-secondary__text-title-1:hover {

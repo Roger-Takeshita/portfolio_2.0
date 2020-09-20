@@ -89,7 +89,7 @@ body {
             line-height: $h2-square * 1rem;
             background-color: $color-grey-1;
             transition: all 0.2s ease-in-out;
-            box-shadow: 0 0.4rem 5rem rgba($color-black, 0.1);
+            box-shadow: 0 0.6rem 5rem rgba($color-black, 0.3);
         }
 
         &:hover {

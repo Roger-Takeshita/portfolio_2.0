@@ -2,6 +2,7 @@ import React from 'react';
 import apolloLogo from '../../assets/images/logos/languages/apollo.svg';
 import bashLogo from '../../assets/images/logos/languages/bash.svg';
 import djangoLogo from '../../assets/images/logos/languages/django.svg';
+import flaskLogo from '../../assets/images/logos/languages/flask.svg';
 import firebaseLogo from '../../assets/images/logos/languages/firebase.svg';
 import graphqlLogo from '../../assets/images/logos/languages/graphql.svg';
 import jestLogo from '../../assets/images/logos/languages/jest.svg';
@@ -12,6 +13,7 @@ import pythonLogo from '../../assets/images/logos/languages/python.svg';
 import reduxLogo from '../../assets/images/logos/languages/redux.svg';
 import socketioLogo from '../../assets/images/logos/languages/socketio.svg';
 import webapackLogo from '../../assets/images/logos/languages/webpack.svg';
+import styledComponentsLogo from '../../assets/images/logos/languages/styled-components.png';
 
 export const strongSkills = [
     {
@@ -127,6 +129,12 @@ export const workingSkills = [
         ),
     },
     {
+        name: 'Flask',
+        icon: (
+            <img src={flaskLogo} alt="logo" className="icon__skills--local" />
+        ),
+    },
+    {
         name: 'TypeScript',
         icon: <i className="devicon-typescript-plain colored icon__skills" />,
     },
@@ -175,5 +183,15 @@ export const workingSkills = [
     {
         name: 'Jest',
         icon: <img src={jestLogo} alt="logo" className="icon__skills--local" />,
+    },
+    {
+        name: 'Styled-Components',
+        icon: (
+            <img
+                src={styledComponentsLogo}
+                alt="logo"
+                className="icon__skills--local"
+            />
+        ),
     },
 ];

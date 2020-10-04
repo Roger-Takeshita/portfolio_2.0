@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
                                     </a>
                                     <br />
                                     This website was developed using React.js,
-                                    Redux, SASS, GSAP, and BEM Methodology.
+                                    SASS, GSAP, and BEM Methodology.
                                 </p>
                             </div>
                         </div>

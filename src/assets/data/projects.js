@@ -30,7 +30,7 @@ export const projects = [
             <i className="devicon-sass-original colored icon__project" />,
         ],
         description:
-            'On August 29th 2020, the Team Ninja (my friend and I) attended the Olympics Hackathon from Mintbean. It was 3 days project where the goal was to create a Kanban board using only front-end technologies. Single Page App (SPA) using React/Redux, TypeScript, HTML, and CSS/SASS (BEM).',
+            'On August 29th 2020, the Team Ninja (my friend and I) attended the Olympics Hackathon from Mintbean. It was 3 days project where the goal was to create a Kanban board using only front-end technologies. Single Page App (SPA) using React/Redux, TypeScript, HTML, CSS/SASS, and Block Element Modifier (BEM) Methodology.',
     },
     {
         name: 'My Follow-up',
@@ -60,7 +60,7 @@ export const projects = [
             <i className="devicon-heroku-original colored icon__project" />,
         ],
         description:
-            'Single Page App (SPA) where users can keep track and follow-up their job applications, full CRUD operation to create resumes, job applications, and follow-ups. Technologies used: MongoDB, Express, React/Redux, Node.js, JSON Web Token (JWT), REST API, JavaScript, HTML, and CSS/SASS (BEM).',
+            'Single Page Application (SPA) using React.js, where users can keep tracking their applications, full CRUD (create, read, update, and delete) operation for resumes, cover letters, job descriptions, and follow-ups. Sending data to the backend through REST APIs, and permanently saving the information on MongoDB Atlas. Technologies used: MongoDB, Mongoose, Express, React/Redux, Node.js, JSON Web Token (JWT), REST API, JavaScript, HTML, CSS/SASS, and Block Element Modifier (BEM) methodology.',
     },
     {
         name: 'Penny Pinchers',
@@ -110,7 +110,7 @@ export const projects = [
             <i className="devicon-heroku-original colored icon__project" />,
         ],
         description:
-            'Book store where users can shop for books, full CRUD operation to store the user profile, create a new cart, add new items, and submit the order. Technologies used: Django, Python, PostgreSQL, 3rd Party API, JavaScript, HTML, and CSS.',
+            'E-commerce using server-side rendering (Django) and SQL database to serve HTML and JavaScript to the front-end. So users can shop books, full CRUD operation for users, carts, user profiles, and submitting the order. Technologies used: Django, Python, PostgreSQL, 3rd Party API, JavaScript, HTML, and CSS.',
     },
     {
         name: 'iCheats',
@@ -137,7 +137,7 @@ export const projects = [
             <i className="devicon-heroku-original colored icon__project" />,
         ],
         description:
-            'Social media where users can sign up using Google OAuth, logged in users can CRUD posts and comments, and send messages to the main chat. Technologies used: Node.js, Express, MongoDB, OAuth2, Socket.io, REST API, JavaScript, HTML, and CSS.',
+            'Social media using Embedded JavaScript Templating (EJS) to serve HTML and JS, where users can sign up using Google OAuth, CRUD new posts, comments and send messages in the main chat via real-time communication. Technologies used: Node.js, Express, MongoDB, Mongoose, OAuth2, Socket.io, REST API, JavaScript, AJAX, jQuery, HTML, and CSS.',
     },
     {
         name: 'Minesweeper',

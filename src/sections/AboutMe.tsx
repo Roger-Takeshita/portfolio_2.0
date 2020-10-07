@@ -1,6 +1,6 @@
-import { gsap } from 'gsap';
 import React, { useEffect, useRef } from 'react';
-import { Element } from 'react-scroll';
+import { gsap } from 'gsap';
+import { Element, Link } from 'react-scroll';
 import { useIntersection } from 'react-use';
 import profilePhoto from '../assets/images/profile_pic.jpeg';
 import Journal from '../components/Journal';
@@ -91,27 +91,35 @@ const AboutMe: React.FC = () => {
                         </p>
                     </div>
                     <div className="col-1-of-2 section-about__photo block-move">
-                        <Journal
-                            imgURI={profilePhoto}
-                            titleOne="Full-stack developer"
-                            text="Curious and detail-oriented, I approach problems with
-                            creativity and efficiency. My background in engineering
-                            has allowed me to develop strong problem-solving skills
-                            and the love for automating tasks. Working with
-                            Vaughan’s Economic and Cultural Development Department
-                            and General Assembly, the Digital Boost supports local
-                            small business owners in finding new opportunities
-                            during the COVID-19 crisis by launching/improving an
-                            e-commerce store, developing new product lines and
-                            services. Working with Digital Main St. and The City of
-                            Toronto to build websites for Toronto’s small businesses
-                            and artists, in order to provide them with an easy way
-                            to transition to sell online during the pandemic. Worked
-                            with Digital Main St. and The City of Toronto to build
-                            websites for Toronto’s small businesses and artists, in
-                            order to provide them with an easy way to transition to
-                            to sell online during the pandemic."
-                        />
+                        <Link
+                            className="section-about__link"
+                            to="contact-me"
+                            smooth={true}
+                            offset={-65}
+                            duration={500}
+                        >
+                            <Journal
+                                imgURI={profilePhoto}
+                                titleOne="Full-stack developer"
+                                text="Curious and detail-oriented, I approach problems with
+                                creativity and efficiency. My background in engineering
+                                has allowed me to develop strong problem-solving skills
+                                and the love for automating tasks. Working with
+                                Vaughan’s Economic and Cultural Development Department
+                                and General Assembly, the Digital Boost supports local
+                                small business owners in finding new opportunities
+                                during the COVID-19 crisis by launching/improving an
+                                e-commerce store, developing new product lines and
+                                services. Working with Digital Main St. and The City of
+                                Toronto to build websites for Toronto’s small businesses
+                                and artists, in order to provide them with an easy way
+                                to transition to sell online during the pandemic. Worked
+                                with Digital Main St. and The City of Toronto to build
+                                websites for Toronto’s small businesses and artists, in
+                                order to provide them with an easy way to transition to
+                                to sell online during the pandemic."
+                            />
+                        </Link>
                     </div>
                 </div>
             </div>

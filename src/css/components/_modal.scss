@@ -48,11 +48,18 @@
     &__link {
         text-decoration: none;
         display: flex;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0.5rem 0.5rem 1rem rgba($color-black, 0.5);
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 1rem 1rem 2rem rgba($color-black, 0.5);
+        }
     }
     &__photo {
         width: 100%;
         border-radius: $border-radius;
-        box-shadow: 1rem 1rem 2rem rgba($color-black, 0.5);
+        // box-shadow: 1rem 1rem 2rem rgba($color-black, 0.5);
     }
     &__close {
         position: absolute;

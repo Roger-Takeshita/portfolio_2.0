@@ -244,7 +244,7 @@ body {
         z-index: 1;
         margin-left: -6rem;
         opacity: 0;
-        transition: opacity 0.3s;
+        transition: opacity 0.3s ease-in-out;
 
         &::after {
             content: '';
@@ -258,6 +258,15 @@ body {
         }
     }
     &:hover &__tooltip-text {
+        visibility: visible;
+        opacity: 1;
+
+        &--1 {
+            bottom: 110%;
+            font-size: 1.2rem;
+        }
+    }
+    &:hover &__tooltip-text-1 {
         visibility: visible;
         opacity: 1;
     }

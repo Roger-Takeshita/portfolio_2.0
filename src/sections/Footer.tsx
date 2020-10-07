@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
                         <div className="footer__resume-box">
                             <a
                                 href="/Resume_-_Roger_Takeshita.pdf"
-                                className="footer__resume-link"
+                                className="footer__resume-link tooltip"
                                 download
                             >
                                 <img
@@ -22,6 +22,9 @@ const Footer: React.FC = () => {
                                 <p className="footer__resume-paragraph">
                                     Resume
                                 </p>
+                                <span className="tooltip__tooltip-text tooltip__tooltip-text--1">
+                                    Download
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -71,7 +74,8 @@ const Footer: React.FC = () => {
                                     </a>
                                     <br />
                                     This website was developed using React.js,
-                                    SASS, GSAP, and BEM Methodology.
+                                    JavaScript, CSS/SASS, GSAP, and BEM
+                                    Methodology.
                                 </p>
                             </div>
                         </div>

@@ -10,9 +10,9 @@ import pucLogo from '../images/logos/education/education_puc.png';
 
 export const education = [
     {
-        institution: 'General Assembly (Previous Bitmaker Lab)',
-        course: 'Software Engineering Immersive',
-        date: 'Ago 2019 - Feb 2020',
+        institution: 'General Assembly (Previous Bitmaker Labs)',
+        course: 'Software Engineering Immersive Bootcamp',
+        date: 'Nov 2019 - Feb 2020',
         location: 'Toronto-ON',
         url:
             'https://generalassemb.ly/education/software-engineering-immersive/toronto',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CertificateProps } from '../utils/interface';
+import { CertificateProps } from '../@types/types';
 
 const Certificate: React.FC<CertificateProps> = ({
     institution,
@@ -19,6 +19,7 @@ const Certificate: React.FC<CertificateProps> = ({
                 className="certificate__link"
             >
                 <img
+                    loading="lazy"
                     src={logoUri.toString()}
                     alt="logo"
                     className="certificate__img"

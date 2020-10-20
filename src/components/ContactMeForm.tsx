@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { connect } from 'react-redux';
 import { setModalMsg } from '../redux/modalMsg';
-import { FormEmail, ReduxForm } from '../utils/interface';
+import { FormEmail, ReduxForm } from '../@types/types';
 
 const ContactMeForm: React.FC<ReduxForm> = ({ setModalMsg }) => {
     const [form, setForm] = useState<FormEmail>({

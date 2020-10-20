@@ -1,5 +1,5 @@
 import React from 'react';
-import { SkillsLogosProps } from '../utils/interface';
+import { SkillsLogosProps } from '../@types/types';
 
 const SkillsLogos: React.FC<SkillsLogosProps> = ({ title, skills }) => {
     return (

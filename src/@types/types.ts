@@ -19,10 +19,10 @@ export interface CertificateProps {
     description?: string;
 }
 
-export interface Certificate {
+export type Certificate = {
     certificateUri: string;
     alt: string;
-}
+};
 
 export interface DotsProps {
     idx: number;
@@ -30,28 +30,28 @@ export interface DotsProps {
     handleDotClick: (idx: number) => any;
 }
 
-export interface JournalProps {
+export type JournalProps = {
     imgURI: string;
     titleOne: string;
     titleTwo?: string;
     text: string;
-}
+};
 
-export interface Skills {
+export type Skills = {
     name: string;
     icon: JSX.Element;
-}
+};
 
-export interface SkillsLogosProps {
+export type SkillsLogosProps = {
     title: string;
     skills: Skills[];
-}
+};
 
-export interface FormEmail {
+export type FormEmail = {
     name: string;
     email: string;
     msg: string;
-}
+};
 
 export interface ModalProps {
     modal: CardProps;
@@ -67,10 +67,10 @@ export interface ModalMsgProps {
     clearModalMsg: () => void;
 }
 
-export interface KeyValue {
+export type KeyValue = {
     [key: string]: string | object;
-}
+};
 
-export interface ReduxForm {
+export type ReduxForm = {
     setModalMsg: (object: any) => any;
-}
+};

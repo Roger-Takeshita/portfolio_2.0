@@ -1,5 +1,5 @@
 import React from 'react';
-import { DotsProps } from '../utils/interface';
+import { DotsProps } from '../@types/types';
 
 const Dots: React.FC<DotsProps> = ({ idx, certificates, handleDotClick }) => {
     return (

@@ -2,6 +2,7 @@ import React from 'react';
 import { Element } from 'react-scroll';
 import { projects } from '../assets/data/projects';
 import Card from '../components/Card';
+import SpanGenerator from '../components/SpanGenerator';
 
 const Projects: React.FC = () => {
     return (
@@ -11,14 +12,7 @@ const Projects: React.FC = () => {
                 <div className="section-projects--pulse">&nbsp;</div>
                 <div className="u-text-center">
                     <h2 className="heading-secondary heading-secondary__text-title-1">
-                        <span>P</span>
-                        <span>R</span>
-                        <span>O</span>
-                        <span>J</span>
-                        <span>E</span>
-                        <span>C</span>
-                        <span>T</span>
-                        <span>S</span>
+                        <SpanGenerator>PROJECTS</SpanGenerator>
                     </h2>
                 </div>
                 <div className="projects">

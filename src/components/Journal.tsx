@@ -1,5 +1,5 @@
 import React from 'react';
-import { JournalProps } from '../utils/interface';
+import { JournalProps } from '../@types/types';
 
 const Journal: React.FC<JournalProps> = ({
     imgURI,
@@ -87,6 +87,7 @@ const Journal: React.FC<JournalProps> = ({
                 <h2 className="journal-box__heading-secondary">{titleTwo}</h2>
                 <p className="journal-box__content__paragraph">
                     <img
+                        loading="lazy"
                         src={imgURI.toString()}
                         alt="Profile Pic"
                         className="journal-box__content__photo"

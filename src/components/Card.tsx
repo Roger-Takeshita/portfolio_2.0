@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setModal } from '../redux/modal';
-import { CardProps } from '../utils/interface';
+import { CardProps } from '../@types/types';
 
 const Card: React.FC<CardProps> = ({
     name,
@@ -21,6 +21,7 @@ const Card: React.FC<CardProps> = ({
         <div className="card u-margin-xsmall">
             <div className="card__side card__side--front">
                 <img
+                    loading="lazy"
                     src={imageUri.toString()}
                     className="card__picture"
                     alt="Project"

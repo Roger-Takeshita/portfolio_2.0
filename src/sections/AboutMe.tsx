@@ -4,6 +4,7 @@ import { Element, Link } from 'react-scroll';
 import { useIntersection } from 'react-use';
 import profilePhoto from '../assets/images/profile_pic.jpeg';
 import Journal from '../components/Journal';
+import SpanGenerator from '../components/SpanGenerator';
 
 const AboutMe: React.FC = () => {
     const journalRef = useRef(null);
@@ -67,14 +68,7 @@ const AboutMe: React.FC = () => {
             <div className="section-about">
                 <div className="u-text-center">
                     <h2 className="heading-secondary heading-secondary__text-title-1">
-                        <span>A</span>
-                        <span>B</span>
-                        <span>O</span>
-                        <span>U</span>
-                        <span>T</span>
-                        <span></span>
-                        <span>M</span>
-                        <span>E</span>
+                        <SpanGenerator>ABOUT ME</SpanGenerator>
                     </h2>
                 </div>
                 <div

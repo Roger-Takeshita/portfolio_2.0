@@ -2,6 +2,7 @@ import React from 'react';
 import { Element } from 'react-scroll';
 import { strongSkills, workingSkills } from '../assets/data/skills';
 import SkillsLogos from '../components/SkillsLogos';
+import SpanGenerator from '../components/SpanGenerator';
 
 const Skills: React.FC = () => {
     return (
@@ -9,12 +10,7 @@ const Skills: React.FC = () => {
             <div className="section-skills">
                 <div className="u-text-center">
                     <h2 className="heading-secondary heading-secondary__text-title-1">
-                        <span>S</span>
-                        <span>K</span>
-                        <span>I</span>
-                        <span>L</span>
-                        <span>L</span>
-                        <span>S</span>
+                        <SpanGenerator>SKILLS</SpanGenerator>
                     </h2>
                 </div>
                 <div className="row u-text-center skills__skew-y">

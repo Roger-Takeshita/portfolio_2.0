@@ -3,6 +3,7 @@ import { Element } from 'react-scroll';
 import { education } from '../assets/data/education';
 import Carousel from '../components/Carousel';
 import Certificate from '../components/Certificate';
+import SpanGenerator from '../components/SpanGenerator';
 
 const Education: React.FC = () => {
     return (
@@ -10,15 +11,7 @@ const Education: React.FC = () => {
             <div className="section-education">
                 <div className="u-text-center">
                     <h2 className="heading-secondary heading-secondary__text-title-1">
-                        <span>E</span>
-                        <span>D</span>
-                        <span>U</span>
-                        <span>C</span>
-                        <span>A</span>
-                        <span>T</span>
-                        <span>I</span>
-                        <span>O</span>
-                        <span>N</span>
+                        <SpanGenerator>EDUCATION</SpanGenerator>
                     </h2>
                 </div>
                 <div className="row u-text-center u-items-center u-flex-wrap-wrap">

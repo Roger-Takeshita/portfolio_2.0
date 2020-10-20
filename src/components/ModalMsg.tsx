@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { clearModalMsg } from '../redux/modalMsg';
-import { ModalMsgProps } from '../utils/interface';
+import { ModalMsgProps } from '../@types/types';
 
 const ModalMsg: React.FC<ModalMsgProps> = ({ modalMsg, clearModalMsg }) => {
     const handleClick = (e: any) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { clearModal } from '../redux/modal';
-import { CardProps, ModalProps } from '../utils/interface';
+import { CardProps, ModalProps } from '../@types/types';
 
 const Modal: React.FC<ModalProps> = ({ modal, clearModal }) => {
     const [modalState, setModalState] = useState(false);

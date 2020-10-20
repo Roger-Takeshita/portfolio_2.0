@@ -11,6 +11,9 @@ import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 
 const App: React.FC = () => {
+    console.log(
+        "Oh! Hello Dev! Nice to see you here. Please don't forget to send me a msg or connect with me at https://linkedin.com/in/roger-takeshita"
+    );
     return (
         <div className="App">
             <header>

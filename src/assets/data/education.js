@@ -5,6 +5,7 @@ import nodejsCert from '../images/certificates/certificate_004.jpg';
 import dataStructureCert from '../images/certificates/certificate_005.jpg';
 import cssCert from '../images/certificates/certificate_006.jpg';
 import pythonCert from '../images/certificates/certificate_007.jpg';
+import djangoCert from '../images/certificates/certificate_008.jpg';
 import gaLogo from '../images/logos/education/education_ga.png';
 import pucLogo from '../images/logos/education/education_puc.png';
 
@@ -31,6 +32,10 @@ export const education = [
 ];
 
 export const onlineEducation = [
+    {
+        certificateUri: djangoCert,
+        alt: 'Django Certificate',
+    },
     {
         certificateUri: pythonCert,
         alt: 'Python Certificate',

@@ -64,18 +64,15 @@ const Footer: React.FC = () => {
                                         target="_blank"
                                         className="paragraph__footer paragraph__footer--link paragraph--animated"
                                     >
-                                        <span className="paragraph__footer--developed">
-                                            Developed by
-                                        </span>
-                                        &nbsp;
                                         <span className="paragraph__footer--name">
-                                            Roger Takeshita
+                                            &copy; Roger Takeshita - 2020. All
+                                            rights reserved.
                                         </span>
                                     </a>
                                     <br />
                                     This website was developed using React.js,
-                                    Redux Thunk, JavaScript, CSS/SASS, GSAP, and
-                                    BEM Methodology.
+                                    Redux Thunk, JavaScript/TypeScript,
+                                    CSS/SASS, GSAP, and BEM.
                                 </p>
                             </div>
                         </div>

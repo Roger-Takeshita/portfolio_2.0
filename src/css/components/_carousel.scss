@@ -9,6 +9,7 @@
     overflow: hidden;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.5);
     transition: all 0.2s ease-in-out;
+    background-color: $color-white;
 
     &__slide {
         transition: all 0.5s;

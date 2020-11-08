@@ -316,12 +316,6 @@
 }
 
 @font-face {
-  font-family: 'DancingScript-Bold';
-  font-weight: 700;
-  src: local("DancingScript"), url("../assets/fonts/DancingScript.ttf") format("opentype");
-}
-
-@font-face {
   font-family: 'Allura-Regular';
   font-weight: 400;
   src: local("Allura-Regular"), url("../assets/fonts/Allura-Regular.ttf") format("opentype");
@@ -573,14 +567,9 @@ body {
   text-decoration: none;
 }
 
-.paragraph__footer--developed {
-  font-family: DancingScript-Bold, sans-serif;
-  font-size: 1.5rem;
-}
-
 .paragraph__footer--name {
-  font-family: Allura-Regular, sans-serif;
-  font-size: 1.8rem;
+  font-family: sans-serif;
+  font-size: 1.2rem;
 }
 
 .paragraph-fade-in {
@@ -2250,6 +2239,7 @@ body {
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  background-color: #fff;
 }
 
 .carousel__slide {

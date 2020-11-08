@@ -41,7 +41,6 @@ const Carousel: React.FC = () => {
                         style={{ transform: `translateX(${translateX}%)` }}
                     >
                         <img
-                            loading="lazy"
                             key={idx}
                             src={course.certificateUri}
                             alt={course.alt}

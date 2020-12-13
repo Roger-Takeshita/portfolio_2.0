@@ -15,6 +15,8 @@ import socketioLogo from '../../assets/images/logos/languages/socketio.svg';
 import webapackLogo from '../../assets/images/logos/languages/webpack.svg';
 import seleniumLogo from '../../assets/images/logos/languages/selenium.svg';
 import styledComponentsLogo from '../../assets/images/logos/languages/styled-components.png';
+import awsEC2Logo from '../../assets/images/logos/languages/aws-ec2.svg';
+import awsLambdaLogo from '../../assets/images/logos/languages/aws-lambda.svg';
 
 export const strongSkills = [
     {
@@ -128,6 +130,10 @@ export const strongSkills = [
 
 export const workingSkills = [
     {
+        name: 'TypeScript',
+        icon: <i className="devicon-typescript-plain colored icon__skills" />,
+    },
+    {
         name: 'Django',
         icon: (
             <img src={djangoLogo} alt="logo" className="icon__skills--local" />
@@ -137,6 +143,28 @@ export const workingSkills = [
         name: 'Flask',
         icon: (
             <img src={flaskLogo} alt="logo" className="icon__skills--local" />
+        ),
+    },
+    {
+        name: 'AWS EC2',
+        icon: (
+            <img src={awsEC2Logo} alt="logo" className="icon__skills--local" />
+        ),
+    },
+    {
+        name: 'AWS Lambda',
+        icon: (
+            <img
+                src={awsLambdaLogo}
+                alt="logo"
+                className="icon__skills--local"
+            />
+        ),
+    },
+    {
+        name: 'AWS S3',
+        icon: (
+            <i className="devicon-amazonwebservices-original colored icon__skills" />
         ),
     },
     {
@@ -152,10 +180,6 @@ export const workingSkills = [
     {
         name: 'Bash',
         icon: <img src={bashLogo} alt="logo" className="icon__skills--local" />,
-    },
-    {
-        name: 'TypeScript',
-        icon: <i className="devicon-typescript-plain colored icon__skills" />,
     },
     {
         name: 'GraphQL',
@@ -187,12 +211,6 @@ export const workingSkills = [
                 alt="logo"
                 className="icon__skills--local"
             />
-        ),
-    },
-    {
-        name: 'AWS S3',
-        icon: (
-            <i className="devicon-amazonwebservices-original colored icon__skills" />
         ),
     },
     {

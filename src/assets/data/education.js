@@ -7,6 +7,7 @@ import cssCert from '../images/certificates/certificate_006.jpg';
 import pythonCert from '../images/certificates/certificate_007.jpg';
 import djangoCert from '../images/certificates/certificate_008.jpg';
 import awsEC2Cert from '../images/certificates/certificate_009.jpg';
+import flask1Cert from '../images/certificates/certificate_010.jpg';
 import gaLogo from '../images/logos/education/education_ga.png';
 import pucLogo from '../images/logos/education/education_puc.png';
 
@@ -16,8 +17,7 @@ export const education = [
         course: 'Software Engineering Immersive Bootcamp',
         date: 'Nov 2019 - Feb 2020',
         location: 'Toronto-ON',
-        url:
-            'https://generalassemb.ly/education/software-engineering-immersive/toronto',
+        url: 'https://generalassemb.ly/education/software-engineering-immersive/toronto',
         logoUri: gaLogo,
         description: '',
     },
@@ -33,6 +33,10 @@ export const education = [
 ];
 
 export const onlineEducation = [
+    {
+        certificateUri: flask1Cert,
+        alt: 'Flask Certificate',
+    },
     {
         certificateUri: awsEC2Cert,
         alt: 'AWS EC2 Certificate',
